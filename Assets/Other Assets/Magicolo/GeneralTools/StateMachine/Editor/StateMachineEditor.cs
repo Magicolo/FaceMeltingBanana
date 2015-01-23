@@ -185,7 +185,7 @@ namespace Magicolo.GeneralTools {
 					stateProperty.SetValue(stateIndex == -1 ? null : statesProperty.GetArrayElementAtIndex(Mathf.Clamp(stateIndex, 0, statesProperty.arraySize - 1)).GetValue());
 					
 					if (EditorGUI.EndChangeCheck() && Application.isPlaying) {
-						currentLayer.SwitchState(stateProperty.objectReferenceValue == null ? typeof(EmptyState) : stateProperty.objectReferenceValue.GetType());
+						currentLayer.SwitchState(stateProperty.objectReferenceValue == null ? typeof(EmptyState) : stateProperty.objectReferenceValue.GetType(), i);
 					}
 				
 					if (i == 0) {
