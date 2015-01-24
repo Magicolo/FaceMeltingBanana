@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" width="10" height="10" tilewidth="32" tileheight="32">
  <properties>
-  <property name="PlayerStartingPosition" value="1,8"/>
-  <property name="PuzzleId" value="0"/>
+  <property name="PlayerStartingPosition" value="3,8"/>
+  <property name="PuzzleId" value="4"/>
   <property name="name" value="Test 1"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
@@ -85,6 +85,10 @@
   <tile id="28">
    <properties>
     <property name="door" value="locked"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
     <property name="lockedDoor" value="1"/>
    </properties>
   </tile>
@@ -108,10 +112,10 @@
 0,1,1,1,1,1,13,1,1,0,
 1,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,1,
+28,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,28,
 1,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,1,
 0,1,1,1,1,1,1,1,1,0
