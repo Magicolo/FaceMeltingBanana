@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
-  <property name="PlayerStartingPosition" value="1,8"/>
-  <property name="PuzzleId" value="0"/>
+  <property name="PlayerStartingPosition" value="4,8"/>
+  <property name="PuzzleId" value="1"/>
   <property name="name" value="Test 1"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
@@ -105,16 +105,16 @@
  </layer>
  <layer name="Wall" width="10" height="10">
   <data encoding="csv">
-0,1,1,1,1,1,13,1,1,0,
+1,1,1,1,1,1,1,1,1,1,
 1,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,1,
+1,0,0,0,0,0,0,0,0,9,
+1,0,0,0,0,0,0,0,0,10,
+1,0,0,0,0,0,0,0,0,11,
+1,0,0,0,0,0,0,0,0,12,
 1,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-0,1,1,1,1,1,1,1,1,0
+1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
  <layer name="CeilingP1" width="10" height="10">
@@ -136,10 +136,10 @@
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
+0,7,0,0,0,0,0,0,0,0,
+0,6,0,0,0,0,0,0,0,0,
+0,5,0,0,0,0,0,0,0,0,
+0,4,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0
