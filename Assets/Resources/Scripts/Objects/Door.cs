@@ -4,9 +4,21 @@ using Magicolo;
 
 public class Door : StateLayer {
 
+	public float speed = 8;
+	[Disable] public GameObject cube;
+	
+	public override void OnStart() {
+		base.OnStart();
+		
+		cube = gameObject.FindChild("Cube");
+	}
+	
 	public override void TriggerEnter(Collider collision) {
 		base.TriggerEnter(collision);
-		RoomFlowManager.instance.goToNextRoom();
+
+		if (collision.gameObject.name == "Player") {
+			RoomFlowManager.instance.goToNextRoom();
+		}
 	}
 	
 	public void Open() {

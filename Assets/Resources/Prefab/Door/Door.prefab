@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11425834}
   - 114: {fileID: 11425836}
   m_Layer: 0
-  m_Name: DoorExit
+  m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -140,8 +140,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   machine: {fileID: 11425830}
   states:
-  - {fileID: 11425834}
   - {fileID: 11425836}
+  - {fileID: 11425834}
   currentStates:
   - {fileID: 11425834}
 --- !u!114 &11425834
