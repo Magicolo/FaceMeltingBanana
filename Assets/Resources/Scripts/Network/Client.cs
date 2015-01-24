@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class Client : MonoBehaviour {
-	int clientPort = 25003;
-	string ip = "127.0.0.1";
+	public int clientPort = 25003;
+	public string ip = "10.212.8.139";
 	bool connected = false;
 	void ConnectToServer() {
 		Network.Connect(ip,clientPort);
