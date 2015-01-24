@@ -14,7 +14,7 @@ public class Player : MonoBehaviourExtended {
 	
 	void Update() {
 		if (playerType == PlayerTypes.Adventurer) {
-			
+			Send();
 		}
 	}
 	
@@ -24,7 +24,7 @@ public class Player : MonoBehaviourExtended {
 	}
 	
 	[RPC]
-	void Receive(object position){
+	void Receive(object position) {
 		Logger.Log(position);
 	}
 }
