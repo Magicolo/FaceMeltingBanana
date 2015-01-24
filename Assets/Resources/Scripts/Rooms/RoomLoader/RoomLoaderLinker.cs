@@ -6,6 +6,12 @@ using System.Collections;
 public class RoomLoaderLinker : MonoBehaviour {
 
 	public List<GameObject> blockPrefabs;
+	public List<GameObject> PuzzleBasePrefabs;
 	
+	public static RoomLoaderLinker instance;
+	
+	void Awake(){
+		RoomLoaderLinker.instance = this;
+	}
 	
 }

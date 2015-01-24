@@ -77,30 +77,54 @@ public abstract class TiledMapLoader {
 	}
 
 	void loadLayer(XElement layer){
-		string tilesCSV = layer.Elements ().First ().Value;
+		int width = Int32.Parse(layer.Attribute("width").Value);
 		int height = Int32.Parse(layer.Attribute("height").Value);
+		
+		createNewLayer(layer, width, height);
+		loadLayerTiles(layer, height);
+	}
+
+	void createNewLayer(XElement layer, int width, int height){
+		Dictionary<string, string> properties = new Dictionary<string, string>();
+		
+		if(layer.Elements("properties").Any() ){
+			var propertiesElements = layer.Element("properties").Descendants();
+			foreach (var property in propertiesElements) {
+				string pname = property.Attribute("name").Value;
+				string value = property.Attribute("value").Value;
+				properties.Add(pname, value);
+			}
+		}
+		
 		string name = layer.Attribute("name").Value;
+		addLayer(name, width, height, properties);
+	}
+	
+	protected abstract void addLayer(string layerName, int width, int height, Dictionary<string, string> properties);
+
+	void loadLayerTiles(XElement layer, int height){
+		string tilesCSV = layer.Element("data").Value;
 		string[] tilesLines = tilesCSV.Split(new string[] { "\n\r", "\r\n", "\n", "\r" }, StringSplitOptions.None);
 		int y = height;
 		for (int i = 1; i <= height; i++) {
 			y--;
-			loadLayerLine(name, y, tilesLines[i]);
+			loadLayerLine( y, tilesLines[i]);
 		}
 	}
-
-	void loadLayerLine(string name, int y, string tileLine){
+	
+	void loadLayerLine(int y, string tileLine){
 		string[] tiles = tileLine.Split(new char[] { ',' }, StringSplitOptions.None);
 		int x = 0;
 		foreach (string tileId in tiles) {
 			if(!tileId.Equals("0") && !tileId.Equals("") && tileId != null){
 				int id = parseInt(tileId) - 1;
-				addTile(name,x,y,id);
+				addTile(x,y,id);
 			}
 			x++;
 		}
 	}
 
-	protected abstract void addTile(string layerName, int x, int y, int id);
+	protected abstract void addTile(int x, int y, int id);
 	
 	#endregion
 	
