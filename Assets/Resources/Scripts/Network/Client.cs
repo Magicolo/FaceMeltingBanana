@@ -35,4 +35,9 @@ public class Client : MonoBehaviour {
 			Debug.Log("Connected : " + connected);
 		}
 	}
+
+	[RPC]
+	void Receive(object position){
+		Logger.Log(position);
+	}
 }
