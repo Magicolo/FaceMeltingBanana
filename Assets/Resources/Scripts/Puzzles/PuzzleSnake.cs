@@ -28,7 +28,7 @@ public class PuzzleSnake : PuzzleBase {
 		for (int i = 0; i < keys.Length - 1; i++) {
 			KeySnake key = keys[i];
 			
-			if (i == 0){
+			if (i == 0) {
 				key.isNextKey = true;
 			}
 			
@@ -36,6 +36,13 @@ public class PuzzleSnake : PuzzleBase {
 		}
 	}
 
+	public void OpenDoors() {
+		Logger.Log("OpenDoors");
+		foreach (Door door in doors) {
+			door.Open();
+		}
+	}
+	
 	public void Fail() {
 		if (GetActiveState() != GetState<PuzzleSnakeFail>()) {
 			SwitchState<PuzzleSnakeFail>();

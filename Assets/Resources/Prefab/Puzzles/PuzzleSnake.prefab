@@ -67,6 +67,7 @@ MonoBehaviour:
   failString: 
   doors: []
   playerHasLastKey: 0
+  player: {fileID: 0}
 --- !u!114 &11432146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -93,7 +94,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 11432144}
   machine: {fileID: 11432142}
-  player: {fileID: 0}
 --- !u!114 &11432150
 MonoBehaviour:
   m_ObjectHideFlags: 1

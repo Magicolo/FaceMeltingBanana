@@ -9,15 +9,13 @@ public class PuzzleBase : StateLayer {
 	[Disable] public string failString;
 	[Disable] public List<Door> doors;
 	
-	public override void OnAwake() {
-		base.OnAwake();
+	public override void OnStart() {
+		base.OnStart();
 		
 		doors = new List<Door>();
 		
-		foreach (Transform child in transform.parent.GetChildrenRecursive()) {
-			if (child.name == "Door") {
-				doors.Add(child.GetComponent<Door>());
-			}
+		foreach (Door child in transform.parent.GetComponentsInChildren<Door>()) {
+			doors.Add(child.GetComponent<Door>());
 		}
 	}
 }

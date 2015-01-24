@@ -13,12 +13,6 @@ public class PuzzleSnakeNormal : State {
 		if (Layer.player.transform.position.y < -10) {
 			SwitchState<PuzzleSnakeFail>();
 		}
-		
-		if (Layer.playerHasLastKey) {
-			foreach (Door door in Layer.doors) {
-				door.Open();
-			}
-		}
 	}
 }
 

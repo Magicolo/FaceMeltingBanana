@@ -22,14 +22,11 @@ public class Door : StateLayer {
 	}
 	
 	public void Open() {
-		if (GetActiveState() != GetState<DoorOpen>()) {
-			SwitchState<DoorOpen>();
-		}
+		Logger.Log("Open");
+		SwitchState<DoorOpen>();
 	}
 	
 	public void Close() {
-		if (GetActiveState() != GetState<DoorClose>()) {
-			SwitchState<DoorClose>();
-		}
+		SwitchState<DoorClose>();
 	}
 }

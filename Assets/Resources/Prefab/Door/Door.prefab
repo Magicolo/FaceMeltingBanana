@@ -129,7 +129,7 @@ MonoBehaviour:
   - {fileID: 11425832}
 --- !u!114 &11425832
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
@@ -144,9 +144,11 @@ MonoBehaviour:
   - {fileID: 11425834}
   currentStates:
   - {fileID: 11425834}
+  speed: 1
+  cube: {fileID: 0}
 --- !u!114 &11425834
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
@@ -159,7 +161,7 @@ MonoBehaviour:
   machine: {fileID: 11425830}
 --- !u!114 &11425836
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
