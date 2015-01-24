@@ -260,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 14744772}
   machine: {fileID: 14744773}
+  timeBeforeFall: 5
 --- !u!114 &14744770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 24344175}
   machine: {fileID: 24344176}
+  timeBeforeFall: 5
 --- !u!114 &24344173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 30785667}
   machine: {fileID: 30785668}
+  timeBeforeFall: 5
 --- !u!114 &30785665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,6 +731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 35475640}
   machine: {fileID: 35475641}
+  timeBeforeFall: 5
 --- !u!114 &35475638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,6 +1031,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 63983084}
   machine: {fileID: 63983085}
+  timeBeforeFall: 5
 --- !u!114 &63983082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1229,6 +1234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 72141971}
   machine: {fileID: 72141972}
+  timeBeforeFall: 5
 --- !u!114 &72141969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1314,110 +1320,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &75017620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 75017621}
-  - 136: {fileID: 75017626}
-  - 114: {fileID: 75017625}
-  - 114: {fileID: 75017624}
-  - 114: {fileID: 75017623}
-  - 114: {fileID: 75017622}
-  m_Layer: 0
-  m_Name: Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &75017621
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75017620}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7, y: 0, z: 7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 897632144}
-  m_Father: {fileID: 1796922945}
-  m_RootOrder: 1
---- !u!114 &75017622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75017620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8263a4810f4cb546a5d2ee384c92aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 75017624}
-  machine: {fileID: 75017625}
---- !u!114 &75017623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75017620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b42e74b219ff646bfe41d058750c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 75017624}
-  machine: {fileID: 75017625}
---- !u!114 &75017624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75017620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fd19eb0f005914c9c902b83214ec31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  machine: {fileID: 75017625}
-  states:
-  - {fileID: 75017623}
-  - {fileID: 75017622}
-  currentStates:
-  - {fileID: 75017623}
-  isCorrectChoice: 1
-  debug: 1
---- !u!114 &75017625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75017620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-  - {fileID: 75017624}
---- !u!136 &75017626
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 75017620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &76884367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 76884372}
   machine: {fileID: 76884373}
+  timeBeforeFall: 5
 --- !u!114 &76884370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,6 +1502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 81889936}
   machine: {fileID: 81889937}
+  timeBeforeFall: 5
 --- !u!114 &81889934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2008,6 +1912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 93900571}
   machine: {fileID: 93900572}
+  timeBeforeFall: 5
 --- !u!114 &93900569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,6 +1998,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &102568112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 132126, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 102568113}
+  - 33: {fileID: 102568115}
+  - 23: {fileID: 102568114}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &102568113
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 432126, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 102568112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children: []
+  m_Father: {fileID: 1766515949}
+  m_RootOrder: 0
+--- !u!23 &102568114
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2332126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 102568112}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &102568115
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3332126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 102568112}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &110015192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,6 +2104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 110015197}
   machine: {fileID: 110015198}
+  timeBeforeFall: 5
 --- !u!114 &110015195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2481,6 +2445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 124363528}
   machine: {fileID: 124363529}
+  timeBeforeFall: 5
 --- !u!114 &124363526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2614,6 +2579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 127997659}
   machine: {fileID: 127997660}
+  timeBeforeFall: 5
 --- !u!114 &127997657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2747,6 +2713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 133381233}
   machine: {fileID: 133381234}
+  timeBeforeFall: 5
 --- !u!114 &133381231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3087,6 +3054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 177638224}
   machine: {fileID: 177638225}
+  timeBeforeFall: 5
 --- !u!114 &177638222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3317,6 +3285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 201944152}
   machine: {fileID: 201944153}
+  timeBeforeFall: 5
 --- !u!114 &201944150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3427,7 +3396,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205264777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.5, z: 0}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 1542787935}
@@ -4030,6 +3999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 239628782}
   machine: {fileID: 239628783}
+  timeBeforeFall: 5
 --- !u!114 &239628780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4191,6 +4161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 246854155}
   machine: {fileID: 246854156}
+  timeBeforeFall: 5
 --- !u!114 &246854153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4324,6 +4295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 251528221}
   machine: {fileID: 251528222}
+  timeBeforeFall: 5
 --- !u!114 &251528219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4457,6 +4429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 252750942}
   machine: {fileID: 252750943}
+  timeBeforeFall: 5
 --- !u!114 &252750940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4590,6 +4563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 260313826}
   machine: {fileID: 260313827}
+  timeBeforeFall: 5
 --- !u!114 &260313824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4861,6 +4835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 264576528}
   machine: {fileID: 264576529}
+  timeBeforeFall: 5
 --- !u!114 &264576526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5270,6 +5245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 296929022}
   machine: {fileID: 296929023}
+  timeBeforeFall: 5
 --- !u!114 &296929020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5403,6 +5379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 310334706}
   machine: {fileID: 310334707}
+  timeBeforeFall: 5
 --- !u!114 &310334704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5605,6 +5582,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 315708855}
   machine: {fileID: 315708856}
+  timeBeforeFall: 5
 --- !u!114 &315708853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5738,6 +5716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 318522219}
   machine: {fileID: 318522220}
+  timeBeforeFall: 5
 --- !u!114 &318522217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5892,6 +5871,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321331734}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &323166993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 132126, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 323166994}
+  - 33: {fileID: 323166996}
+  - 23: {fileID: 323166995}
+  m_Layer: 0
+  m_Name: Capsule
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323166994
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 432126, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 323166993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children: []
+  m_Father: {fileID: 1895688212}
+  m_RootOrder: 0
+--- !u!23 &323166995
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2332126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 323166993}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &323166996
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3332126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 323166993}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &326639729
 GameObject:
   m_ObjectHideFlags: 0
@@ -6009,6 +6046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 343569364}
   machine: {fileID: 343569365}
+  timeBeforeFall: 5
 --- !u!114 &343569362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6211,6 +6249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 357722718}
   machine: {fileID: 357722719}
+  timeBeforeFall: 5
 --- !u!114 &357722716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6413,6 +6452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 372597733}
   machine: {fileID: 372597734}
+  timeBeforeFall: 5
 --- !u!114 &372597731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6546,6 +6586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 376958929}
   machine: {fileID: 376958930}
+  timeBeforeFall: 5
 --- !u!114 &376958927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6914,6 +6955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 397970990}
   machine: {fileID: 397970991}
+  timeBeforeFall: 5
 --- !u!114 &397970988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7116,6 +7158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 400226652}
   machine: {fileID: 400226653}
+  timeBeforeFall: 5
 --- !u!114 &400226650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7484,6 +7527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 416157212}
   machine: {fileID: 416157213}
+  timeBeforeFall: 5
 --- !u!114 &416157210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7617,6 +7661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 424691531}
   machine: {fileID: 424691532}
+  timeBeforeFall: 5
 --- !u!114 &424691529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7750,6 +7795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 433385923}
   machine: {fileID: 433385924}
+  timeBeforeFall: 5
 --- !u!114 &433385921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7952,6 +7998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 440496121}
   machine: {fileID: 440496122}
+  timeBeforeFall: 5
 --- !u!114 &440496119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8154,6 +8201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 459658589}
   machine: {fileID: 459658590}
+  timeBeforeFall: 5
 --- !u!114 &459658587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8356,6 +8404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 461489219}
   machine: {fileID: 461489220}
+  timeBeforeFall: 5
 --- !u!114 &461489217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8627,6 +8676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 470556345}
   machine: {fileID: 470556346}
+  timeBeforeFall: 5
 --- !u!114 &470556343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8760,6 +8810,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 476973007}
   machine: {fileID: 476973008}
+  timeBeforeFall: 5
 --- !u!114 &476973005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9089,6 +9140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 487043055}
   machine: {fileID: 487043056}
+  timeBeforeFall: 5
 --- !u!114 &487043053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9222,6 +9274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 502888442}
   machine: {fileID: 502888443}
+  timeBeforeFall: 5
 --- !u!114 &502888440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9424,6 +9477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 509961662}
   machine: {fileID: 509961663}
+  timeBeforeFall: 5
 --- !u!114 &509961660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9557,6 +9611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 512029461}
   machine: {fileID: 512029462}
+  timeBeforeFall: 5
 --- !u!114 &512029459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9690,6 +9745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 521268164}
   machine: {fileID: 521268165}
+  timeBeforeFall: 5
 --- !u!114 &521268162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9823,6 +9879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 524493569}
   machine: {fileID: 524493570}
+  timeBeforeFall: 5
 --- !u!114 &524493567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9956,6 +10013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 531561342}
   machine: {fileID: 531561343}
+  timeBeforeFall: 5
 --- !u!114 &531561340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10089,6 +10147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 531760403}
   machine: {fileID: 531760404}
+  timeBeforeFall: 5
 --- !u!114 &531760401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10222,6 +10281,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 537042110}
   machine: {fileID: 537042111}
+  timeBeforeFall: 5
 --- !u!114 &537042108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10355,6 +10415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 545265554}
   machine: {fileID: 545265555}
+  timeBeforeFall: 5
 --- !u!114 &545265552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10695,6 +10756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 565557347}
   machine: {fileID: 565557348}
+  timeBeforeFall: 5
 --- !u!114 &565557345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11104,6 +11166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 595480342}
   machine: {fileID: 595480343}
+  timeBeforeFall: 5
 --- !u!114 &595480340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11403,6 +11466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 602397500}
   machine: {fileID: 602397501}
+  timeBeforeFall: 5
 --- !u!114 &602397498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11564,6 +11628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 603453353}
   machine: {fileID: 603453354}
+  timeBeforeFall: 5
 --- !u!114 &603453351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11973,6 +12038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 625786748}
   machine: {fileID: 625786749}
+  timeBeforeFall: 5
 --- !u!114 &625786746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12106,6 +12172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 628605365}
   machine: {fileID: 628605366}
+  timeBeforeFall: 5
 --- !u!114 &628605363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12239,6 +12306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 629275273}
   machine: {fileID: 629275274}
+  timeBeforeFall: 5
 --- !u!114 &629275271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12441,6 +12509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 638573787}
   machine: {fileID: 638573788}
+  timeBeforeFall: 5
 --- !u!114 &638573785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12574,6 +12643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 639337086}
   machine: {fileID: 639337087}
+  timeBeforeFall: 5
 --- !u!114 &639337084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12707,6 +12777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 639482532}
   machine: {fileID: 639482533}
+  timeBeforeFall: 5
 --- !u!114 &639482530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12840,6 +12911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 647432294}
   machine: {fileID: 647432295}
+  timeBeforeFall: 5
 --- !u!114 &647432292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13160,6 +13232,50 @@ Transform:
   - {fileID: 1416838766}
   m_Father: {fileID: 714217017}
   m_RootOrder: 31
+--- !u!1001 &680991080
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1148263201}
+    m_Modifications:
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+  m_RootGameObject: {fileID: 1622270260}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &688950264
 GameObject:
   m_ObjectHideFlags: 0
@@ -13195,6 +13311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 688950268}
   machine: {fileID: 688950269}
+  timeBeforeFall: 5
 --- !u!114 &688950266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13438,6 +13555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 692859385}
   machine: {fileID: 692859386}
+  timeBeforeFall: 5
 --- !u!114 &692859383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13640,6 +13758,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 700386230}
   machine: {fileID: 700386231}
+  timeBeforeFall: 5
 --- !u!114 &700386228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14071,6 +14190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 721270162}
   machine: {fileID: 721270163}
+  timeBeforeFall: 5
 --- !u!114 &721270160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14342,6 +14462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 728836837}
   machine: {fileID: 728836838}
+  timeBeforeFall: 5
 --- !u!114 &728836835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14475,6 +14596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 731307933}
   machine: {fileID: 731307934}
+  timeBeforeFall: 5
 --- !u!114 &731307931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14608,6 +14730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 732453986}
   machine: {fileID: 732453987}
+  timeBeforeFall: 5
 --- !u!114 &732453984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14879,6 +15002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 741576536}
   machine: {fileID: 741576537}
+  timeBeforeFall: 5
 --- !u!114 &741576534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15012,6 +15136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 745904445}
   machine: {fileID: 745904446}
+  timeBeforeFall: 5
 --- !u!114 &745904443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15214,6 +15339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 753083874}
   machine: {fileID: 753083875}
+  timeBeforeFall: 5
 --- !u!114 &753083872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15651,6 +15777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 771916655}
   machine: {fileID: 771916656}
+  timeBeforeFall: 5
 --- !u!114 &771916653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16039,6 +16166,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1148263201}
   m_RootOrder: 3
+--- !u!1001 &786018437
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1796922945}
+    m_Modifications:
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332126, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11432130, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_RootGameObject: {fileID: 1766515948}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &787446685
 GameObject:
   m_ObjectHideFlags: 0
@@ -16490,6 +16669,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 817820647}
   machine: {fileID: 817820648}
+  timeBeforeFall: 5
 --- !u!114 &817820645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16623,6 +16803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 829665395}
   machine: {fileID: 829665396}
+  timeBeforeFall: 5
 --- !u!114 &829665393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16894,6 +17075,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 836411649}
   machine: {fileID: 836411650}
+  timeBeforeFall: 5
 --- !u!114 &836411647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17165,6 +17347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 857489105}
   machine: {fileID: 857489106}
+  timeBeforeFall: 5
 --- !u!114 &857489103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17367,6 +17550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 865494032}
   machine: {fileID: 865494033}
+  timeBeforeFall: 5
 --- !u!114 &865494030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17638,6 +17822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 872887879}
   machine: {fileID: 872887880}
+  timeBeforeFall: 5
 --- !u!114 &872887877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17771,6 +17956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 875440378}
   machine: {fileID: 875440379}
+  timeBeforeFall: 5
 --- !u!114 &875440376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17932,6 +18118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 883317810}
   machine: {fileID: 883317811}
+  timeBeforeFall: 5
 --- !u!114 &883317808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18065,6 +18252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 885549843}
   machine: {fileID: 885549844}
+  timeBeforeFall: 5
 --- !u!114 &885549841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18198,6 +18386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 890021530}
   machine: {fileID: 890021531}
+  timeBeforeFall: 5
 --- !u!114 &890021528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18283,166 +18472,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
---- !u!1 &894906456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 894906457}
-  - 136: {fileID: 894906462}
-  - 114: {fileID: 894906461}
-  - 114: {fileID: 894906460}
-  - 114: {fileID: 894906459}
-  - 114: {fileID: 894906458}
-  m_Layer: 0
-  m_Name: Object
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &894906457
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894906456}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2, y: 0, z: 7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1374773285}
-  m_Father: {fileID: 1796922945}
-  m_RootOrder: 0
---- !u!114 &894906458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894906456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8263a4810f4cb546a5d2ee384c92aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 894906460}
-  machine: {fileID: 894906461}
---- !u!114 &894906459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894906456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85b42e74b219ff646bfe41d058750c65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 894906460}
-  machine: {fileID: 894906461}
---- !u!114 &894906460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894906456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20fd19eb0f005914c9c902b83214ec31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  machine: {fileID: 894906461}
-  states:
-  - {fileID: 894906459}
-  - {fileID: 894906458}
-  currentStates:
-  - {fileID: 894906459}
-  isCorrectChoice: 1
-  debug: 1
---- !u!114 &894906461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894906456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-  - {fileID: 894906460}
---- !u!136 &894906462
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 894906456}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: .25
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 2, z: 0}
---- !u!1 &897632143
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 897632144}
-  - 33: {fileID: 897632146}
-  - 23: {fileID: 897632145}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &897632144
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 897632143}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: .5}
-  m_Children: []
-  m_Father: {fileID: 75017621}
-  m_RootOrder: 0
---- !u!23 &897632145
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 897632143}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &897632146
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 897632143}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &907742306
 GameObject:
   m_ObjectHideFlags: 0
@@ -18756,6 +18785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 942365968}
   machine: {fileID: 942365969}
+  timeBeforeFall: 5
 --- !u!114 &942365966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18917,6 +18947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 951554453}
   machine: {fileID: 951554454}
+  timeBeforeFall: 5
 --- !u!114 &951554451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19119,6 +19150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 958431862}
   machine: {fileID: 958431863}
+  timeBeforeFall: 5
 --- !u!114 &958431860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19280,6 +19312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 973050025}
   machine: {fileID: 973050026}
+  timeBeforeFall: 5
 --- !u!114 &973050023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19413,6 +19446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 973772066}
   machine: {fileID: 973772067}
+  timeBeforeFall: 5
 --- !u!114 &973772064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19822,6 +19856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 987266483}
   machine: {fileID: 987266484}
+  timeBeforeFall: 5
 --- !u!114 &987266481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20024,6 +20059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 996681812}
   machine: {fileID: 996681813}
+  timeBeforeFall: 5
 --- !u!114 &996681810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20157,6 +20193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1002348621}
   machine: {fileID: 1002348622}
+  timeBeforeFall: 5
 --- !u!114 &1002348619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20359,6 +20396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1004306901}
   machine: {fileID: 1004306902}
+  timeBeforeFall: 5
 --- !u!114 &1004306899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20561,6 +20599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1021489716}
   machine: {fileID: 1021489717}
+  timeBeforeFall: 5
 --- !u!114 &1021489714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20694,6 +20733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1027258657}
   machine: {fileID: 1027258658}
+  timeBeforeFall: 5
 --- !u!114 &1027258655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20896,6 +20936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1033040076}
   machine: {fileID: 1033040077}
+  timeBeforeFall: 5
 --- !u!114 &1033040074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21167,6 +21208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1053084842}
   machine: {fileID: 1053084843}
+  timeBeforeFall: 5
 --- !u!114 &1053084840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21369,6 +21411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1060108813}
   machine: {fileID: 1060108814}
+  timeBeforeFall: 5
 --- !u!114 &1060108811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21640,6 +21683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1065396574}
   machine: {fileID: 1065396575}
+  timeBeforeFall: 5
 --- !u!114 &1065396572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21773,6 +21817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1065814448}
   machine: {fileID: 1065814449}
+  timeBeforeFall: 5
 --- !u!114 &1065814446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21975,6 +22020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1073564523}
   machine: {fileID: 1073564524}
+  timeBeforeFall: 5
 --- !u!114 &1073564521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22108,6 +22154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1078921649}
   machine: {fileID: 1078921650}
+  timeBeforeFall: 5
 --- !u!114 &1078921647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22241,6 +22288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1082515745}
   machine: {fileID: 1082515746}
+  timeBeforeFall: 5
 --- !u!114 &1082515743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22637,6 +22685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1119075732}
   machine: {fileID: 1119075733}
+  timeBeforeFall: 5
 --- !u!114 &1119075730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22839,6 +22888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1125118404}
   machine: {fileID: 1125118405}
+  timeBeforeFall: 5
 --- !u!114 &1125118402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22972,6 +23022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1128003947}
   machine: {fileID: 1128003948}
+  timeBeforeFall: 5
 --- !u!114 &1128003945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23105,6 +23156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1130492757}
   machine: {fileID: 1130492758}
+  timeBeforeFall: 5
 --- !u!114 &1130492755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23238,6 +23290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1133682545}
   machine: {fileID: 1133682546}
+  timeBeforeFall: 5
 --- !u!114 &1133682543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23537,6 +23590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1138197620}
   machine: {fileID: 1138197621}
+  timeBeforeFall: 5
 --- !u!114 &1138197618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23670,6 +23724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1147690580}
   machine: {fileID: 1147690581}
+  timeBeforeFall: 5
 --- !u!114 &1147690578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23763,11 +23818,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1148263201}
-  - 114: {fileID: 1148263206}
-  - 114: {fileID: 1148263205}
-  - 114: {fileID: 1148263204}
-  - 114: {fileID: 1148263203}
-  - 114: {fileID: 1148263202}
   m_Layer: 0
   m_Name: Room
   m_TagString: Untagged
@@ -23790,78 +23840,9 @@ Transform:
   - {fileID: 803721912}
   - {fileID: 785932684}
   - {fileID: 1796922945}
+  - {fileID: 1622270261}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!114 &1148263202
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148263200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32e1a7291219d4b4386940367a9a0d3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 1148263205}
-  machine: {fileID: 1148263206}
---- !u!114 &1148263203
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148263200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c6e84779d42bb44f9e3fe701e627afe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 1148263205}
-  machine: {fileID: 1148263206}
---- !u!114 &1148263204
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148263200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef33f777bff5e2042aa728557d2e43b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layer: {fileID: 1148263205}
-  machine: {fileID: 1148263206}
---- !u!114 &1148263205
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148263200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577b070b1c734cf46a6dae1899544aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  machine: {fileID: 1148263206}
-  states:
-  - {fileID: 1148263203}
-  - {fileID: 1148263202}
-  - {fileID: 1148263204}
-  currentStates:
-  - {fileID: 1148263203}
---- !u!114 &1148263206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148263200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-  - {fileID: 1148263205}
 --- !u!1 &1150148579
 GameObject:
   m_ObjectHideFlags: 0
@@ -24007,6 +23988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1160157477}
   machine: {fileID: 1160157478}
+  timeBeforeFall: 5
 --- !u!114 &1160157475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24140,6 +24122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1160956069}
   machine: {fileID: 1160956070}
+  timeBeforeFall: 5
 --- !u!114 &1160956067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24273,6 +24256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1162383032}
   machine: {fileID: 1162383033}
+  timeBeforeFall: 5
 --- !u!114 &1162383030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24406,6 +24390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1165981709}
   machine: {fileID: 1165981710}
+  timeBeforeFall: 5
 --- !u!114 &1165981707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24539,6 +24524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1171164853}
   machine: {fileID: 1171164854}
+  timeBeforeFall: 5
 --- !u!114 &1171164851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24879,6 +24865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1214169106}
   machine: {fileID: 1214169107}
+  timeBeforeFall: 5
 --- !u!114 &1214169104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25081,6 +25068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1217386968}
   machine: {fileID: 1217386969}
+  timeBeforeFall: 5
 --- !u!114 &1217386966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25515,6 +25503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1244102006}
   machine: {fileID: 1244102007}
+  timeBeforeFall: 5
 --- !u!114 &1244102004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25648,6 +25637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1256563335}
   machine: {fileID: 1256563336}
+  timeBeforeFall: 5
 --- !u!114 &1256563333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26124,6 +26114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1297586813}
   machine: {fileID: 1297586814}
+  timeBeforeFall: 5
 --- !u!114 &1297586811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26257,6 +26248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1311096840}
   machine: {fileID: 1311096841}
+  timeBeforeFall: 5
 --- !u!114 &1311096838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26390,6 +26382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1313044191}
   machine: {fileID: 1313044192}
+  timeBeforeFall: 5
 --- !u!114 &1313044189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26523,6 +26516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1322914389}
   machine: {fileID: 1322914390}
+  timeBeforeFall: 5
 --- !u!114 &1322914387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26608,6 +26602,54 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1001 &1325842099
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1796922945}
+    m_Modifications:
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332126, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_RootGameObject: {fileID: 1895688211}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1333137847
 GameObject:
   m_ObjectHideFlags: 0
@@ -26794,6 +26836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1361008893}
   machine: {fileID: 1361008894}
+  timeBeforeFall: 5
 --- !u!114 &1361008891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26948,62 +26991,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1364774778}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1374773284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1374773285}
-  - 33: {fileID: 1374773287}
-  - 23: {fileID: 1374773286}
-  m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1374773285
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1374773284}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: .5}
-  m_Children: []
-  m_Father: {fileID: 894906457}
-  m_RootOrder: 0
---- !u!23 &1374773286
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1374773284}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &1374773287
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1374773284}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1384729491
 GameObject:
   m_ObjectHideFlags: 0
@@ -27522,6 +27509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1404725876}
   machine: {fileID: 1404725877}
+  timeBeforeFall: 5
 --- !u!114 &1404725874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28166,6 +28154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1423541023}
   machine: {fileID: 1423541024}
+  timeBeforeFall: 5
 --- !u!114 &1423541021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28465,6 +28454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1443468075}
   machine: {fileID: 1443468076}
+  timeBeforeFall: 5
 --- !u!114 &1443468073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28667,6 +28657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1448202110}
   machine: {fileID: 1448202111}
+  timeBeforeFall: 5
 --- !u!114 &1448202108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28966,6 +28957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1454161098}
   machine: {fileID: 1454161099}
+  timeBeforeFall: 5
 --- !u!114 &1454161096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29099,6 +29091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1455681128}
   machine: {fileID: 1455681129}
+  timeBeforeFall: 5
 --- !u!114 &1455681126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29232,6 +29225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1456750592}
   machine: {fileID: 1456750593}
+  timeBeforeFall: 5
 --- !u!114 &1456750590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29365,6 +29359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1467524297}
   machine: {fileID: 1467524298}
+  timeBeforeFall: 5
 --- !u!114 &1467524295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29567,6 +29562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1476607555}
   machine: {fileID: 1476607556}
+  timeBeforeFall: 5
 --- !u!114 &1476607553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29728,6 +29724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1477475501}
   machine: {fileID: 1477475502}
+  timeBeforeFall: 5
 --- !u!114 &1477475499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29861,6 +29858,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1478330034}
   machine: {fileID: 1478330035}
+  timeBeforeFall: 5
 --- !u!114 &1478330032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30132,6 +30130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1491979106}
   machine: {fileID: 1491979107}
+  timeBeforeFall: 5
 --- !u!114 &1491979104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30528,6 +30527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1511541392}
   machine: {fileID: 1511541393}
+  timeBeforeFall: 5
 --- !u!114 &1511541390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30661,6 +30661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1515243482}
   machine: {fileID: 1515243483}
+  timeBeforeFall: 5
 --- !u!114 &1515243480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30863,6 +30864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1520599423}
   machine: {fileID: 1520599424}
+  timeBeforeFall: 5
 --- !u!114 &1520599421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30996,6 +30998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1522062314}
   machine: {fileID: 1522062315}
+  timeBeforeFall: 5
 --- !u!114 &1522062312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31198,6 +31201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1538795506}
   machine: {fileID: 1538795507}
+  timeBeforeFall: 5
 --- !u!114 &1538795504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31594,6 +31598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1558086998}
   machine: {fileID: 1558086999}
+  timeBeforeFall: 5
 --- !u!114 &1558086996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32238,6 +32243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1602409246}
   machine: {fileID: 1602409247}
+  timeBeforeFall: 5
 --- !u!114 &1602409244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32371,6 +32377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1609109117}
   machine: {fileID: 1609109118}
+  timeBeforeFall: 5
 --- !u!114 &1609109115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32504,6 +32511,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1610526244}
   machine: {fileID: 1610526245}
+  timeBeforeFall: 5
 --- !u!114 &1610526242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32637,6 +32645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1611534316}
   machine: {fileID: 1611534317}
+  timeBeforeFall: 5
 --- !u!114 &1611534314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32860,6 +32869,118 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1616922433}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1622270260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1622270261}
+  - 114: {fileID: 1622270266}
+  - 114: {fileID: 1622270265}
+  - 114: {fileID: 1622270264}
+  - 114: {fileID: 1622270263}
+  - 114: {fileID: 1622270262}
+  m_Layer: 0
+  m_Name: PuzzleSnake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1622270261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  m_GameObject: {fileID: 1622270260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1148263201}
+  m_RootOrder: 5
+--- !u!114 &1622270262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c,
+    type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  m_GameObject: {fileID: 1622270260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e1a7291219d4b4386940367a9a0d3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1622270265}
+  machine: {fileID: 1622270266}
+--- !u!114 &1622270263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432148, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c,
+    type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  m_GameObject: {fileID: 1622270260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6e84779d42bb44f9e3fe701e627afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1622270265}
+  machine: {fileID: 1622270266}
+--- !u!114 &1622270264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432146, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c,
+    type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  m_GameObject: {fileID: 1622270260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef33f777bff5e2042aa728557d2e43b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1622270265}
+  machine: {fileID: 1622270266}
+--- !u!114 &1622270265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432144, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c,
+    type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  m_GameObject: {fileID: 1622270260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b070b1c734cf46a6dae1899544aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machine: {fileID: 1622270266}
+  states:
+  - {fileID: 1622270263}
+  - {fileID: 1622270262}
+  - {fileID: 1622270264}
+  currentStates:
+  - {fileID: 1622270263}
+  successString: 
+  failString: 
+  doors: []
+  playerHasLastKey: 0
+  player: {fileID: 0}
+--- !u!114 &1622270266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432142, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c,
+    type: 2}
+  m_PrefabInternal: {fileID: 680991080}
+  m_GameObject: {fileID: 1622270260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - {fileID: 1622270265}
 --- !u!1 &1624462916
 GameObject:
   m_ObjectHideFlags: 0
@@ -32908,6 +33029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1624462921}
   machine: {fileID: 1624462922}
+  timeBeforeFall: 5
 --- !u!114 &1624462919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33041,6 +33163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1632988193}
   machine: {fileID: 1632988194}
+  timeBeforeFall: 5
 --- !u!114 &1632988191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33243,6 +33366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1637669056}
   machine: {fileID: 1637669057}
+  timeBeforeFall: 5
 --- !u!114 &1637669054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33514,6 +33638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1650973053}
   machine: {fileID: 1650973054}
+  timeBeforeFall: 5
 --- !u!114 &1650973051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33779,6 +33904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1680994212}
   machine: {fileID: 1680994213}
+  timeBeforeFall: 5
 --- !u!114 &1680994210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33912,6 +34038,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1685941374}
   machine: {fileID: 1685941375}
+  timeBeforeFall: 5
 --- !u!114 &1685941372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34045,6 +34172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1689123086}
   machine: {fileID: 1689123087}
+  timeBeforeFall: 5
 --- !u!114 &1689123084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34178,6 +34306,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1690265165}
   machine: {fileID: 1690265166}
+  timeBeforeFall: 5
 --- !u!114 &1690265163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34380,6 +34509,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1710931218}
   machine: {fileID: 1710931219}
+  timeBeforeFall: 5
 --- !u!114 &1710931216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34513,6 +34643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1717260632}
   machine: {fileID: 1717260633}
+  timeBeforeFall: 5
 --- !u!114 &1717260630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34646,6 +34777,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1718833180}
   machine: {fileID: 1718833181}
+  timeBeforeFall: 5
 --- !u!114 &1718833178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34986,6 +35118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1725186568}
   machine: {fileID: 1725186569}
+  timeBeforeFall: 5
 --- !u!114 &1725186566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35326,6 +35459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1732191749}
   machine: {fileID: 1732191750}
+  timeBeforeFall: 5
 --- !u!114 &1732191747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35528,6 +35662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1739314479}
   machine: {fileID: 1739314480}
+  timeBeforeFall: 5
 --- !u!114 &1739314477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35730,6 +35865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1755478635}
   machine: {fileID: 1755478636}
+  timeBeforeFall: 5
 --- !u!114 &1755478633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35815,6 +35951,118 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1766515948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 132128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1766515949}
+  - 136: {fileID: 1766515954}
+  - 114: {fileID: 1766515953}
+  - 114: {fileID: 1766515952}
+  - 114: {fileID: 1766515951}
+  - 114: {fileID: 1766515950}
+  m_Layer: 0
+  m_Name: KeySnake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766515949
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 1766515948}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 0, z: 7}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children:
+  - {fileID: 102568113}
+  m_Father: {fileID: 1796922945}
+  m_RootOrder: 1
+--- !u!114 &1766515950
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 11432126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 1766515948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347c5778ddce33242b47088d885cb633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1766515952}
+  machine: {fileID: 1766515953}
+--- !u!114 &1766515951
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 11432128, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 1766515948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4fef0c78440644f9f88e7b93cd9e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1766515952}
+  machine: {fileID: 1766515953}
+--- !u!114 &1766515952
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 11432130, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 1766515948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d71c31e7fba1b946b77b91817ff5cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machine: {fileID: 1766515953}
+  states:
+  - {fileID: 1766515951}
+  - {fileID: 1766515950}
+  currentStates:
+  - {fileID: 1766515951}
+  index: 1
+  debug: 1
+  nextKey: {fileID: 0}
+  isNextKey: 0
+  puzzle: {fileID: 0}
+--- !u!114 &1766515953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432132, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 1766515948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - {fileID: 1766515952}
+--- !u!136 &1766515954
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13632126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 786018437}
+  m_GameObject: {fileID: 1766515948}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .25
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &1770017587
 GameObject:
   m_ObjectHideFlags: 0
@@ -35932,6 +36180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1782290716}
   machine: {fileID: 1782290717}
+  timeBeforeFall: 5
 --- !u!114 &1782290714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36065,6 +36314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1790379467}
   machine: {fileID: 1790379468}
+  timeBeforeFall: 5
 --- !u!114 &1790379465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36382,8 +36632,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 894906457}
-  - {fileID: 75017621}
+  - {fileID: 1895688212}
+  - {fileID: 1766515949}
   m_Father: {fileID: 1148263201}
   m_RootOrder: 4
 --- !u!1 &1799055872
@@ -36572,6 +36822,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1806654088}
   machine: {fileID: 1806654089}
+  timeBeforeFall: 5
 --- !u!114 &1806654086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36774,6 +37025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1808651390}
   machine: {fileID: 1808651391}
+  timeBeforeFall: 5
 --- !u!114 &1808651388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36976,6 +37228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1822298005}
   machine: {fileID: 1822298006}
+  timeBeforeFall: 5
 --- !u!114 &1822298003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37109,6 +37362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1824083153}
   machine: {fileID: 1824083154}
+  timeBeforeFall: 5
 --- !u!114 &1824083151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37380,6 +37634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1831466423}
   machine: {fileID: 1831466424}
+  timeBeforeFall: 5
 --- !u!114 &1831466421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37513,6 +37768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1831802304}
   machine: {fileID: 1831802305}
+  timeBeforeFall: 5
 --- !u!114 &1831802302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37646,6 +37902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1837093126}
   machine: {fileID: 1837093127}
+  timeBeforeFall: 5
 --- !u!114 &1837093124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37779,6 +38036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1837276899}
   machine: {fileID: 1837276900}
+  timeBeforeFall: 5
 --- !u!114 &1837276897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38257,6 +38515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1868414244}
   machine: {fileID: 1868414245}
+  timeBeforeFall: 5
 --- !u!114 &1868414242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38694,6 +38953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1888563686}
   machine: {fileID: 1888563687}
+  timeBeforeFall: 5
 --- !u!114 &1888563684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38848,6 +39108,118 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890939145}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1895688211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 132128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1895688212}
+  - 136: {fileID: 1895688217}
+  - 114: {fileID: 1895688216}
+  - 114: {fileID: 1895688215}
+  - 114: {fileID: 1895688214}
+  - 114: {fileID: 1895688213}
+  m_Layer: 0
+  m_Name: KeySnake
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1895688212
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 432128, guid: 92fed9f75408e4041adc194903a0c94d, type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 1895688211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0, z: 7}
+  m_LocalScale: {x: .5, y: .5, z: .5}
+  m_Children:
+  - {fileID: 323166994}
+  m_Father: {fileID: 1796922945}
+  m_RootOrder: 0
+--- !u!114 &1895688213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 1895688211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347c5778ddce33242b47088d885cb633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1895688215}
+  machine: {fileID: 1895688216}
+--- !u!114 &1895688214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432128, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 1895688211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a4fef0c78440644f9f88e7b93cd9e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 1895688215}
+  machine: {fileID: 1895688216}
+--- !u!114 &1895688215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432130, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 1895688211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d71c31e7fba1b946b77b91817ff5cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machine: {fileID: 1895688216}
+  states:
+  - {fileID: 1895688214}
+  - {fileID: 1895688213}
+  currentStates:
+  - {fileID: 1895688214}
+  index: 0
+  debug: 1
+  nextKey: {fileID: 0}
+  isNextKey: 0
+  puzzle: {fileID: 0}
+--- !u!114 &1895688216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11432132, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 1895688211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7208d05a13589c84fbf2b1d9c12cafe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layers:
+  - {fileID: 1895688215}
+--- !u!136 &1895688217
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13632126, guid: 92fed9f75408e4041adc194903a0c94d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1325842099}
+  m_GameObject: {fileID: 1895688211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: .25
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &1901504666
 GameObject:
   m_ObjectHideFlags: 0
@@ -38896,6 +39268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1901504671}
   machine: {fileID: 1901504672}
+  timeBeforeFall: 5
 --- !u!114 &1901504669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39097,6 +39470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1909824612}
   machine: {fileID: 1909824613}
+  timeBeforeFall: 5
 --- !u!114 &1909824610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39230,6 +39604,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1910135750}
   machine: {fileID: 1910135751}
+  timeBeforeFall: 5
 --- !u!114 &1910135748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39501,6 +39876,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1924955938}
   machine: {fileID: 1924955939}
+  timeBeforeFall: 5
 --- !u!114 &1924955936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39772,6 +40148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1932834027}
   machine: {fileID: 1932834028}
+  timeBeforeFall: 5
 --- !u!114 &1932834025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39961,6 +40338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1941513089}
   machine: {fileID: 1941513090}
+  timeBeforeFall: 5
 --- !u!114 &1941513087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40301,6 +40679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1960395588}
   machine: {fileID: 1960395589}
+  timeBeforeFall: 5
 --- !u!114 &1960395586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40434,6 +40813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1962297116}
   machine: {fileID: 1962297117}
+  timeBeforeFall: 5
 --- !u!114 &1962297114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40708,6 +41088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1968624777}
   machine: {fileID: 1968624778}
+  timeBeforeFall: 5
 --- !u!114 &1968624775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41145,6 +41526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1988608440}
   machine: {fileID: 1988608441}
+  timeBeforeFall: 5
 --- !u!114 &1988608438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41278,6 +41660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 1992673843}
   machine: {fileID: 1992673844}
+  timeBeforeFall: 5
 --- !u!114 &1992673841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41618,6 +42001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2019170757}
   machine: {fileID: 2019170758}
+  timeBeforeFall: 5
 --- !u!114 &2019170755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41751,6 +42135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2025445641}
   machine: {fileID: 2025445642}
+  timeBeforeFall: 5
 --- !u!114 &2025445639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41884,6 +42269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2026286317}
   machine: {fileID: 2026286318}
+  timeBeforeFall: 5
 --- !u!114 &2026286315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42017,6 +42403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2031607733}
   machine: {fileID: 2031607734}
+  timeBeforeFall: 5
 --- !u!114 &2031607731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42219,6 +42606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2040544621}
   machine: {fileID: 2040544622}
+  timeBeforeFall: 5
 --- !u!114 &2040544619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42352,6 +42740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2041946037}
   machine: {fileID: 2041946038}
+  timeBeforeFall: 5
 --- !u!114 &2041946035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42485,6 +42874,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2045037683}
   machine: {fileID: 2045037684}
+  timeBeforeFall: 5
 --- !u!114 &2045037681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42618,6 +43008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2055397440}
   machine: {fileID: 2055397441}
+  timeBeforeFall: 5
 --- !u!114 &2055397438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42820,6 +43211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2058429747}
   machine: {fileID: 2058429748}
+  timeBeforeFall: 5
 --- !u!114 &2058429745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42953,6 +43345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2067681651}
   machine: {fileID: 2067681652}
+  timeBeforeFall: 5
 --- !u!114 &2067681649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43086,6 +43479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2070565616}
   machine: {fileID: 2070565617}
+  timeBeforeFall: 5
 --- !u!114 &2070565614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43219,6 +43613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2072560685}
   machine: {fileID: 2072560686}
+  timeBeforeFall: 5
 --- !u!114 &2072560683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43697,6 +44092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2091695225}
   machine: {fileID: 2091695226}
+  timeBeforeFall: 5
 --- !u!114 &2091695223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43830,6 +44226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2094941313}
   machine: {fileID: 2094941314}
+  timeBeforeFall: 5
 --- !u!114 &2094941311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44032,6 +44429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2107294812}
   machine: {fileID: 2107294813}
+  timeBeforeFall: 5
 --- !u!114 &2107294810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44372,6 +44770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2112193576}
   machine: {fileID: 2112193577}
+  timeBeforeFall: 5
 --- !u!114 &2112193574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44505,6 +44904,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2114730131}
   machine: {fileID: 2114730132}
+  timeBeforeFall: 5
 --- !u!114 &2114730129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44914,6 +45314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2137886376}
   machine: {fileID: 2137886377}
+  timeBeforeFall: 5
 --- !u!114 &2137886374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45185,6 +45586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer: {fileID: 2140060505}
   machine: {fileID: 2140060506}
+  timeBeforeFall: 5
 --- !u!114 &2140060503
 MonoBehaviour:
   m_ObjectHideFlags: 0

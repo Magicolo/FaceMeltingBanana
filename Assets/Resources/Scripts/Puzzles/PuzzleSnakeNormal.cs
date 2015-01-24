@@ -5,15 +5,19 @@ using Magicolo;
 
 public class PuzzleSnakeNormal : State {
 
-	public GameObject player;
-	
 	PuzzleSnake Layer {
 		get { return ((PuzzleSnake)layer); }
 	}
 	
 	public override void OnUpdate() {
-		if (player.transform.position.y < -10) {
+		if (Layer.player.transform.position.y < -10) {
 			SwitchState<PuzzleSnakeFail>();
+		}
+		
+		if (Layer.playerHasLastKey) {
+			foreach (Door door in Layer.doors) {
+				door.Open();
+			}
 		}
 	}
 }
