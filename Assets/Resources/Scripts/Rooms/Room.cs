@@ -9,7 +9,7 @@ public class Room : MonoBehaviour {
 	public int width;
 	public int height;
 	
-	public GameObject roomPrefab
+	public GameObject roomPrefab;
 	
 	void Start () {
 	
