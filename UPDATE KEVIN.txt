@@ -1,0 +1,29 @@
+NEW ASSETS
+
+Prefabs:
+-TileBasic
+	Simple tile; cube with collider...
+	
+-TileSnake (Snake puzzle)
+	Tiles that detect the gameObject named "Player" and when it exits trigger, the tile falls
+	Note: The tile is not destroyed when falling
+
+-TileColor (Color tile path puzzle)
+	Tiles that will light up correctly (green) if the gameObject named "Player" steps on the TileColor set in the 'NextTile' field on the StateMachine
+	A path can be built by setting the 'IsNextTile' field to true on the first tile of the path and then chaining TileColor with each of theirs 'NextTile' field
+	Note: The path creation should be automated
+	
+-WallBasic
+	Simple wall; cube with collider again...
+	
+-WallFake (Invisible wall puzzle)
+	Even simpler wall; cube WITHOUT collider...
+	
+-RiddleItem (Blue/Red pill puzzle)
+	Pickable item by the gameObject named "Player" then destroyed; The 'IsCorrectChoice' field will determine if the player picked the right item
+	Note: Should send a message to the 'PuzzleManager' (that doesn't exist yet) before being destroyed
+	
+	
+General notes:
+-All missing logic should be added to the states or state layers associated with the StateMachine component when it exists
+-There should be basic tiles under walls

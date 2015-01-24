@@ -10,11 +10,16 @@ public class TileSnakeFalling : State {
 	}
 	
 	public override void OnEnter() {
-		if (Layer.debug){
+		if (Layer.debug) {
 			Layer.cubeMeshRenderer.material.color = Color.red;
 		}
+		
 		rigidbody.isKinematic = false;
 		rigidbody.WakeUp();
+		
+		foreach (BoxCollider cubeBoxCollider in Layer.cubeBoxColliders) {
+			cubeBoxCollider.enabled = false;
+		}
 	}
 }
 

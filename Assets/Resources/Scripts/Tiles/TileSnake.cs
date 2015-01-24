@@ -9,4 +9,8 @@ public class TileSnake : StateLayer {
 	
 	MeshRenderer _cubeMeshRenderer;
 	public MeshRenderer cubeMeshRenderer { get { return _cubeMeshRenderer ? _cubeMeshRenderer : (_cubeMeshRenderer = GetComponentInChildren<MeshRenderer>()); } }
+
+	BoxCollider[] _cubeBoxColliders;
+	public BoxCollider[] cubeBoxColliders { get { return _cubeBoxColliders ?? (_cubeBoxColliders = GetComponentsInChildren<BoxCollider>()); } }
+	
 }
