@@ -47,7 +47,7 @@ MonoBehaviour:
   - {fileID: 11432144}
 --- !u!114 &11432144
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132150}
@@ -70,7 +70,7 @@ MonoBehaviour:
   player: {fileID: 0}
 --- !u!114 &11432146
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132150}
@@ -83,7 +83,7 @@ MonoBehaviour:
   machine: {fileID: 11432142}
 --- !u!114 &11432148
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132150}
@@ -96,7 +96,7 @@ MonoBehaviour:
   machine: {fileID: 11432142}
 --- !u!114 &11432150
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132150}

@@ -13,18 +13,24 @@ public abstract class TiledMapLoader {
 	protected int mapWidth;
 	protected int mapHeight;
 	
+	protected Dictionary<Int32,Dictionary<String,String>> tilesetTiles;
+	
 	private XDocument document;
+	private XElement map;
+	
 	
 	public void loadFromFile(string fileName){
 		string text = System.IO.File.ReadAllText(fileName);
+		tilesetTiles = new Dictionary<int, Dictionary<string, string>>();
         loadLevel(text);
 	}
 	
 	private void loadLevel(string levelFileContent){
 		document = XDocument.Parse(levelFileContent);
-		
+		map = document.Element("map");
 		loadMapAttributes();
         loadMapProperties();
+        loadTilesets();
         loadLevelsLayers();
         loadLevelsObjectGroup();
 	}
@@ -38,6 +44,28 @@ public abstract class TiledMapLoader {
 	}
 	protected abstract void afterMapAttributesLoaded();
 
+	void loadTilesets(){
+		var tileset = map.Element("tileset");
+		foreach (var tile in tileset.Elements("tile")) {
+			int id = this.parseInt(tile.Attribute("id").Value);
+			
+			Dictionary<string, string> dictionnary = makePropertiesDictionary(tile.Element("properties"));
+			tilesetTiles.Add(id, dictionnary);
+		}
+	}
+	
+	private Dictionary<string, string> makePropertiesDictionary(XElement propertiesElement){
+		Dictionary<string, string> properties = new Dictionary<string, string>();
+		if(propertiesElement == null) return properties;
+		
+		foreach (var property in propertiesElement.Elements("property")) {
+			string name = property.Attribute("name").Value;
+			string value = property.Attribute("value").Value;
+			properties.Add(name,value);
+		}
+		
+		return properties;
+	}
 	
 	
 	void loadLevelsObjectGroup(){
