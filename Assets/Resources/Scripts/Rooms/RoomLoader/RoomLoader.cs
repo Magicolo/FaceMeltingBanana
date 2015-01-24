@@ -80,9 +80,19 @@ public class RoomLoader : TiledMapLoader {
 			if(currentUnityLayer != -1){
 				newGo.gameObject.layer = currentUnityLayer;
 			}
+			if(this.tilesetTiles.ContainsKey(id)){
+				Dictionary<String,String> properties = this.tilesetTiles[id];
+				addPropertiesTo(newGo, properties);
+			}
 		}
 	}
 
+	void addPropertiesTo(GameObject newGo, Dictionary<string, string> properties){
+		if(properties.ContainsKey("SnakeKey")){
+			KeySnake ks = newGo.GetComponent<KeySnake>();
+			ks.index = Int32.Parse(properties["SnakeKey"]);
+		}
+	}
 	GameObject getNewPrefab(int id){
 		if(roomLoaderLinker.blockPrefabs.Count < id){
 			Debug.LogError("Une tuile d'id " + id + " n'a pas de prefab disponible dans le linker.");
