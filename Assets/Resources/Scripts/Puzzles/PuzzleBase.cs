@@ -11,12 +11,19 @@ public class PuzzleBase : StateLayer {
 	
 	public override void OnStart() {
 		base.OnStart();
-		
+
 		doors = new List<Door>();
 		
-		foreach (Door child in transform.parent.GetComponentsInChildren<Door>()) {
-			doors.Add(child.GetComponent<Door>());
+		foreach (Door door in transform.parent.GetComponentsInChildren<Door>()) {
+			doors.Add(door);
+			door.puzzle = this;
 		}
+	}
+	
+	public virtual void Success() {
+	}
+	
+	public virtual void Fail() {
 	}
 }
 
