@@ -17,6 +17,7 @@ public class KeySnakePickedUp : State {
 		if (Layer.isNextKey) {
 			if (Layer.nextKey == null) {
 				Layer.puzzle.playerHasLastKey = true;
+				Layer.puzzle.OpenDoors();
 			}
 			else {
 				Layer.nextKey.isNextKey = true;
