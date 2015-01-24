@@ -12,6 +12,8 @@ public class RoomLoader : TiledMapLoader {
 
 	
 	private GameObject parentGameObject;
+	private Room room;
+	
 	private Transform wallParent;
 	private Transform floorParent;
 	private Transform ceilingParent;
@@ -37,13 +39,22 @@ public class RoomLoader : TiledMapLoader {
 		foreach (var element in this.parentGameObject.GetChildren()) {
 			Object.DestroyImmediate(element);
 		}
+		room = parentGameObject.GetOrAddComponent<Room>();
 	}
+	
+	
 	protected override void loadMapProperty(string name, string value){
-		
+		if(name == "PlayerStartingPosition"){
+			string[] positions = value.Split(new char[]{','});
+			float x = float.Parse(positions[0]);
+			float z = this.room.height - float.Parse(positions[1]);
+			room.startingPosition = new Vector3(x,1,z);
+		}
 	}
 
 	protected override void afterMapAttributesLoaded(){
-		
+		this.room.width = this.mapWidth;
+		this.room.height = this.mapHeight;
 	}
 
 	protected override void afterMapPropertiesLoaded(){
@@ -52,22 +63,27 @@ public class RoomLoader : TiledMapLoader {
 	
 	protected override void addTile(string layerName, int x, int y, int id){
 		GameObject newPrefab = getNewPrefab(id);
-		GameObject newGo;
 		
-		Vector3 newP = new Vector3(x,0,y);
 		if(newPrefab != null){
+			Vector3 newP = new Vector3(x,0,y);
+			Transform parent = null;
+			int layer = -1;
 			if(layerName == "Wall"){
-				GameObjectExtend.createClone(newPrefab,"Wall", wallParent, newP);
+				parent = wallParent;
 			}else if(layerName == "Floor"){
-				GameObjectExtend.createClone(newPrefab, "Floor", floorParent, newP);
+				parent = floorParent;
 			}else if(layerName == "CeilingP1"){
-				newGo = GameObjectExtend.createClone(newPrefab, "CeilingP1", ceilingParent, newP);
-				newGo.gameObject.layer = LayerMask.NameToLayer("P1 Only");
+				parent = ceilingParent;
+				layer = LayerMask.NameToLayer("P1 Only");
 			}else if(layerName == "RoofP2"){
-				newGo = GameObjectExtend.createClone(newPrefab, "RoofP2", roofParent, newP);
-				newGo.gameObject.layer = LayerMask.NameToLayer("P2 Only");
+				parent = roofParent;
+				layer = LayerMask.NameToLayer("P2 Only");
 			}else if(layerName == "Object"){
-				GameObjectExtend.createClone(newPrefab, "Object", objectsParent, newP);
+				parent = objectsParent;
+			}
+			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, parent, newP);
+			if(layer != -1){
+				newGo.gameObject.layer = layer;
 			}
 		}
 	}
