@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using Magicolo;
 
 public class RoomFlowManager : MonoBehaviour {
 
@@ -31,9 +32,12 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	public void switchToRoom(Room room){
 		if(this.currentRoom != null){
+			foreach (var element in this.currentRoom.gameObject.GetChildren()) {
+				Destroy(element);
+			}
 			this.currentRoom.gameObject.SetActive(false);
 		}
-		room.gameObject.SetActive(true);
+		GameObjectExtend.createClone(room.roomPrefab,"RoomThings", room.transform, Vector3.zero);
 		this.currentRoom = room;
 		player.transform.position = room.startingPosition;
 		
