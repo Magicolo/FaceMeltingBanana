@@ -41,13 +41,31 @@ public class RoomLoader : TiledMapLoader {
 			float x = float.Parse(positions[0]);
 			float z = this.room.height - float.Parse(positions[1]);
 			room.startingPosition = new Vector3(x,1,z);
-		}else if(name == "PuzzleId"){
+		}else if(name == "-PuzzleId"){
 			int index = Int32.Parse(value);
 			GameObject prefab = this.roomLoaderLinker.PuzzleBasePrefabs[index];
 			GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
+		}else if(name == "=FloorButtonSequence"){
+			putButtonSequence(value);
 		}
 	}
 
+	void putButtonSequence(string value){
+		String[] keys = value.Split(new char[]{','});
+		KeySquenceLink firstLink = new KeySquenceLink(keys[0]);
+		KeySquenceLink currentLink = firstLink;
+		
+		for (int i = 1; i < keys.Length; i++) {
+			KeySquenceLink newLink = new KeySquenceLink(keys[i]); 
+			currentLink.next = newLink;
+			currentLink = newLink;
+		}
+		
+		PuzzleFloorButton puzzle = UnityEngine.Object.FindObjectOfType<PuzzleFloorButton>();
+		puzzle.firstKeySquenceLink = firstLink;
+		puzzle.currentKeySquenceLink = firstLink;
+	}
+	
 	protected override void afterMapAttributesLoaded(){
 		this.room.width = this.mapWidth;
 		this.room.height = this.mapHeight;
@@ -76,7 +94,7 @@ public class RoomLoader : TiledMapLoader {
 		
 		if(newPrefab != null){
 			Vector3 newP = new Vector3(x,0,y);
-			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP,true);
+			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP,false);
 			if(currentUnityLayer != -1){
 				newGo.gameObject.layer = currentUnityLayer;
 			}
@@ -91,8 +109,13 @@ public class RoomLoader : TiledMapLoader {
 		if(properties.ContainsKey("SnakeKey")){
 			KeySnake ks = newGo.GetComponent<KeySnake>();
 			ks.index = Int32.Parse(properties["SnakeKey"]);
+		}else if(properties.ContainsKey("FloorButton")){
+			FloorButton fb = newGo.GetComponent<FloorButton>();
+			fb.keyword = properties["FloorButton"];
 		}
 	}
+	
+	
 	GameObject getNewPrefab(int id){
 		if(roomLoaderLinker.blockPrefabs.Count < id){
 			Debug.LogError("Une tuile d'id " + id + " n'a pas de prefab disponible dans le linker.");

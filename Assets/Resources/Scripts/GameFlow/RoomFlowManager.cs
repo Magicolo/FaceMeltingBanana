@@ -12,6 +12,8 @@ public class RoomFlowManager : MonoBehaviour {
 	public Room firstRoom;
 	public List<Room> rooms;
 	
+	public Dictionary<string, Room> RoomsBanane;
+	
 	
 	void Awake(){
 		RoomFlowManager.instance = this;
