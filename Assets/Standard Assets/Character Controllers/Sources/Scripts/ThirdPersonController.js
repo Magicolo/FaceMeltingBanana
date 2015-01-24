@@ -299,7 +299,7 @@ function Update() {
 		lastJumpButtonTime = Time.time;
 	}
 
-	UpdateSmoothedMovementDirection();
+	//UpdateSmoothedMovementDirection();
 	
 	// Apply gravity
 	// - extra power jump modifies gravity
