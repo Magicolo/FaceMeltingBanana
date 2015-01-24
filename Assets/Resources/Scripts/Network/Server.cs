@@ -2,18 +2,20 @@
 using System.Collections;
 
 public class Server : MonoBehaviour {
+	
+	public enum PlayerTypes {
+		Adventurer,
+		Cartographer
+	}
+	
+	public PlayerTypes playerType;
+	
 	// PlayerPrefs.SetString("MyString", "MyValue");
 	int serverPort = 25003;
 	int NoOfPlayersServer = 16;
 	
-	// Use this for initialization
-	void Start () {
+	void Start() {
 		StartServer();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 	
 	void StartServer() {
@@ -24,6 +26,15 @@ public class Server : MonoBehaviour {
 		//Network.TestConnection(
 	}
 	
+	[RPC]
+	void Send() {
+		if (Network.connections.Length > 0) {
+			networkView.RPC("Receive", Network.connections[0]);
+		}
+	}
 	
-	
+	[RPC]
+	void Receive(object position) {
+		Logger.Log(position);
+	}
 }
