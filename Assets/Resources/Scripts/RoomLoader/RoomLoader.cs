@@ -54,19 +54,20 @@ public class RoomLoader : TiledMapLoader {
 		GameObject newPrefab = getNewPrefab(id);
 		GameObject newGo;
 		
+		Vector3 newP = new Vector3(x,0,y);
 		if(newPrefab != null){
 			if(layerName == "Wall"){
-				GameObjectExtend.createClone(newPrefab,"Wall", wallParent, new Vector3(x,y,1));
+				GameObjectExtend.createClone(newPrefab,"Wall", wallParent, newP);
 			}else if(layerName == "Floor"){
-				GameObjectExtend.createClone(newPrefab, "Floor", floorParent, new Vector3(x,y,0));
+				GameObjectExtend.createClone(newPrefab, "Floor", floorParent, newP);
 			}else if(layerName == "CeilingP1"){
-				newGo = GameObjectExtend.createClone(newPrefab, "CeilingP1", ceilingParent, new Vector3(x,y,2));
+				newGo = GameObjectExtend.createClone(newPrefab, "CeilingP1", ceilingParent, newP);
 				newGo.gameObject.layer = LayerMask.NameToLayer("P1 Only");
 			}else if(layerName == "RoofP2"){
-				newGo = GameObjectExtend.createClone(newPrefab, "RoofP2", roofParent, new Vector3(x,y,3));
+				newGo = GameObjectExtend.createClone(newPrefab, "RoofP2", roofParent, newP);
 				newGo.gameObject.layer = LayerMask.NameToLayer("P2 Only");
 			}else if(layerName == "Object"){
-				GameObjectExtend.createClone(newPrefab, "Object", objectsParent, new Vector3(x,y,1));
+				GameObjectExtend.createClone(newPrefab, "Object", objectsParent, newP);
 			}
 		}
 	}
