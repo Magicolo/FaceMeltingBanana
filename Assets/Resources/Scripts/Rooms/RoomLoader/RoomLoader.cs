@@ -41,6 +41,10 @@ public class RoomLoader : TiledMapLoader {
 			float x = float.Parse(positions[0]);
 			float z = this.room.height - float.Parse(positions[1]);
 			room.startingPosition = new Vector3(x,1,z);
+		}else if(name == "PuzzleId"){
+			int index = Int32.Parse(value);
+			GameObject prefab = this.roomLoaderLinker.PuzzleBasePrefabs[index];
+			GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
 		}
 	}
 
