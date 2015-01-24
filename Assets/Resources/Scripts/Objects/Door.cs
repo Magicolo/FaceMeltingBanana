@@ -6,6 +6,7 @@ public class Door : StateLayer {
 
 	public float speed = 8;
 	[Disable] public GameObject cube;
+	[Disable] public PuzzleBase puzzle;
 	
 	public override void OnStart() {
 		base.OnStart();
@@ -17,7 +18,7 @@ public class Door : StateLayer {
 		base.TriggerEnter(collision);
 
 		if (collision.gameObject.name == "Player") {
-			RoomFlowManager.instance.goToNextRoom();
+			puzzle.Success();
 		}
 	}
 	

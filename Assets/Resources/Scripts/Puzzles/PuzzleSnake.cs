@@ -43,9 +43,11 @@ public class PuzzleSnake : PuzzleBase {
 		}
 	}
 	
-	public void Fail() {
-		if (GetActiveState() != GetState<PuzzleSnakeFail>()) {
-			SwitchState<PuzzleSnakeFail>();
-		}
+	public override void Success() {
+		SwitchState<PuzzleSnakeSuccess>();
+	}
+	
+	public override void Fail() {
+		SwitchState<PuzzleSnakeFail>();
 	}
 }
