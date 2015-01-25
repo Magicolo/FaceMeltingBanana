@@ -96,7 +96,8 @@ public class RoomFlowManager : MonoBehaviour {
 			player.GetComponent<Server>().envoyerChangementLevel(room.name);
 		}
 		
-		if(room!= null && room.overlayMaterial != null){
+		if(room!= null){
+			
 			overLayMesh.material = room.overlayMaterial;
 		}
 		
