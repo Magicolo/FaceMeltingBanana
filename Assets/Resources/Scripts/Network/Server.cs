@@ -7,7 +7,7 @@ public class Server : MonoBehaviour {
 	public string ip = "10.212.8.139";
 	bool connected = false;
 	
-	
+	string messageAuClient="nulll";
 	//server related
 	bool serverOnline = false;
 	
@@ -47,12 +47,26 @@ public class Server : MonoBehaviour {
 		Debug.Log("Server STARTED");
 		//Network.TestConnection(
 	}
-	
+
+	[RPC]
+	void envoyerChangementLevel(){
+		networkView.RPC ("recevoirChangementLevel", RPCMode.Others, messageAuClient);
+	}
+
+	[RPC]
+	void recevoirChangementLevel(string message){
+		Debug.Log ("Message recu du server:");
+	}
+
+
 	[RPC]
 	void Send() {
 		if (Network.connections.Length > 0) {
 			networkView.RPC("Receive", Network.connections[0]);
+		
 		}
+
+
 	}
 	
 	[RPC]
@@ -118,17 +132,6 @@ public class Server : MonoBehaviour {
 
 
 */
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
