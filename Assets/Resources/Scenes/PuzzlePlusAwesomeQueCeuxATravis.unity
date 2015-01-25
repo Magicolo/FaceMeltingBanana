@@ -454,6 +454,9 @@ MonoBehaviour:
   - {fileID: 128106, guid: ba25ebc8e80b0c542962bd2fa58bb71b, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 107252, guid: 24431c965b22e944fa1e418d140a6a87, type: 2}
   PuzzleBasePrefabs:
   - {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
   - {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
