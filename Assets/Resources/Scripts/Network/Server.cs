@@ -27,7 +27,8 @@ public class Server : MonoBehaviour {
 	void Start() {
 		//Sera setter par le Main Menu
 		//int pInt = PlayerPrefs.GetInt("PlayerType");
-
+		pInt = PlayerPrefs.GetInt("PlayerType");
+		Debug.Log ("PLAYER TYPE PINT: " + pInt);
 		//Enable le FPS
 		if (pInt==0){
 			GameObject.Find("CameraTopView").GetComponent<Camera>().enabled=false;
@@ -137,13 +138,6 @@ public class Server : MonoBehaviour {
 		}
 	}
 
-	void OnGUI(){
-		string z = "isClient:" + Network.isClient.ToString() + " M:" + messageAuClient;
-		if (GUI.Button (new Rect (10,10,800,100), z)){
-			print ("You clicked the button!");
-		}
-			
-	}
 		
 	void OnConnectedToServer() {
 		connected = true;
