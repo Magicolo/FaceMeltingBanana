@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="12" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
-  <property name="PlayerStartingPosition" value="3,8"/>
-  <property name="PuzzleId" value="4"/>
+  <property name="-PuzzleId" value="5"/>
+  <property name="=FloorButtonSequence" value="blue,yellow,blue"/>
+  <property name="PlayerStartingPosition" value="5,8"/>
   <property name="name" value="Test 1"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
   <image source="../RoomEditorImage.png" width="320" height="96"/>
   <tile id="3">
    <properties>
-    <property name="button" value="red"/>
+    <property name="FloorButton" value="red"/>
    </properties>
   </tile>
   <tile id="4">
    <properties>
-    <property name="button" value="blue"/>
+    <property name="FloorButton" value="blue"/>
    </properties>
   </tile>
   <tile id="5">
    <properties>
-    <property name="button" value="yellow"/>
+    <property name="FloorButton" value="yellow"/>
    </properties>
   </tile>
   <tile id="6">
    <properties>
-    <property name="button" value="white"/>
+    <property name="FloorButton" value="white"/>
    </properties>
   </tile>
   <tile id="7">
    <properties>
-    <property name="button" value=""/>
+    <property name="FloorButton" value=""/>
    </properties>
   </tile>
   <tile id="8">
@@ -109,12 +110,12 @@
   <data encoding="csv">
 1,1,1,1,1,1,1,1,1,1,1,1,
 1,1,1,1,1,1,1,1,1,1,1,1,
-1,1,1,1,1,1,1,13,1,1,1,1,
-1,1,1,0,0,0,0,0,0,1,1,1,
-1,1,28,0,0,0,0,0,0,1,1,1,
+1,1,1,1,1,1,3,1,1,1,1,1,
 1,1,1,0,0,0,0,0,0,1,1,1,
 1,1,1,0,0,0,0,0,0,1,1,1,
-1,1,1,0,0,0,0,0,0,28,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
 1,1,1,0,0,0,0,0,0,1,1,1,
 1,1,1,1,1,1,1,1,1,1,1,1,
 1,1,1,1,1,1,1,1,1,1,1,1,
@@ -144,9 +145,25 @@
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,6,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,5,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="ObjectStatic" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,23,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,22,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,21,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,

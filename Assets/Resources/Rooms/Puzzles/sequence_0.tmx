@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" nextobjectid="1">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="12" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
-  <property name="-PuzzleId" value="1"/>
-  <property name="=FloorButtonSequence" value="blue,red,blue,red"/>
-  <property name="PlayerStartingPosition" value="4,8"/>
+  <property name="-PuzzleId" value="2"/>
+  <property name="=FloorButtonSequence" value="white,blue,yellow,red"/>
+  <property name="PlayerStartingPosition" value="3,8"/>
   <property name="name" value="Test 1"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
@@ -11,31 +11,26 @@
   <tile id="3">
    <properties>
     <property name="FloorButton" value="red"/>
-    <property name="button" value="red"/>
    </properties>
   </tile>
   <tile id="4">
    <properties>
     <property name="FloorButton" value="blue"/>
-    <property name="button" value="blue"/>
    </properties>
   </tile>
   <tile id="5">
    <properties>
     <property name="FloorButton" value="yellow"/>
-    <property name="button" value="yellow"/>
    </properties>
   </tile>
   <tile id="6">
    <properties>
     <property name="FloorButton" value="white"/>
-    <property name="button" value="white"/>
    </properties>
   </tile>
   <tile id="7">
    <properties>
     <property name="FloorButton" value=""/>
-    <property name="button" value=""/>
    </properties>
   </tile>
   <tile id="8">
@@ -95,74 +90,84 @@
    </properties>
   </tile>
  </tileset>
- <layer name="Floor" width="10" height="10">
+ <layer name="Floor" width="12" height="12">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,2,2,2,2,2,2,2,2,0,
-0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Wall" width="10" height="10">
+ <layer name="Wall" width="12" height="12">
   <data encoding="csv">
-1,1,1,1,1,1,1,1,1,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,3,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,0,0,0,0,0,0,0,0,1,
-1,1,1,1,1,1,1,1,1,1
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,0,0,0,0,0,0,1,3,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1
 </data>
  </layer>
- <layer name="CeilingP1" width="10" height="10">
+ <layer name="CeilingP1" width="12" height="12">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Object" width="10" height="10">
+ <layer name="Object" width="12" height="12">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,7,0,0,0,0,0,0,0,0,
-0,6,0,0,0,0,0,0,0,0,
-0,5,0,0,0,0,0,0,0,0,
-0,4,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,4,0,0,5,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,7,0,0,6,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="RoofP2" width="10" height="10">
+ <layer name="RoofP2" width="12" height="12">
   <data encoding="csv">
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
 </map>
