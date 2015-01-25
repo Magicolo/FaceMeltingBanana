@@ -12,7 +12,7 @@ GameObject:
   - 65: {fileID: 6507252}
   - 23: {fileID: 2307252}
   m_Layer: 14
-  m_Name: RedX
+  m_Name: Key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,7 +42,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: e09d88b340f173247aca124f4f7d0466, type: 2}
+  - {fileID: 2100000, guid: 2a832ae8abb4c0c43a02dcc4e5375cbb, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
