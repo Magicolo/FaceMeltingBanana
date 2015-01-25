@@ -58,9 +58,9 @@ public class AudioManager : MonoBehaviourExtended {
 	
 	public static void PlayAll() {
 		if (Network.isServer) {
-			PlayRandomMusic(60, 150, 0.5F, 10);
-			PlayRandomAmbiance(45, 120, 0.5F, 5);
-			PlayRandomHallucination(15, 60, 0.5F, 2);
+			PlayRandomMusic(60, 150, 0.75F, 5);
+			PlayRandomAmbiance(60, 150, 0.5F, 5);
+			PlayRandomHallucination(120, 240, 0.5F, 2);
 		}
 	}
 	
@@ -177,8 +177,10 @@ public class AudioManager : MonoBehaviourExtended {
 	}
 	
 	void playLevelSource(bool success) {
-		currentLevelSource.clip = success ? levelSuccess : levelFail;
-		currentLevelSource.Play();
+		if (Network.isServer){
+			currentLevelSource.clip = success ? levelSuccess : levelFail;
+			currentLevelSource.Play();
+		}
 	}
 	
 	IEnumerator FadeIn(AudioSource source, float targetVolume, float fade) {

@@ -39,7 +39,7 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	
 	void Start() {
-		switchToRoom(firstRoom);
+		switchToRoom(firstRoom, true);
 		AudioManager.PlayAll();
 	}
 	
@@ -57,7 +57,7 @@ public class RoomFlowManager : MonoBehaviour {
 		}
 		
 		if(!switching && player.transform.position.y <= -10f){
-			switchToRoom(currentRoom.looseRoom);
+			switchToRoom(currentRoom.looseRoom, false);
 		}
 		if (fading) {
 			t += Time.deltaTime;
@@ -77,10 +77,10 @@ public class RoomFlowManager : MonoBehaviour {
 		}
 	}
 	
-	public void switchToRoom(string roomName) {
+	public void switchToRoom(string roomName, bool success) {
 		foreach (var room in this.rooms) {
 			if (room.name == roomName) {
-				switchToRoom(room);
+				switchToRoom(room, success);
 				return;
 			}
 		}
@@ -88,8 +88,10 @@ public class RoomFlowManager : MonoBehaviour {
 	
 
 
-	public void switchToRoom(Room room){
+	public void switchToRoom(Room room, bool success){
 		Server server  = player.GetComponent<Server>();
+		AudioManager.PlayLevelSource(success);
+		
 		if(server != null){
 			player.GetComponent<Server>().envoyerChangementLevel(room.name);
 		}
@@ -136,7 +138,7 @@ public class RoomFlowManager : MonoBehaviour {
 			player.GetComponent<Rigidbody>().active = false;
 		}
 		else {
-			switchToRoom(this.currentRoom.nextRoom);
+			switchToRoom(this.currentRoom.nextRoom, true);
 		}
 		
 	}

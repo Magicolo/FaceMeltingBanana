@@ -68,7 +68,7 @@ public class Server : MonoBehaviour {
 	public 	void recevoirChangementLevel(string message){
 		if(!Network.isServer){
 			Debug.Log ("Message recu du server:" + message);
-			RoomFlowManager.instance.switchToRoom(message);
+			RoomFlowManager.instance.switchToRoom(message, true);
 			messageAuClient = "recevoirChangementLevel: "+ message;
 		}
 	}
