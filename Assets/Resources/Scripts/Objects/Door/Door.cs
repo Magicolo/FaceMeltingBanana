@@ -4,7 +4,6 @@ using Magicolo;
 
 public class Door : StateLayer {
 
-	public float speed = 8;
 	[Disable] public GameObject cube;
 	[Disable] public PuzzleBase puzzle;
 	[Disable] public MeshRenderer cubeMeshRenderer;

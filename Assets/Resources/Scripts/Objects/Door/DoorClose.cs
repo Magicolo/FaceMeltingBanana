@@ -10,7 +10,7 @@ public class DoorClose : State {
 	}
 	
 	public override void OnUpdate() {
-		Layer.cube.transform.SetLocalPosition(Mathf.Lerp(Layer.cube.transform.localPosition.y, 2, Time.deltaTime * Layer.speed), "Y");
+		
 	}
 }
 

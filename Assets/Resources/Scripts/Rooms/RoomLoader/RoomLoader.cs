@@ -94,7 +94,7 @@ public class RoomLoader : TiledMapLoader {
 		
 		if(newPrefab != null){
 			Vector3 newP = new Vector3(x,0,y);
-			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP,false);
+			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP, true);
 			if(currentUnityLayer != -1){
 				newGo.gameObject.layer = currentUnityLayer;
 			}
