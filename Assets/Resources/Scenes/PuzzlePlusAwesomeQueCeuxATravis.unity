@@ -113,13 +113,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 0}
-  nextRoom: {fileID: 1413918457}
+  looseRoom: {fileID: 62231561}
+  nextRoom: {fileID: 1528050202}
   startingPosition: {x: 10, y: 2, z: 15}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
   map: 0
 --- !u!1 &88128686
 GameObject:
@@ -260,8 +260,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clientPort: 25003
   ip: 127.0.0.1
-  playerTypes: 0
-  pInt: 0
+  playerTypes: 1
+  pInt: 1
 --- !u!148 &311057593
 NetworkView:
   m_ObjectHideFlags: 0
@@ -453,8 +453,11 @@ MonoBehaviour:
   - {fileID: 125316, guid: 29b955b517940264d8081969fe1c1c9f, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 128106, guid: ba25ebc8e80b0c542962bd2fa58bb71b, type: 2}
+  - {fileID: 175590, guid: c36c47243e069b743a95155c38ebca85, type: 2}
+  - {fileID: 175590, guid: 9e951f0c0ee09ff4aa5012b9a8627054, type: 2}
+  - {fileID: 175590, guid: 7b717e46bcfa0eb459f434ab30b39ed6, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
-  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 107252, guid: 24431c965b22e944fa1e418d140a6a87, type: 2}
   PuzzleBasePrefabs:
   - {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
   - {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
@@ -646,11 +649,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 62231560}
-  - {fileID: 1413918456}
   - {fileID: 1528050203}
-  - {fileID: 1703808500}
   - {fileID: 1974879750}
+  - {fileID: 1457592914}
+  - {fileID: 1703808500}
   - {fileID: 417380766}
+  - {fileID: 1413918456}
   - {fileID: 1357730655}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -769,7 +773,10 @@ MonoBehaviour:
   firstRoom: {fileID: 62231561}
   rooms:
   - {fileID: 62231561}
-  - {fileID: 1413918457}
+  - {fileID: 1528050202}
+  - {fileID: 1974879751}
+  - {fileID: 1457592913}
+  - {fileID: 1703808499}
   fadeImage: {fileID: 475836660}
 --- !u!4 &1030245614
 Transform:
@@ -989,7 +996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &1357730656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1036,7 +1043,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 1
+  m_RootOrder: 6
 --- !u!114 &1413918457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,11 +1211,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11409090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: playerTypes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11409090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: pInt
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11409090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: ip
@@ -1227,6 +1234,53 @@ Prefab:
   m_RootGameObject: {fileID: 311057590}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1457592912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1457592914}
+  - 114: {fileID: 1457592913}
+  m_Layer: 0
+  m_Name: RoomD1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1457592913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457592912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  looseRoom: {fileID: 1457592913}
+  nextRoom: {fileID: 1703808499}
+  startingPosition: {x: 0, y: 0, z: 0}
+  startingAngle: 0
+  width: 0
+  height: 0
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD_1.tmx
+  map: 0
+--- !u!4 &1457592914
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1457592912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 612877398}
+  m_RootOrder: 3
 --- !u!1 &1525555495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,12 +1372,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1528050202}
-  nextRoom: {fileID: 0}
+  nextRoom: {fileID: 1974879751}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
   map: 0
 --- !u!4 &1528050203
 Transform:
@@ -1336,7 +1390,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1557606282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1703808499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1422,13 +1476,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 0}
-  nextRoom: {fileID: 0}
+  looseRoom: {fileID: 1703808499}
+  nextRoom: {fileID: 62231561}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
   map: 0
 --- !u!4 &1703808500
 Transform:
@@ -1441,7 +1495,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1756251046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1542,7 +1596,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!114 &1974879751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,13 +1608,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 0}
-  nextRoom: {fileID: 62231561}
+  looseRoom: {fileID: 1974879751}
+  nextRoom: {fileID: 1457592913}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
   map: 0
 --- !u!1001 &2068737573
 Prefab:
