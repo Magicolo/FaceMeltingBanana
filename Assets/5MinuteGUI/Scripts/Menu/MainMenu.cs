@@ -10,7 +10,9 @@ namespace FMG
 		public GameObject levelSelectMenu;
 		public GameObject optionsMenu;
 		public GameObject creditsMenu;
-
+		public GameObject how2Play;
+		public GameObject how2Play2;
+		
 		public bool useLevelSelect = true;
 		public bool useExitButton = true;
 
@@ -65,9 +67,16 @@ namespace FMG
 			}
 			if(str.Equals("Options"))
 			{
-				Constants.fadeInFadeOut(optionsMenu,mainMenu);
+				Constants.fadeInFadeOut(how2Play,mainMenu);
 			}
-
+			if(str.Equals("Next"))
+			{
+				Constants.fadeInFadeOut(how2Play2, how2Play);
+			}
+			if(str.Equals("OK"))
+			{
+				Constants.fadeInFadeOut(levelSelectMenu,how2Play2);
+			}
 
 		}
 	}
