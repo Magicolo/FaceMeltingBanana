@@ -93,7 +93,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &204122036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -527,7 +527,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '>>'
+  m_Text: Cartographer
 --- !u!222 &422473195
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -906,7 +906,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 5.6789856, y: 125}
+  m_AnchoredPosition: {x: 6, y: 100}
   m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &683183364
@@ -1380,8 +1380,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.67900944, y: 94.7669983}
-  m_SizeDelta: {x: -256, y: -448}
+  m_AnchoredPosition: {x: -8.14999962, y: 24}
+  m_SizeDelta: {x: 33.0999985, y: -448}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1102499822
 MonoBehaviour:
@@ -1411,20 +1411,20 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2f8b50ebe974f4f3381c461a4fff317a, type: 3}
-    m_FontSize: 55
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 23
     m_FontStyle: 0
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Programming: Justin
-
-    Art: Ivan'
+  m_Text: "Programming\nRichard Rail, Marc-Andr\xE9 lavoie, and Kevin McNally-Gagnon\n\nDesign
+    by Martine Chapuis and Travis Martin\n\nSound by Kevin McNally-Gagnon\n\nStory
+    by Travis Martin"
 --- !u!222 &1102499824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1443,7 +1443,7 @@ GameObject:
   - 114: {fileID: 1125394889}
   - 114: {fileID: 1125394888}
   m_Layer: 5
-  m_Name: LevelSelectPrevButton
+  m_Name: CartographerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1464,8 +1464,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 333, y: 77.4639969}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 0, y: -16}
+  m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1125394888
 MonoBehaviour:
@@ -1506,9 +1506,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2079778904}
-        m_MethodName: onCommand
-        m_Mode: 5
+      - m_Target: {fileID: 485588633}
+        m_MethodName: playerChooseCartographer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
@@ -1884,7 +1884,7 @@ MonoBehaviour:
   m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2f8b50ebe974f4f3381c461a4fff317a, type: 3}
-    m_FontSize: 55
+    m_FontSize: 39
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
@@ -2155,7 +2155,7 @@ GameObject:
   - 114: {fileID: 1670759753}
   - 114: {fileID: 1670759752}
   m_Layer: 5
-  m_Name: LevelSelectNextButton
+  m_Name: AdventurerButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2176,8 +2176,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -333, y: 77.4639969}
-  m_SizeDelta: {x: 64, y: 64}
+  m_AnchoredPosition: {x: 0, y: 77}
+  m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1670759752
 MonoBehaviour:
@@ -2218,9 +2218,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2079778904}
-        m_MethodName: onCommand
-        m_Mode: 5
+      - m_Target: {fileID: 485588633}
+        m_MethodName: playerChooseAdventurer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
@@ -2271,7 +2271,7 @@ GameObject:
   - 114: {fileID: 1738614314}
   - 114: {fileID: 1738614313}
   m_Layer: 5
-  m_Name: OptionsButton
+  m_Name: How2Play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2292,7 +2292,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 5.6789999, y: 46.105999}
+  m_AnchoredPosition: {x: 6, y: -6.69999981}
   m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1738614313
@@ -2685,7 +2685,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 5.6789999, y: -48.4029999}
+  m_AnchoredPosition: {x: 6, y: -80}
   m_SizeDelta: {x: 256, y: 64}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &1889751394
@@ -3000,12 +3000,12 @@ GameObject:
   - 114: {fileID: 2110926611}
   - 114: {fileID: 2110926610}
   m_Layer: 5
-  m_Name: CreditsPanel
+  m_Name: How2Play Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110926606
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3173,7 +3173,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: <<
+  m_Text: Adventurer
 --- !u!222 &2131406254
 CanvasRenderer:
   m_ObjectHideFlags: 0
