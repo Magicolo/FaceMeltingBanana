@@ -22,22 +22,18 @@ public class Client : MonoBehaviour {
 		ConnectToServer();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+				// Update is called once per frame
+				void Update () {
+					if(Input.GetKeyDown(KeyCode.U)){
+						Debug.Log("Clicked : Connect to server");
+						// Whatever you want it to do.
+						Debug.Log("Retrieved informations : " );
+						Debug.Log("Connected : " + connected);
+					}
+				}
 	
-	void OnMouseOver(){
-		if(Input.GetMouseButton(0)){
-			Debug.Log("Clicked : Connect to server");
-			// Whatever you want it to do.
-			Debug.Log("Retrieved informations : " );
-			Debug.Log("Connected : " + connected);
-		}
-	}
-	
-	[RPC]
-	void Receive(object position){
-		Logger.Log(position);
-	}
+				[RPC]
+				void Receive(object position){
+					Logger.Log(position);
+				}
 }
