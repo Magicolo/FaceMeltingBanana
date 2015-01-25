@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
 	// Si aventurier, on set isServer a true sinon on le met a false
 
 
-
+	public string levelName;
 
 
 	// Use this for initialization
@@ -23,15 +23,21 @@ public class MainMenu : MonoBehaviour {
 	}
 
 
-	void playerChooseAdventurer(){
-		PlayerPrefs.SetString("isServer", "true");
+	public void playerChooseAdventurer(){
+		PlayerPrefs.SetInt("PlayerType", 0);
+		LoadLevel();
 	}
-	void playerChooseCartographer(){
-		PlayerPrefs.SetString("isServer", "false");
+	public void playerChooseCartographer(){
+		PlayerPrefs.SetInt("PlayerType", 1);
+		LoadLevel();
 	}
 		
 	void Update () {
 
+	}
+	
+	void LoadLevel(){
+		Application.LoadLevel(levelName);
 	}
 
 

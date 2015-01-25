@@ -31,6 +31,7 @@ GameObject:
   - 114: {fileID: 11425832}
   - 114: {fileID: 11425834}
   - 114: {fileID: 11425836}
+  - 114: {fileID: 11488084}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -45,8 +46,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 425832}
   m_RootOrder: 0
@@ -75,7 +76,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 046014d3ba5ec214683c7003b7f7b6b4, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -112,8 +113,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .75, y: 3, z: .75}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: .899999976, y: .899999976, z: .899999976}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11425830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,7 +130,7 @@ MonoBehaviour:
   - {fileID: 11425832}
 --- !u!114 &11425832
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
@@ -142,13 +143,19 @@ MonoBehaviour:
   states:
   - {fileID: 11425836}
   - {fileID: 11425834}
+  - {fileID: 11488084}
   currentStates:
   - {fileID: 11425834}
-  speed: 1
   cube: {fileID: 0}
+  puzzle: {fileID: 0}
+  simplePuzzle: {fileID: 0}
+  cubeMeshRenderer: {fileID: 0}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  keyword: 
+  enterWin: 1
 --- !u!114 &11425834
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
@@ -161,13 +168,26 @@ MonoBehaviour:
   machine: {fileID: 11425830}
 --- !u!114 &11425836
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af076d0ef0f75b14dac3c4e909d801cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 11425832}
+  machine: {fileID: 11425830}
+--- !u!114 &11488084
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0cb960728b05142a40ef030b8f5c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layer: {fileID: 11425832}

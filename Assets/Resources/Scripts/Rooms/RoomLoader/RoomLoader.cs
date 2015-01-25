@@ -18,6 +18,7 @@ public class RoomLoader : TiledMapLoader {
 	
 	private Transform currentLayer;
 	private int currentUnityLayer;
+	private SimplePuzzle simplePuzzle = null;
 	
 	public RoomLoaderLinker roomLoaderLinker;
 	
@@ -41,10 +42,13 @@ public class RoomLoader : TiledMapLoader {
 			float x = float.Parse(positions[0]);
 			float z = this.room.height - float.Parse(positions[1]);
 			room.startingPosition = new Vector3(x,1,z);
+		}else if(name == "PlayerStartingAngle"){
+			this.room.startingAngle = float.Parse(value);
 		}else if(name == "-PuzzleId"){
 			int index = Int32.Parse(value);
 			GameObject prefab = this.roomLoaderLinker.PuzzleBasePrefabs[index];
-			GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
+			GameObject newGo = GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
+			simplePuzzle = newGo.GetComponent<SimplePuzzle>();
 		}else if(name == "=FloorButtonSequence"){
 			putButtonSequence(value);
 		}
@@ -61,7 +65,7 @@ public class RoomLoader : TiledMapLoader {
 			currentLink = newLink;
 		}
 		
-		PuzzleFloorButton puzzle = UnityEngine.Object.FindObjectOfType<PuzzleFloorButton>();
+		FloorButtonPuzzle puzzle = UnityEngine.Object.FindObjectOfType<FloorButtonPuzzle>();
 		puzzle.firstKeySquenceLink = firstLink;
 		puzzle.currentKeySquenceLink = firstLink;
 	}
@@ -94,9 +98,13 @@ public class RoomLoader : TiledMapLoader {
 		
 		if(newPrefab != null){
 			Vector3 newP = new Vector3(x,0,y);
-			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP,false);
+			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP, true);
 			if(currentUnityLayer != -1){
 				newGo.gameObject.layer = currentUnityLayer;
+				var fils = newGo.GetChildren();
+				foreach (var element in fils) {
+					element.gameObject.layer = currentUnityLayer;
+				}
 			}
 			if(this.tilesetTiles.ContainsKey(id)){
 				Dictionary<String,String> properties = this.tilesetTiles[id];
@@ -109,9 +117,40 @@ public class RoomLoader : TiledMapLoader {
 		if(properties.ContainsKey("SnakeKey")){
 			KeySnake ks = newGo.GetComponent<KeySnake>();
 			ks.index = Int32.Parse(properties["SnakeKey"]);
-		}else if(properties.ContainsKey("FloorButton")){
+		}
+		if(properties.ContainsKey("FloorButton")){
 			FloorButton fb = newGo.GetComponent<FloorButton>();
 			fb.keyword = properties["FloorButton"];
+		}
+		if(properties.ContainsKey("DoorLocked")){
+			Door door = newGo.GetComponent<Door>();
+			if(properties["DoorLocked"] == "false"){
+				door.SwitchState<DoorOpen>();
+			}
+		}
+		if(properties.ContainsKey("DoorColor")){
+			Door door = newGo.GetComponent<Door>();
+			String[] colorData = properties["DoorColor"].Split(new char[]{','});
+			Int32 r = Int32.Parse(colorData[0]);
+			Int32 g = Int32.Parse(colorData[1]);
+			Int32 b = Int32.Parse(colorData[2]);
+			door.baseColor = new Color(r/255f,g/255f,b/255f,1);
+			door.FindChild("Cube").GetComponent<MeshRenderer>().material.color = door.baseColor;
+		}
+		if(properties.ContainsKey("DoorWin")){
+			Door door = newGo.GetComponent<Door>();
+			door.enterWin = properties["DoorWin"] == "true";
+		}
+		if(properties.ContainsKey("DoorKeyword")){
+			Door door = newGo.GetComponent<Door>();
+			door.keyword = properties["DoorKeyword"];
+		}
+		if(properties.ContainsKey("Collider")){
+			BoxCollider box = newGo.GetComponentInChildren<BoxCollider>();
+			if(properties["Collider"] == "false"){
+				box.enabled = false;
+			}
+			
 		}
 	}
 	
@@ -133,4 +172,10 @@ public class RoomLoader : TiledMapLoader {
 		
 	}
 	
+
+	protected override void afterAll(){
+		if(this.simplePuzzle != null){
+			simplePuzzle.init();
+		}
+	}
 }

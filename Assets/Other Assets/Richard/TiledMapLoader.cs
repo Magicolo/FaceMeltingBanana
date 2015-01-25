@@ -33,7 +33,11 @@ public abstract class TiledMapLoader {
         loadTilesets();
         loadLevelsLayers();
         loadLevelsObjectGroup();
+        afterAll();
 	}
+	
+	
+	protected abstract void afterAll();
 
 	
 	void loadMapAttributes(){

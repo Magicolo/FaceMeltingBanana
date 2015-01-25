@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="12" height="12" tilewidth="32" tileheight="32" nextobjectid="1">
+ <properties>
+  <property name="-PuzzleId" value="2"/>
+  <property name="=FloorButtonSequence" value="white,blue,yellow,red"/>
+  <property name="PlayerStartingPosition" value="3,8"/>
+  <property name="name" value="Test 1"/>
+ </properties>
+ <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
+  <image source="../RoomEditorImage.png" width="320" height="96"/>
+  <tile id="3">
+   <properties>
+    <property name="FloorButton" value="red"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="FloorButton" value="blue"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="FloorButton" value="yellow"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="FloorButton" value="white"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="FloorButton" value=""/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="door" value="red"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="door" value="blue"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="door" value="yellow"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="door" value="white"/>
+   </properties>
+  </tile>
+  <tile id="12">
+   <properties>
+    <property name="DoorLocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="23">
+   <properties>
+    <property name="SnakeKey" value="0"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="SnakeKey" value="1"/>
+   </properties>
+  </tile>
+  <tile id="25">
+   <properties>
+    <property name="SnakeKey" value="2"/>
+   </properties>
+  </tile>
+  <tile id="26">
+   <properties>
+    <property name="SnakeKey" value="3"/>
+   </properties>
+  </tile>
+  <tile id="27">
+   <properties>
+    <property name="door" value="trap"/>
+   </properties>
+  </tile>
+  <tile id="28">
+   <properties>
+    <property name="door" value="locked"/>
+    <property name="lockedDoor" value="1"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Floor" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,2,2,2,2,2,2,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Wall" width="12" height="12">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,0,0,0,0,0,0,13,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,0,0,0,0,0,0,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,1,1,1,1,1
+</data>
+ </layer>
+ <layer name="CeilingP1" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Object" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,4,0,0,5,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,7,0,0,6,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="RoofP2" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
