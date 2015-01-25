@@ -113,14 +113,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 62231561}
-  nextRoom: {fileID: 1528050202}
+  looseRoom: {fileID: 0}
+  nextRoom: {fileID: 1413918457}
   startingPosition: {x: 10, y: 2, z: 15}
   startingAngle: 0
   width: 0
   height: 0
   overlayMaterial: {fileID: 0}
-  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
   map: 0
 --- !u!1 &88128686
 GameObject:
@@ -212,6 +212,70 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!1001 &273445451
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.92092419
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.64795113
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.43143129
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: levelSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: eeeb210dac1a1c94e819731c478b4fd2, type: 3}
+    - target: {fileID: 11407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: levelFail
+      value: 
+      objectReference: {fileID: 8300000, guid: 42f4efc897d694641b53e845abb04e95, type: 3}
+    - target: {fileID: 8207326, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8207324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8268348, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_Volume
+      value: .5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+  m_RootGameObject: {fileID: 555431335}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &311057590
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,11 +518,8 @@ MonoBehaviour:
   - {fileID: 125316, guid: 29b955b517940264d8081969fe1c1c9f, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 128106, guid: ba25ebc8e80b0c542962bd2fa58bb71b, type: 2}
-  - {fileID: 175590, guid: c36c47243e069b743a95155c38ebca85, type: 2}
-  - {fileID: 175590, guid: 9e951f0c0ee09ff4aa5012b9a8627054, type: 2}
-  - {fileID: 175590, guid: 7b717e46bcfa0eb459f434ab30b39ed6, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
-  - {fileID: 107252, guid: 24431c965b22e944fa1e418d140a6a87, type: 2}
+  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   PuzzleBasePrefabs:
   - {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
   - {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
@@ -585,6 +646,487 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475836658}
+--- !u!1 &555431335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 107324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 555431344}
+  - 114: {fileID: 555431343}
+  - 82: {fileID: 555431342}
+  - 82: {fileID: 555431341}
+  - 82: {fileID: 555431340}
+  - 82: {fileID: 555431339}
+  - 82: {fileID: 555431338}
+  - 82: {fileID: 555431337}
+  - 82: {fileID: 555431336}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &555431336
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8268348, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431337
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431338
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207326, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431339
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207328, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431340
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207332, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: e539bd41fefa88f47b211ed8cec3bbd2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431341
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207334, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431342
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207330, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &555431343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffee1f8594af3cc4bbae32470b1d07db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMusic: {fileID: 555431342}
+  idleMusic: {fileID: 555431341}
+  ashsSong: {fileID: 8300000, guid: 72f0b62a38ac98143849c33ca5576e3d, type: 3}
+  brodysSong: {fileID: 8300000, guid: dce0419907ae222419f18eb560d21e91, type: 3}
+  currentAmbiance: {fileID: 555431340}
+  idleAmbiance: {fileID: 555431339}
+  hospitalAmbiance: {fileID: 8300000, guid: e539bd41fefa88f47b211ed8cec3bbd2, type: 3}
+  forestAmbiance: {fileID: 8300000, guid: ffe9a8d39cf362c49855ccbb8f43e277, type: 3}
+  windAmbiance: {fileID: 8300000, guid: 1b18bd67af20c9b49be861a703ab59f6, type: 3}
+  windDangerAmbiance: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  currentHallucination: {fileID: 555431338}
+  idleHallucination: {fileID: 555431337}
+  ambulanceHallucination: {fileID: 8300000, guid: f77bdb4d2e462814a8078f07c1e29c94,
+    type: 3}
+  policeHallucination: {fileID: 8300000, guid: e135abb4f2cc66844ac12b82c2bf0d62, type: 3}
+  heartBeepHallucination: {fileID: 8300000, guid: 8c83d846ccd22af4d9571bf037a2ebca,
+    type: 3}
+  traficHallucination: {fileID: 8300000, guid: 96c7e9e7457d2fa4e8f3516cccb8ea6f, type: 3}
+  currentLevelSource: {fileID: 555431336}
+  levelSuccess: {fileID: 8300000, guid: eeeb210dac1a1c94e819731c478b4fd2, type: 3}
+  levelFail: {fileID: 8300000, guid: 42f4efc897d694641b53e845abb04e95, type: 3}
+--- !u!4 &555431344
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+  m_PrefabInternal: {fileID: 273445451}
+  m_GameObject: {fileID: 555431335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.92092419, y: -2.64795113, z: -3.43143129}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &603575188
 GameObject:
   m_ObjectHideFlags: 0
@@ -651,12 +1193,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 62231560}
-  - {fileID: 1528050203}
-  - {fileID: 1974879750}
-  - {fileID: 1457592914}
-  - {fileID: 1703808500}
-  - {fileID: 417380766}
   - {fileID: 1413918456}
+  - {fileID: 1528050203}
+  - {fileID: 1703808500}
+  - {fileID: 1974879750}
+  - {fileID: 417380766}
   - {fileID: 1357730655}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -775,10 +1316,7 @@ MonoBehaviour:
   firstRoom: {fileID: 62231561}
   rooms:
   - {fileID: 62231561}
-  - {fileID: 1528050202}
-  - {fileID: 1974879751}
-  - {fileID: 1457592913}
-  - {fileID: 1703808499}
+  - {fileID: 1413918457}
   fadeImage: {fileID: 475836660}
 --- !u!4 &1030245614
 Transform:
@@ -998,7 +1536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &1357730656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1046,7 +1584,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 6
+  m_RootOrder: 1
 --- !u!114 &1413918457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,7 +1603,7 @@ MonoBehaviour:
   width: 0
   height: 0
   overlayMaterial: {fileID: 0}
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomB.tmx
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomB.tmx
   map: 0
 --- !u!1 &1423193527
 GameObject:
@@ -1167,7 +1705,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 14809090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_ViewID.m_ID
@@ -1238,54 +1776,6 @@ Prefab:
   m_RootGameObject: {fileID: 311057590}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1457592912
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1457592914}
-  - 114: {fileID: 1457592913}
-  m_Layer: 0
-  m_Name: RoomD1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1457592913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1457592912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  looseRoom: {fileID: 1457592913}
-  nextRoom: {fileID: 1703808499}
-  startingPosition: {x: 0, y: 0, z: 0}
-  startingAngle: 0
-  width: 0
-  height: 0
-  overlayMaterial: {fileID: 2100000, guid: 29dad4fe6fe80a24b82b145519cd9ce4, type: 2}
-  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD_1.tmx
-  map: 0
---- !u!4 &1457592914
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1457592912}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 612877398}
-  m_RootOrder: 3
 --- !u!1 &1525555495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,13 +1867,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1528050202}
-  nextRoom: {fileID: 1974879751}
+  nextRoom: {fileID: 1703808499}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  overlayMaterial: {fileID: 2100000, guid: 4002165917de4fb44aaab069d41ea90d, type: 2}
-  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
   map: 0
 --- !u!4 &1528050203
 Transform:
@@ -1396,7 +1886,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1557606282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1483,13 +1973,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1703808499}
-  nextRoom: {fileID: 62231561}
+  nextRoom: {fileID: 1974879751}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
   overlayMaterial: {fileID: 0}
-  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
   map: 0
 --- !u!4 &1703808500
 Transform:
@@ -1502,7 +1992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1756251046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1603,7 +2093,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!114 &1974879751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1615,14 +2105,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 1974879751}
-  nextRoom: {fileID: 1457592913}
+  looseRoom: {fileID: 0}
+  nextRoom: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  overlayMaterial: {fileID: 2100000, guid: 1d09461a98d05704786bb158cd2a0b61, type: 2}
-  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
   map: 0
 --- !u!1001 &2068737573
 Prefab:
