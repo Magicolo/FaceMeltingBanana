@@ -452,9 +452,9 @@ MonoBehaviour:
   - {fileID: 125316, guid: 29b955b517940264d8081969fe1c1c9f, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 128106, guid: ba25ebc8e80b0c542962bd2fa58bb71b, type: 2}
-  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
-  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
-  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 175590, guid: c36c47243e069b743a95155c38ebca85, type: 2}
+  - {fileID: 175590, guid: 9e951f0c0ee09ff4aa5012b9a8627054, type: 2}
+  - {fileID: 175590, guid: 7b717e46bcfa0eb459f434ab30b39ed6, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 107252, guid: 24431c965b22e944fa1e418d140a6a87, type: 2}
   PuzzleBasePrefabs:
@@ -501,7 +501,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &417380767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -636,12 +636,12 @@ Transform:
   m_Children:
   - {fileID: 62231560}
   - {fileID: 1528050203}
-  - {fileID: 1703808500}
   - {fileID: 1974879750}
+  - {fileID: 1733652499}
+  - {fileID: 1703808500}
   - {fileID: 417380766}
   - {fileID: 1357730655}
   - {fileID: 1413918456}
-  - {fileID: 1733652499}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &657472987
@@ -759,7 +759,10 @@ MonoBehaviour:
   firstRoom: {fileID: 1528050202}
   rooms:
   - {fileID: 62231561}
-  - {fileID: 1413918457}
+  - {fileID: 1528050202}
+  - {fileID: 1974879751}
+  - {fileID: 1733652500}
+  - {fileID: 1703808499}
   fadeImage: {fileID: 475836660}
 --- !u!4 &1030245614
 Transform:
@@ -1008,7 +1011,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!114 &1357730656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1055,7 +1058,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &1413918457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1528050202}
-  nextRoom: {fileID: 0}
+  nextRoom: {fileID: 1974879751}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
@@ -1346,7 +1349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1703808499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,7 +1380,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!1 &1733652498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,7 +1408,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 7
+  m_RootOrder: 3
 --- !u!114 &1733652500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1418,12 +1421,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1733652500}
-  nextRoom: {fileID: 0}
+  nextRoom: {fileID: 1703808499}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: E:/My Games/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
+  fileName: E:/My Games/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD_1.tmx
   map: 0
 --- !u!1 &1756251046
 GameObject:
@@ -1525,7 +1528,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1974879751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1538,7 +1541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 0}
-  nextRoom: {fileID: 62231561}
+  nextRoom: {fileID: 1733652500}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
