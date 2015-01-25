@@ -26,7 +26,7 @@ public class PuzzleFloorButton : PuzzleBase {
 		}
 	}
 	
-	public void Fail() {
+	public override void Fail() {
 		if (GetActiveState() != GetState<PuzzleSnakeFail>()) {
 			SwitchState<PuzzleSnakeFail>();
 		}

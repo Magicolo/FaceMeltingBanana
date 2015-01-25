@@ -9,8 +9,9 @@ public class DoorOpen : State {
 		get { return ((Door)layer); }
 	}
 	
-	public override void OnUpdate() {
-		Layer.cube.transform.SetLocalPosition(Mathf.Lerp(Layer.cube.transform.localPosition.y, 5, Time.deltaTime * Layer.speed), "Y");
+	public override void OnStart() {
+		Layer.cubeMeshRenderer.material.color = new Color(0,0,0,0);
+		Layer.cube.GetComponent<BoxCollider>().enabled = false;
 	}
 }
 
