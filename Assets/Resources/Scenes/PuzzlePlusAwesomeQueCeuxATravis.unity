@@ -114,12 +114,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 0}
-  nextRoom: {fileID: 1413918457}
+  nextRoom: {fileID: 0}
   startingPosition: {x: 10, y: 2, z: 15}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
   map: 0
 --- !u!1 &88128686
 GameObject:
@@ -517,6 +518,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
+  overlayMaterial: {fileID: 0}
   fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomL.tmx
   map: 0
 --- !u!1 &475836658
@@ -1007,6 +1009,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
+  overlayMaterial: {fileID: 0}
   fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomMines.tmx
   map: 0
 --- !u!1 &1413918455
@@ -1054,6 +1057,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
+  overlayMaterial: {fileID: 0}
   fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomB.tmx
   map: 0
 --- !u!1 &1423193527
@@ -1323,6 +1327,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
+  overlayMaterial: {fileID: 0}
   fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
   map: 0
 --- !u!4 &1528050203
@@ -1428,6 +1433,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
+  overlayMaterial: {fileID: 0}
   fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
   map: 0
 --- !u!4 &1703808500
@@ -1560,6 +1566,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
+  overlayMaterial: {fileID: 0}
   fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
   map: 0
 --- !u!1001 &2068737573
