@@ -211,21 +211,21 @@ public class AudioManager : MonoBehaviourExtended {
 	}
 
 	IEnumerator PlayRandom(AudioSource source1, AudioSource source2, AudioClip[] audioClips, float minFrequency, float maxFrequency, float volume, float fade, string suffix) {
-		source2.clip = audioClips.GetRandom();
-		source2.volume = 0;
-		source2.Play();
-	
-		if (CoroutinesExist("Fade" + suffix)) {
-			StopCoroutines("Fade" + suffix);
-		}
-		StartCoroutine("Fade" + suffix, FadeOut(source1, fade));
-		StartCoroutine("Fade" + suffix, FadeIn(source2, volume, fade));
-	
-		AudioSource sourceTemp = source1;
-		source1 = source2;
-		source2 = sourceTemp;
-		
 		while (true) {
+			source2.clip = audioClips.GetRandom();
+			source2.volume = 0;
+			source2.Play();
+	
+			if (CoroutinesExist("Fade" + suffix)) {
+				StopCoroutines("Fade" + suffix);
+			}
+			StartCoroutine("Fade" + suffix, FadeOut(source1, fade));
+			StartCoroutine("Fade" + suffix, FadeIn(source2, volume, fade));
+	
+			AudioSource sourceTemp = source1;
+			source1 = source2;
+			source2 = sourceTemp;
+		
 			float random = Random.Range(minFrequency, maxFrequency);
 			float counter = 0;
 			
@@ -233,20 +233,6 @@ public class AudioManager : MonoBehaviourExtended {
 				counter += Time.deltaTime;
 				yield return new WaitForSeconds(0);
 			}
-			
-			source2.clip = audioClips.GetRandom();
-			source2.volume = 0;
-			source2.Play();
-		
-			if (CoroutinesExist("Fade" + suffix)) {
-				StopCoroutines("Fade" + suffix);
-			}
-			StartCoroutine("Fade" + suffix, FadeOut(source1, fade));
-			StartCoroutine("Fade" + suffix, FadeIn(source2, volume, fade));
-		
-			sourceTemp = source1;
-			source1 = source2;
-			source2 = sourceTemp;
 		}
 	}
 }
