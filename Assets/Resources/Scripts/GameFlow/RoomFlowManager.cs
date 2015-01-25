@@ -12,6 +12,8 @@ public class RoomFlowManager : MonoBehaviour {
 	public Room firstRoom;
 	public List<Room> rooms;
 	
+	public Dictionary<string, Room> RoomsBanane;
+	
 	
 	void Awake(){
 		RoomFlowManager.instance = this;
@@ -19,9 +21,9 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	
 	void Start () {
-		foreach (var element in rooms) {
-			element.gameObject.SetActive(false);
-		}
+		//foreach (var element in rooms) {
+			//element.gameObject.SetActive(false);
+		//}
 		switchToRoom(firstRoom);
 	}
 	
@@ -31,16 +33,19 @@ public class RoomFlowManager : MonoBehaviour {
 	}
 	
 	public void switchToRoom(Room room){
+		player.SetActive(false);
 		if(this.currentRoom != null){
 			foreach (var element in this.currentRoom.gameObject.GetChildren()) {
 				Destroy(element);
 			}
-			this.currentRoom.gameObject.SetActive(false);
 		}
-		GameObjectExtend.createClone(room.roomPrefab,"RoomThings", room.transform, Vector3.zero);
+		RoomLoader loader = new RoomLoader(room.gameObject);
+		loader.roomLoaderLinker = RoomLoaderLinker.instance;
+		loader.loadFromFile(room.fileName);
+		
 		this.currentRoom = room;
 		player.transform.position = room.startingPosition;
-		
+		player.SetActive(true);
 	}
 	
 	public void goToNextRoom(){

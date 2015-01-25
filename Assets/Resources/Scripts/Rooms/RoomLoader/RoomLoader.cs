@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 
 #if UNITY_EDITOR
@@ -14,11 +16,8 @@ public class RoomLoader : TiledMapLoader {
 	private GameObject parentGameObject;
 	private Room room;
 	
-	private Transform wallParent;
-	private Transform floorParent;
-	private Transform ceilingParent;
-	private Transform roofParent;
-	private Transform objectsParent;
+	private Transform currentLayer;
+	private int currentUnityLayer;
 	
 	public RoomLoaderLinker roomLoaderLinker;
 	
@@ -26,18 +25,11 @@ public class RoomLoader : TiledMapLoader {
 	public RoomLoader(GameObject parentGameObject){
 		this.parentGameObject = parentGameObject;
 		clearParent();
-		this.wallParent = GameObjectExtend.createGameObject("Wall", parentGameObject.transform, Vector3.zero, false).transform;
-		this.floorParent = GameObjectExtend.createGameObject("Floor", parentGameObject.transform, Vector3.zero, false).transform;
-		this.ceilingParent = GameObjectExtend.createGameObject("Ceiling P1", parentGameObject.transform, Vector3.zero, false).transform;
-		ceilingParent.gameObject.layer = LayerMask.NameToLayer("P1 Only");
-		this.roofParent = GameObjectExtend.createGameObject("Roof P2", parentGameObject.transform, Vector3.zero, false).transform;
-		roofParent.gameObject.layer = LayerMask.NameToLayer("P2 Only");
-		this.objectsParent = GameObjectExtend.createGameObject("object", parentGameObject.transform, Vector3.zero, false).transform;
 	}
 
 	void clearParent(){
 		foreach (var element in this.parentGameObject.GetChildren()) {
-			Object.DestroyImmediate(element);
+			UnityEngine.Object.DestroyImmediate(element);
 		}
 		room = parentGameObject.GetOrAddComponent<Room>();
 	}
@@ -49,9 +41,31 @@ public class RoomLoader : TiledMapLoader {
 			float x = float.Parse(positions[0]);
 			float z = this.room.height - float.Parse(positions[1]);
 			room.startingPosition = new Vector3(x,1,z);
+		}else if(name == "-PuzzleId"){
+			int index = Int32.Parse(value);
+			GameObject prefab = this.roomLoaderLinker.PuzzleBasePrefabs[index];
+			GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
+		}else if(name == "=FloorButtonSequence"){
+			putButtonSequence(value);
 		}
 	}
 
+	void putButtonSequence(string value){
+		String[] keys = value.Split(new char[]{','});
+		KeySquenceLink firstLink = new KeySquenceLink(keys[0]);
+		KeySquenceLink currentLink = firstLink;
+		
+		for (int i = 1; i < keys.Length; i++) {
+			KeySquenceLink newLink = new KeySquenceLink(keys[i]); 
+			currentLink.next = newLink;
+			currentLink = newLink;
+		}
+		
+		PuzzleFloorButton puzzle = UnityEngine.Object.FindObjectOfType<PuzzleFloorButton>();
+		puzzle.firstKeySquenceLink = firstLink;
+		puzzle.currentKeySquenceLink = firstLink;
+	}
+	
 	protected override void afterMapAttributesLoaded(){
 		this.room.width = this.mapWidth;
 		this.room.height = this.mapHeight;
@@ -60,34 +74,48 @@ public class RoomLoader : TiledMapLoader {
 	protected override void afterMapPropertiesLoaded(){
 		
 	}
+
+	protected override void addLayer(string layerName, int width, int height, Dictionary<string, string> properties){
+		this.currentLayer = GameObjectExtend.createGameObject(layerName, parentGameObject.transform, Vector3.zero, false).transform;
+		currentUnityLayer = -1;
+		if(properties.ContainsKey("UnityLayer")){
+			currentUnityLayer = LayerMask.NameToLayer(properties["UnityLayer"]);
+		}
+		
+		if(properties.ContainsKey("Offset")){
+			int offset = Int32.Parse(properties["Offset"]);
+			currentLayer.transform.Translate(new Vector3(0,offset,0));
+		}
+	}
 	
-	protected override void addTile(string layerName, int x, int y, int id){
+	
+	protected override void addTile(int x, int y, int id){
 		GameObject newPrefab = getNewPrefab(id);
 		
 		if(newPrefab != null){
 			Vector3 newP = new Vector3(x,0,y);
-			Transform parent = null;
-			int layer = -1;
-			if(layerName == "Wall"){
-				parent = wallParent;
-			}else if(layerName == "Floor"){
-				parent = floorParent;
-			}else if(layerName == "CeilingP1"){
-				parent = ceilingParent;
-				layer = LayerMask.NameToLayer("P1 Only");
-			}else if(layerName == "RoofP2"){
-				parent = roofParent;
-				layer = LayerMask.NameToLayer("P2 Only");
-			}else if(layerName == "Object"){
-				parent = objectsParent;
+			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP,false);
+			if(currentUnityLayer != -1){
+				newGo.gameObject.layer = currentUnityLayer;
 			}
-			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, parent, newP);
-			if(layer != -1){
-				newGo.gameObject.layer = layer;
+			if(this.tilesetTiles.ContainsKey(id)){
+				Dictionary<String,String> properties = this.tilesetTiles[id];
+				addPropertiesTo(newGo, properties);
 			}
 		}
 	}
 
+	void addPropertiesTo(GameObject newGo, Dictionary<string, string> properties){
+		if(properties.ContainsKey("SnakeKey")){
+			KeySnake ks = newGo.GetComponent<KeySnake>();
+			ks.index = Int32.Parse(properties["SnakeKey"]);
+		}else if(properties.ContainsKey("FloorButton")){
+			FloorButton fb = newGo.GetComponent<FloorButton>();
+			fb.keyword = properties["FloorButton"];
+		}
+	}
+	
+	
 	GameObject getNewPrefab(int id){
 		if(roomLoaderLinker.blockPrefabs.Count < id){
 			Debug.LogError("Une tuile d'id " + id + " n'a pas de prefab disponible dans le linker.");
