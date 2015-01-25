@@ -117,7 +117,7 @@ MonoBehaviour:
   startingPosition: {x: 10, y: 2, z: 15}
   width: 0
   height: 0
-  fileName: E:/My Games/FaceMeltingBanana/Assets/Resources/Rooms/Puzzles/sequence_0.tmx
+  fileName: E:/My Games/FaceMeltingBanana/Assets/Resources/Rooms/Puzzles/porteInvisible_0.tmx
   map: 0
 --- !u!1 &131496126
 GameObject:
@@ -241,6 +241,10 @@ MonoBehaviour:
   - {fileID: 140502, guid: 6ab49abee0f4f764588ea3c7415797d0, type: 2}
   - {fileID: 140502, guid: 6ab49abee0f4f764588ea3c7415797d0, type: 2}
   PuzzleBasePrefabs:
+  - {fileID: 166638, guid: 50c61388d6aa7984e906cb9e21ebc7a2, type: 2}
+  - {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
+  - {fileID: 180648, guid: 0db379a7d1d96ac43bd7a4c9061a8b23, type: 2}
+  - {fileID: 180648, guid: 0db379a7d1d96ac43bd7a4c9061a8b23, type: 2}
   - {fileID: 180648, guid: 0db379a7d1d96ac43bd7a4c9061a8b23, type: 2}
   - {fileID: 180648, guid: 0db379a7d1d96ac43bd7a4c9061a8b23, type: 2}
 --- !u!4 &405509012
@@ -555,7 +559,7 @@ MonoBehaviour:
   startingPosition: {x: 9, y: 2, z: 9}
   width: 0
   height: 0
-  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/testRoom2.tmx
+  fileName: E:/My Games/FaceMeltingBanana/Assets/Resources/Rooms/Puzzles/snake_0.tmx
   map: 0
 --- !u!1001 &2068737573
 Prefab:
