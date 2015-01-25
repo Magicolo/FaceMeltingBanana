@@ -47,7 +47,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -105,7 +105,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -393,7 +393,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: .75
+  m_Volume: .200000003
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -471,8 +471,8 @@ MonoBehaviour:
     type: 3}
   traficHallucination: {fileID: 8300000, guid: 96c7e9e7457d2fa4e8f3516cccb8ea6f, type: 3}
   currentLevelSource: {fileID: 8268348}
-  levelSuccess: {fileID: 0}
-  levelFail: {fileID: 0}
+  levelSuccess: {fileID: 8300000, guid: e94157a457fddb34293bc0bf5dadf259, type: 3}
+  levelFail: {fileID: 8300000, guid: 42f4efc897d694641b53e845abb04e95, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
