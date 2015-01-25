@@ -218,7 +218,7 @@ MonoBehaviour:
   startingPosition: {x: 0, y: 0, z: 0}
   width: 0
   height: 0
-  fileName: C:/Users/Kevin/Desktop/Unity/GGJ2015/FaceMeltingBanana/Assets/Resources/Rooms/KevinTest.tmx
+  fileName: E:/Projects/Unity/GGJ2015/FaceMeltingBanana/Assets/Resources/Rooms/KevinTest.tmx
   map: 0
 --- !u!1 &1231320200
 GameObject:
