@@ -9,6 +9,6 @@ public class PuzzleFloorButtonWin : State {
 	}
 	
 	public override void OnEnter() {
-		RoomFlowManager.instance.goToNextRoom();
+		//RoomFlowManager.instance.goToNextRoom();
 	}
 }
