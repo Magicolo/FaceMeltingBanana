@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -26,55 +25,71 @@ public class RoomFlowManager : MonoBehaviour {
 	private bool roomLose = false;
 	private bool switching = false;
 	
+	private MeshRenderer overLayMesh;
 	
-	void Awake(){
+	
+	void Awake() {
 		RoomFlowManager.instance = this;
 		player = GameObject.FindWithTag("Player");
+		overLayMesh = GameObject.Find("PlaneOverlay").GetComponent<MeshRenderer>();
 	}
 	
 	
-	void Start () {
+	void Start() {
 		switchToRoom(firstRoom);
+		AudioManager.PlayAll();
 	}
 	
 	
-	void Update () {
-		if(!switching && player.transform.position.y <= -10f){
+	void Update() {
+		if (!switching && player.transform.position.y <= -10f) {
 			switchToRoom(currentRoom.looseRoom);
 		}
-		if(fading){
-			t+= Time.deltaTime;
-			fadeImage.color = Color.Lerp(fromColor,toColor, t);
-			if(t >= 1){
-				if(fadeOut){
+		if (fading) {
+			t += Time.deltaTime;
+			fadeImage.color = Color.Lerp(fromColor, toColor, t);
+			if (t >= 1) {
+				if (fadeOut) {
 					fading = false;
 					fadeImage.color = toColor;
-				}else{
+				}
+				else {
 					fadeOut = true;
-					toColor = new Color(0,0,0,0);
-					fromColor = new Color(0,0,0,1);
+					toColor = new Color(0, 0, 0, 0);
+					fromColor = new Color(0, 0, 0, 1);
 					t = 0;
 				}
 			}
 		}
 	}
 	
-	public void switchToRoom(string roomName){
+	public void switchToRoom(string roomName) {
 		foreach (var room in this.rooms) {
-			if(room.name == roomName){
+			if (room.name == roomName) {
 				switchToRoom(room);
 				return;
 			}
 		}
 	}
 	
+
+
 	public void switchToRoom(Room room){
-		//player.GetComponent<Machin>().level = room.name;
-		if(switching) return;
+		Server server  = player.GetComponent<Server>();
+		if(server != null){
+			player.GetComponent<Server>().envoyerChangementLevel(room.name);
+		}
 		
-		if(fadeImage != null){
-			fromColor = new Color(0,0,0,0);
-			toColor = new Color(0,0,0,1);
+		if(room!= null && room.overlayMaterial != null){
+			overLayMesh.material = room.overlayMaterial;
+		}
+		
+		if(switching) return;
+
+		
+		if (fadeImage != null) {
+			fromColor = new Color(0, 0, 0, 0);
+			toColor = new Color(0, 0, 0, 1);
 			fadeOut = false;
 			fading = true;
 			t = 0;
@@ -83,7 +98,7 @@ public class RoomFlowManager : MonoBehaviour {
 		player.transform.position = room.startingPosition;
 		roomLose = false;
 		player.SetActive(false);
-		if(this.currentRoom != null){
+		if (this.currentRoom != null) {
 			foreach (var element in this.currentRoom.gameObject.GetChildren()) {
 				Destroy(element);
 			}
@@ -99,29 +114,30 @@ public class RoomFlowManager : MonoBehaviour {
 		switching = false;
 	}
 	
-	public void goToNextRoom(){
-		if(this.currentRoom.nextRoom == null){
+	public void goToNextRoom() {
+		if (this.currentRoom.nextRoom == null) {
 			Application.LoadLevel("TheEnd");
-		}else{
+		}
+		else {
 			switchToRoom(this.currentRoom.nextRoom);
 		}
 		
 	}
 	
-	public void activeState(string stateName){
+	public void activeState(string stateName) {
 	
 	}
 
-	public void die(){
-		if(!roomLose){
+	public void die() {
+		if (!roomLose) {
 			letTheGroundFall();
 			roomLose = true;
 		}
 	}
 
-	private void letTheGroundFall(){
+	private void letTheGroundFall() {
 		foreach (BoxCollider box in this.currentRoom.GetComponentsInChildren<BoxCollider>()) {
-			if(box.gameObject.transform.position.y <= 0){
+			if (box.gameObject.transform.position.y <= 0) {
 				Rigidbody rb = box.gameObject.AddComponent<Rigidbody>();
 				rb.mass = Random.Range(1f, 5f);
 				rb.drag = Random.Range(0f, 5f); 
