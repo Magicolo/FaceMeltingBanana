@@ -20,6 +20,9 @@ public class RoomFlowManager : MonoBehaviour {
 	private bool fadeOut = false;
 	private bool fading = false;
 	
+	private bool wallHackFade = false;
+	private float tSpeical = 0;
+	
 	public Dictionary<string, Room> RoomsBanane;
 	
 	private bool roomLose = false;
@@ -41,6 +44,17 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	
 	void Update () {
+		if(wallHackFade){
+			tSpeical += Time.deltaTime;
+			fadeImage.color = Color.Lerp(fromColor,toColor, tSpeical);
+			Debug.Log(Color.Lerp(fromColor,toColor, tSpeical));
+			if(tSpeical >= 1) {
+				Application.LoadLevel("TheEnd");
+			}
+			
+			return;
+		}
+		
 		if(!switching && player.transform.position.y <= -10f){
 			switchToRoom(currentRoom.looseRoom);
 		}
@@ -111,7 +125,10 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	public void goToNextRoom(){
 		if(this.currentRoom.nextRoom == null){
-			Application.LoadLevel("TheEnd");
+			wallHackFade = true;
+			toColor = new Color(1f,1f,1f,1f);
+			fromColor = new Color(1f,1f,1f,0f);
+			player.GetComponent<Rigidbody>().active = false;
 		}else{
 			switchToRoom(this.currentRoom.nextRoom);
 		}
