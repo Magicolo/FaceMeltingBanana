@@ -111,7 +111,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="P2 Only" width="12" height="12" visible="0">
+ <layer name="P2 Only" width="12" height="12">
   <properties>
    <property name="Offset" value="5"/>
    <property name="UnityLayer" value="P2 Only"/>
@@ -119,7 +119,7 @@
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,0,44,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
@@ -131,7 +131,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Wall2" width="12" height="12">
+ <layer name="Wall2" width="12" height="12" visible="0">
   <properties>
    <property name="Offset" value="2"/>
   </properties>
