@@ -13,6 +13,7 @@ public static class GameObjectExtend{
 			go.transform.position = parent.transform.position;
 		}
 		go.transform.Translate(position);
+		go.transform.Translate(original.transform.position);
 		
 		return go;
 	}

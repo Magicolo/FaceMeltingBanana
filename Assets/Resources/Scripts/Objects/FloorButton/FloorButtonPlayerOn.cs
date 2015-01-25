@@ -16,7 +16,7 @@ public class FloorButtonPlayerOn : State {
 	public override void OnEnter() {
 		exited = false;
 		t = 0;
-		Layer.puzzle.registerKeyword(this.Layer.keyword);
+		Layer.simplePuzzle.handleMessage("btn",this.Layer.keyword);
 		startingPosition = this.transform.position;
 		finalPosition = new Vector3(startingPosition.x, startingPosition.y - 0.09f, startingPosition.z);
 	}
@@ -31,7 +31,7 @@ public class FloorButtonPlayerOn : State {
 	}
 	
 	public override void TriggerExit(Collider collision) {
-		if (collision.gameObject.name == "Player") {
+		if (collision.gameObject.tag == "Player") {
 			exited = true;
 		}
 	}
