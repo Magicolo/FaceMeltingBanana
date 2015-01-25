@@ -258,7 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193414a30d64bf248a4563307e5380d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  clientPort: 25003
+  ip: 10.212.8.139
+  playerTypes: 0
 --- !u!148 &311057593
 NetworkView:
   m_ObjectHideFlags: 0
@@ -750,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRoom: {fileID: 1703808499}
-  firstRoom: {fileID: 1528050202}
+  firstRoom: {fileID: 1703808499}
   rooms:
   - {fileID: 62231561}
   - {fileID: 1413918457}
@@ -1340,7 +1342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1703808499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1358,7 +1360,7 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
+  fileName: C:/Users/Kevin/Desktop/Unity/GGJ2015/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
   map: 0
 --- !u!4 &1703808500
 Transform:
