@@ -20,6 +20,9 @@ public class RoomFlowManager : MonoBehaviour {
 	private bool fadeOut = false;
 	private bool fading = false;
 	
+	private bool wallHackFade = false;
+	private float tSpeical = 0;
+	
 	public Dictionary<string, Room> RoomsBanane;
 	
 	private bool roomLose = false;
@@ -36,14 +39,25 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	
 	void Start() {
-		switchToRoom(firstRoom);
+		switchToRoom(firstRoom, true);
 		AudioManager.PlayAll();
 	}
 	
 	
-	void Update() {
-		if (!switching && player.transform.position.y <= -10f) {
-			switchToRoom(currentRoom.looseRoom);
+	void Update () {
+		if(wallHackFade){
+			tSpeical += Time.deltaTime;
+			fadeImage.color = Color.Lerp(fromColor,toColor, tSpeical);
+			Debug.Log(Color.Lerp(fromColor,toColor, tSpeical));
+			if(tSpeical >= 1) {
+				Application.LoadLevel("TheEnd");
+			}
+			
+			return;
+		}
+		
+		if(!switching && player.transform.position.y <= -10f){
+			switchToRoom(currentRoom.looseRoom, false);
 		}
 		if (fading) {
 			t += Time.deltaTime;
@@ -63,10 +77,10 @@ public class RoomFlowManager : MonoBehaviour {
 		}
 	}
 	
-	public void switchToRoom(string roomName) {
+	public void switchToRoom(string roomName, bool success) {
 		foreach (var room in this.rooms) {
 			if (room.name == roomName) {
-				switchToRoom(room);
+				switchToRoom(room, success);
 				return;
 			}
 		}
@@ -74,8 +88,10 @@ public class RoomFlowManager : MonoBehaviour {
 	
 
 
-	public void switchToRoom(Room room){
+	public void switchToRoom(Room room, bool success){
 		Server server  = player.GetComponent<Server>();
+		AudioManager.PlayLevelSource(success);
+		
 		if(server != null){
 			player.GetComponent<Server>().envoyerChangementLevel(room.name);
 		}
@@ -116,10 +132,13 @@ public class RoomFlowManager : MonoBehaviour {
 	
 	public void goToNextRoom() {
 		if (this.currentRoom.nextRoom == null) {
-			Application.LoadLevel("TheEnd");
+			wallHackFade = true;
+			toColor = new Color(1f,1f,1f,1f);
+			fromColor = new Color(1f,1f,1f,0f);
+			player.GetComponent<Rigidbody>().active = false;
 		}
 		else {
-			switchToRoom(this.currentRoom.nextRoom);
+			switchToRoom(this.currentRoom.nextRoom, true);
 		}
 		
 	}

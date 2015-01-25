@@ -32,11 +32,6 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip ashsSong;
 	public AudioClip brodysSong;
 
-	[Button("PlayMusic", "PlayMusic", NoPrefixLabel = true)] public bool playMusic;
-	void PlayMusic() {
-		
-	}
-	
 	[Separator]
 	 
 	public AudioSource currentAmbiance;
@@ -46,11 +41,6 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip windAmbiance;
 	public AudioClip windDangerAmbiance;
 
-	[Button("PlayAmbiance", "PlayAmbiance", NoPrefixLabel = true)] public bool playAmbiance;
-	void PlayAmbiance() {
-		
-	}
-	
 	[Separator]
 	
 	public AudioSource currentHallucination;
@@ -60,26 +50,28 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip heartBeepHallucination;
 	public AudioClip traficHallucination;
 	
-	[Button("PlayHallucinations", "PlayHallucinations", NoPrefixLabel = true)] public bool playHallucinations;
-	void PlayHallucinations() {
-		playRandomHallucination(10, 30, 0.5F, 2);
-	}
+	[Separator]
 	
-	[Button("StopHallucinations", "StopHallucinations", NoPrefixLabel = true)] public bool stopHallucinations;
-	void StopHallucinations() {
-		stopRandomHallucination(2);
-	}
-
+	public AudioSource currentLevelSource;
+	public AudioClip levelSuccess;
+	public AudioClip levelFail;
+	
 	public static void PlayAll() {
-		PlayRandomMusic(60, 150, 0.5F, 10);
-		PlayRandomAmbiance(45, 120, 0.5F, 5);
-		PlayRandomHallucination(15, 60, 0.5F, 2);
+		if (Network.isServer) {
+			PlayRandomMusic(60, 150, 0.75F, 5);
+			PlayRandomAmbiance(60, 150, 0.5F, 5);
+			PlayRandomHallucination(120, 240, 0.5F, 2);
+		}
 	}
 	
 	public static void StopAll() {
 		StopRandomMusic(2);
 		StopRandomAmbiance(2);
 		StopRandomHallucination(2);
+	}
+	
+	public static void PlayLevelSource(bool success) {
+		Instance.playLevelSource(success);
 	}
 	
 	public static void PlayRandomMusic(float minFrequency, float maxFrequency, float volume, float fade) {
@@ -184,6 +176,13 @@ public class AudioManager : MonoBehaviourExtended {
 		StartCoroutine("FadeHallucination", FadeOut(idleHallucination, fade));
 	}
 	
+	void playLevelSource(bool success) {
+		if (Network.isServer){
+			currentLevelSource.clip = success ? levelSuccess : levelFail;
+			currentLevelSource.Play();
+		}
+	}
+	
 	IEnumerator FadeIn(AudioSource source, float targetVolume, float fade) {
 		float counter = 0;
 		
@@ -212,6 +211,20 @@ public class AudioManager : MonoBehaviourExtended {
 
 	IEnumerator PlayRandom(AudioSource source1, AudioSource source2, AudioClip[] audioClips, float minFrequency, float maxFrequency, float volume, float fade, string suffix) {
 		while (true) {
+			source2.clip = audioClips.GetRandom();
+			source2.volume = 0;
+			source2.Play();
+	
+			if (CoroutinesExist("Fade" + suffix)) {
+				StopCoroutines("Fade" + suffix);
+			}
+			StartCoroutine("Fade" + suffix, FadeOut(source1, fade));
+			StartCoroutine("Fade" + suffix, FadeIn(source2, volume, fade));
+	
+			AudioSource sourceTemp = source1;
+			source1 = source2;
+			source2 = sourceTemp;
+		
 			float random = Random.Range(minFrequency, maxFrequency);
 			float counter = 0;
 			
@@ -219,20 +232,6 @@ public class AudioManager : MonoBehaviourExtended {
 				counter += Time.deltaTime;
 				yield return new WaitForSeconds(0);
 			}
-			
-			source2.clip = audioClips.GetRandom();
-			source2.volume = 0;
-			source2.Play();
-		
-			if (CoroutinesExist("Fade" + suffix)) {
-				StopCoroutines("Fade" + suffix);
-			}
-			StartCoroutine("Fade" + suffix, FadeOut(source1, fade));
-			StartCoroutine("Fade" + suffix, FadeIn(source2, volume, fade));
-		
-			AudioSource sourceTemp = source1;
-			source1 = source2;
-			source2 = sourceTemp;
 		}
 	}
 }

@@ -44,10 +44,14 @@ public class PuzzleSnake : PuzzleBase {
 	}
 	
 	public override void Success() {
+		base.Success();
+		
 		SwitchState<PuzzleSnakeSuccess>();
 	}
 	
 	public override void Fail() {
+		base.Fail();
+		
 		SwitchState<PuzzleSnakeFail>();
 	}
 }
