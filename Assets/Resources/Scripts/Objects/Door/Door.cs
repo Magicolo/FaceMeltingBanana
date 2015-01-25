@@ -18,6 +18,7 @@ public class Door : StateLayer {
 		
 		cube = gameObject.FindChild("Cube");
 		cubeMeshRenderer = cube.GetComponent<MeshRenderer>();
+		cubeMeshRenderer.material.color = baseColor;
 	}
 	
 	public override void TriggerEnter(Collider collision) {

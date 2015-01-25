@@ -6,36 +6,7 @@
   <property name="PlayerStartingPosition" value="10,5"/>
   <property name="name" value="Test 1"/>
  </properties>
- <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
-  <image source="RoomEditorImage.png" width="320" height="128"/>
-  <tile id="4">
-   <properties>
-    <property name="FloorButton" value="0"/>
-   </properties>
-  </tile>
-  <tile id="5">
-   <properties>
-    <property name="FloorButton" value="1"/>
-   </properties>
-  </tile>
-  <tile id="6">
-   <properties>
-    <property name="FloorButton" value="2"/>
-   </properties>
-  </tile>
-  <tile id="7">
-   <properties>
-    <property name="KeySnake" value="4"/>
-   </properties>
-  </tile>
-  <tile id="8">
-   <properties>
-    <property name="DoorColor" value="255,0,0"/>
-    <property name="DoorLocked" value="false"/>
-    <property name="DoorWin" value="false"/>
-   </properties>
-  </tile>
- </tileset>
+ <tileset firstgid="1" source="Tileset.tsx"/>
  <layer name="Floor" width="20" height="20">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,32,32,32,0,0,0,0,0,0,0,0,
@@ -65,7 +36,7 @@
    <property name="Offset" value="1"/>
   </properties>
   <data encoding="csv">
-31,30,30,30,30,30,30,10,30,9,3,30,30,30,30,30,30,30,30,30,
+31,30,30,30,30,30,30,30,30,42,30,30,30,30,30,30,30,30,30,30,
 31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,
 31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,30,
 31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,31,
@@ -165,7 +136,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Wall2" width="20" height="20">
+ <layer name="Wall2" width="20" height="20" visible="0">
   <properties>
    <property name="Offset" value="2"/>
   </properties>
@@ -192,7 +163,7 @@
 34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34
 </data>
  </layer>
- <layer name="Wall3" width="20" height="20">
+ <layer name="Wall3" width="20" height="20" visible="0">
   <properties>
    <property name="Offset" value="3"/>
   </properties>

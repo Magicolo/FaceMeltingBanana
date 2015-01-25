@@ -97,6 +97,10 @@ public class RoomLoader : TiledMapLoader {
 			GameObject newGo = GameObjectExtend.createClone(newPrefab, newPrefab.name, currentLayer, newP, true);
 			if(currentUnityLayer != -1){
 				newGo.gameObject.layer = currentUnityLayer;
+				var fils = newGo.GetChildren();
+				foreach (var element in fils) {
+					element.gameObject.layer = currentUnityLayer;
+				}
 			}
 			if(this.tilesetTiles.ContainsKey(id)){
 				Dictionary<String,String> properties = this.tilesetTiles[id];
@@ -122,14 +126,22 @@ public class RoomLoader : TiledMapLoader {
 		if(properties.ContainsKey("DoorColor")){
 			Door door = newGo.GetComponent<Door>();
 			String[] colorData = properties["DoorColor"].Split(new char[]{','});
-			Byte r = Byte.Parse(colorData[0]);
-			Byte g = Byte.Parse(colorData[1]);
-			Byte b = Byte.Parse(colorData[2]);
-			door.baseColor = new Color32(r,g,b,255);
+			Int32 r = Int32.Parse(colorData[0]);
+			Int32 g = Int32.Parse(colorData[1]);
+			Int32 b = Int32.Parse(colorData[2]);
+			door.baseColor = new Color(r/255f,g/255f,b/255f,1);
+			door.FindChild("Cube").GetComponent<MeshRenderer>().material.color = door.baseColor;
 		}
 		if(properties.ContainsKey("DoorWin")){
 			Door door = newGo.GetComponent<Door>();
 			door.enterWin = properties["DoorWin"] == "true";
+		}
+		if(properties.ContainsKey("Collider")){
+			BoxCollider box = newGo.GetComponentInChildren<BoxCollider>();
+			if(properties["Collider"] == "false"){
+				box.enabled = false;
+			}
+			
 		}
 	}
 	

@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour {
 	// Si aventurier, on set isServer a true sinon on le met a false
 
 
-
+	public string levelName;
 
 
 	// Use this for initialization
@@ -32,6 +32,10 @@ public class MainMenu : MonoBehaviour {
 		
 	void Update () {
 
+	}
+	
+	void LoadLevel(){
+		Application.LoadLevel(levelName);
 	}
 
 
