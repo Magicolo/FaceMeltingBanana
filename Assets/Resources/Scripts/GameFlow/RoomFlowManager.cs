@@ -60,7 +60,9 @@ public class RoomFlowManager : MonoBehaviour {
 	}
 	
 	public void switchToRoom(Room room){
+		//Debug.Log("switchToRoom");
 		if(switching) return;
+		//Debug.Log("llala");
 		
 		if(fadeImage != null){
 			fromColor = new Color(0,0,0,0);
@@ -90,7 +92,12 @@ public class RoomFlowManager : MonoBehaviour {
 	}
 	
 	public void goToNextRoom(){
-		switchToRoom(this.currentRoom.nextRoom);
+		if(this.currentRoom.nextRoom == null){
+			Application.LoadLevel("TheEnd");
+		}else{
+			switchToRoom(this.currentRoom.nextRoom);
+		}
+		
 	}
 	
 	public void activeState(string stateName){

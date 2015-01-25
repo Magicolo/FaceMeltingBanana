@@ -7,6 +7,8 @@ public class SimplePuzzle : MonoBehaviour {
 
 	public bool puzzleActive = true;
 	[Disable] public List<Door> doors;
+	[Disable] public List<FloorButton> buttons;
+	
 
 	public void init(){
 		doors = new List<Door>();
@@ -17,6 +19,7 @@ public class SimplePuzzle : MonoBehaviour {
 		}
 		foreach (FloorButton button in transform.parent.GetComponentsInChildren<FloorButton>()) {
 			button.simplePuzzle = this;
+			buttons.Add(button);
 		}
 	}
 	
