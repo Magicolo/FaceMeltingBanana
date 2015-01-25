@@ -59,10 +59,18 @@ public class RoomFlowManager : MonoBehaviour {
 		}
 	}
 	
+	public void switchToRoom(string roomName){
+		foreach (var room in this.rooms) {
+			if(room.name == roomName){
+				switchToRoom(room);
+				return;
+			}
+		}
+	}
+	
 	public void switchToRoom(Room room){
-		//Debug.Log("switchToRoom");
+		//player.GetComponent<Machin>().level = room.name;
 		if(switching) return;
-		//Debug.Log("llala");
 		
 		if(fadeImage != null){
 			fromColor = new Color(0,0,0,0);
