@@ -4,7 +4,6 @@ using Magicolo;
 
 public class Door : StateLayer {
 
-	public float speed = 8;
 	[Disable] public GameObject cube;
 	[Disable] public PuzzleBase puzzle;
 	[Disable] public MeshRenderer cubeMeshRenderer;
@@ -19,6 +18,7 @@ public class Door : StateLayer {
 		
 		cube = gameObject.FindChild("Cube");
 		cubeMeshRenderer = cube.GetComponent<MeshRenderer>();
+		cubeMeshRenderer.material.color = baseColor;
 	}
 	
 	public override void TriggerEnter(Collider collision) {
