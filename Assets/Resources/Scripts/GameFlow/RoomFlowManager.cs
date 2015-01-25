@@ -25,10 +25,13 @@ public class RoomFlowManager : MonoBehaviour {
 	private bool roomLose = false;
 	private bool switching = false;
 	
+	private MeshRenderer overLayMesh;
+	
 	
 	void Awake(){
 		RoomFlowManager.instance = this;
 		player = GameObject.FindWithTag("Player");
+		overLayMesh = GameObject.Find("PlaneOverlay").GetComponent<MeshRenderer>();
 	}
 	
 	
@@ -68,7 +71,15 @@ public class RoomFlowManager : MonoBehaviour {
 	}
 	
 	public void switchToRoom(Room room){
-		player.GetComponent<Server>().envoyerChangementLevel(room.name);
+		Server server  = player.GetComponent<Server>();
+		if(server != null){
+			player.GetComponent<Server>().envoyerChangementLevel(room.name);
+		}
+		
+		if(room!= null && room.overlayMaterial != null){
+			overLayMesh.material = room.overlayMaterial;
+		}
+		
 		if(switching) return;
 		
 		if(fadeImage != null){

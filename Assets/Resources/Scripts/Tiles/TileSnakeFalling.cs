@@ -21,5 +21,11 @@ public class TileSnakeFalling : State {
 			cubeBoxCollider.enabled = false;
 		}
 	}
+	
+	public override void OnUpdate() {
+		if (transform.position.y <= -10) {
+			gameObject.Remove();
+		}
+	}
 }
 
