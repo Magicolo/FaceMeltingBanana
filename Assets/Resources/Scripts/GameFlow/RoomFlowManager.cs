@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -69,7 +68,7 @@ public class RoomFlowManager : MonoBehaviour {
 	}
 	
 	public void switchToRoom(Room room){
-		//player.GetComponent<Machin>().level = room.name;
+		player.GetComponent<Server>().envoyerChangementLevel(room.name);
 		if(switching) return;
 		
 		if(fadeImage != null){
