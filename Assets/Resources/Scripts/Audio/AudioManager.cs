@@ -32,11 +32,6 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip ashsSong;
 	public AudioClip brodysSong;
 
-	[Button("PlayMusic", "PlayMusic", NoPrefixLabel = true)] public bool playMusic;
-	void PlayMusic() {
-		
-	}
-	
 	[Separator]
 	 
 	public AudioSource currentAmbiance;
@@ -46,11 +41,6 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip windAmbiance;
 	public AudioClip windDangerAmbiance;
 
-	[Button("PlayAmbiance", "PlayAmbiance", NoPrefixLabel = true)] public bool playAmbiance;
-	void PlayAmbiance() {
-		
-	}
-	
 	[Separator]
 	
 	public AudioSource currentHallucination;
@@ -60,26 +50,28 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip heartBeepHallucination;
 	public AudioClip traficHallucination;
 	
-	[Button("PlayHallucinations", "PlayHallucinations", NoPrefixLabel = true)] public bool playHallucinations;
-	void PlayHallucinations() {
-		playRandomHallucination(10, 30, 0.5F, 2);
-	}
+	[Separator]
 	
-	[Button("StopHallucinations", "StopHallucinations", NoPrefixLabel = true)] public bool stopHallucinations;
-	void StopHallucinations() {
-		stopRandomHallucination(2);
-	}
-
+	public AudioSource currentLevelSource;
+	public AudioClip levelSuccess;
+	public AudioClip levelFail;
+	
 	public static void PlayAll() {
-		PlayRandomMusic(60, 150, 0.5F, 10);
-		PlayRandomAmbiance(45, 120, 0.5F, 5);
-		PlayRandomHallucination(15, 60, 0.5F, 2);
+		if (Network.isServer) {
+			PlayRandomMusic(60, 150, 0.5F, 10);
+			PlayRandomAmbiance(45, 120, 0.5F, 5);
+			PlayRandomHallucination(15, 60, 0.5F, 2);
+		}
 	}
 	
 	public static void StopAll() {
 		StopRandomMusic(2);
 		StopRandomAmbiance(2);
 		StopRandomHallucination(2);
+	}
+	
+	public static void PlayLevelSource(bool success) {
+		Instance.playLevelSource(success);
 	}
 	
 	public static void PlayRandomMusic(float minFrequency, float maxFrequency, float volume, float fade) {
@@ -182,6 +174,11 @@ public class AudioManager : MonoBehaviourExtended {
 		
 		StartCoroutine("FadeHallucination", FadeOut(currentHallucination, fade));
 		StartCoroutine("FadeHallucination", FadeOut(idleHallucination, fade));
+	}
+	
+	void playLevelSource(bool success) {
+		currentLevelSource.clip = success ? levelSuccess : levelFail;
+		currentLevelSource.Play();
 	}
 	
 	IEnumerator FadeIn(AudioSource source, float targetVolume, float fade) {
