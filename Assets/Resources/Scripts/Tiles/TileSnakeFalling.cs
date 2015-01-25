@@ -9,6 +9,9 @@ public class TileSnakeFalling : State {
 		get { return ((TileSnake)layer); }
 	}
 	
+	public AudioSource fallingSource1;
+	public AudioSource fallingSource2;
+	
 	public override void OnEnter() {
 		if (Layer.debug) {
 			Layer.cubeMeshRenderer.material.color = Color.red;
@@ -19,6 +22,15 @@ public class TileSnakeFalling : State {
 		
 		foreach (BoxCollider cubeBoxCollider in Layer.cubeBoxColliders) {
 			cubeBoxCollider.enabled = false;
+		}
+		
+		fallingSource1.Play();
+		fallingSource2.Play();
+	}
+	
+	public override void OnUpdate() {
+		if (transform.position.y <= -10) {
+			gameObject.Remove();
 		}
 	}
 }

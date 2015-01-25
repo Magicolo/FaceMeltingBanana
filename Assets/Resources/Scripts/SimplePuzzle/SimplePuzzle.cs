@@ -40,12 +40,14 @@ public class SimplePuzzle : MonoBehaviour {
 	
 	public void fail(){
 		if(!puzzleActive) return;
+		AudioManager.PlayLevelSource(false);
 		RoomFlowManager.instance.die();
 		puzzleActive = false;
 	}
 	
 	public void win(){
 		if(!puzzleActive) return;
+		AudioManager.PlayLevelSource(true);
 		puzzleActive = false;
 	}
 }

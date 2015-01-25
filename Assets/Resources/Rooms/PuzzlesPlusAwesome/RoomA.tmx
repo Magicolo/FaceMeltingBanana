@@ -86,7 +86,7 @@
  </layer>
  <layer name="Object1" width="12" height="12">
   <properties>
-   <property name="Offset1" value=""/>
+   <property name="Offset1" value="1"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,

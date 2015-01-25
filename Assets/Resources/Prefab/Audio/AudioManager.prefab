@@ -15,6 +15,7 @@ GameObject:
   - 82: {fileID: 8207328}
   - 82: {fileID: 8207326}
   - 82: {fileID: 8207324}
+  - 82: {fileID: 8268348}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -46,7 +47,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -104,7 +105,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Priority: 128
   DopplerLevel: 1
@@ -382,6 +383,64 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!82 &8268348
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .200000003
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!114 &11407324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -397,18 +456,12 @@ MonoBehaviour:
   idleMusic: {fileID: 8207334}
   ashsSong: {fileID: 8300000, guid: 72f0b62a38ac98143849c33ca5576e3d, type: 3}
   brodysSong: {fileID: 8300000, guid: dce0419907ae222419f18eb560d21e91, type: 3}
-  switchToAsh: 0
-  switchToBrody: 0
   currentAmbiance: {fileID: 8207332}
   idleAmbiance: {fileID: 8207328}
   hospitalAmbiance: {fileID: 8300000, guid: e539bd41fefa88f47b211ed8cec3bbd2, type: 3}
   forestAmbiance: {fileID: 8300000, guid: ffe9a8d39cf362c49855ccbb8f43e277, type: 3}
   windAmbiance: {fileID: 8300000, guid: 1b18bd67af20c9b49be861a703ab59f6, type: 3}
   windDangerAmbiance: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
-  switchToForest: 0
-  switchToWind: 0
-  switchToWindDanger: 0
-  switchToHospital: 0
   currentHallucination: {fileID: 8207326}
   idleHallucination: {fileID: 8207324}
   ambulanceHallucination: {fileID: 8300000, guid: f77bdb4d2e462814a8078f07c1e29c94,
@@ -417,8 +470,9 @@ MonoBehaviour:
   heartBeepHallucination: {fileID: 8300000, guid: 8c83d846ccd22af4d9571bf037a2ebca,
     type: 3}
   traficHallucination: {fileID: 8300000, guid: 96c7e9e7457d2fa4e8f3516cccb8ea6f, type: 3}
-  playRandom: 0
-  stopRandom: 0
+  currentLevelSource: {fileID: 8268348}
+  levelSuccess: {fileID: 8300000, guid: e94157a457fddb34293bc0bf5dadf259, type: 3}
+  levelFail: {fileID: 8300000, guid: 42f4efc897d694641b53e845abb04e95, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

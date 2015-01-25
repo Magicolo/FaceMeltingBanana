@@ -8,6 +8,8 @@ public class FloorButtonPlayerOn : State {
 		get { return ((FloorButton)layer); }
 	}
 	
+	public AudioSource triggerSource;
+	
 	private float t;
 	private Vector3 startingPosition;
 	private Vector3 finalPosition;
@@ -19,6 +21,7 @@ public class FloorButtonPlayerOn : State {
 		Layer.simplePuzzle.handleMessage("btn",this.Layer.keyword);
 		startingPosition = this.transform.position;
 		finalPosition = new Vector3(startingPosition.x, startingPosition.y - 0.09f, startingPosition.z);
+		triggerSource.Play();
 	}
 	
 	public override void OnUpdate() {
