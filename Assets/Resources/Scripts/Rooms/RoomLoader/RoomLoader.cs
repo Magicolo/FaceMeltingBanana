@@ -113,6 +113,24 @@ public class RoomLoader : TiledMapLoader {
 			FloorButton fb = newGo.GetComponent<FloorButton>();
 			fb.keyword = properties["FloorButton"];
 		}
+		if(properties.ContainsKey("DoorLocked")){
+			Door door = newGo.GetComponent<Door>();
+			if(properties["DoorLocked"] == "false"){
+				door.SwitchState<DoorOpen>();
+			}
+		}
+		if(properties.ContainsKey("DoorColor")){
+			Door door = newGo.GetComponent<Door>();
+			String[] colorData = properties["DoorColor"].Split(new char[]{','});
+			Byte r = Byte.Parse(colorData[0]);
+			Byte g = Byte.Parse(colorData[1]);
+			Byte b = Byte.Parse(colorData[2]);
+			door.baseColor = new Color32(r,g,b,255);
+		}
+		if(properties.ContainsKey("DoorWin")){
+			Door door = newGo.GetComponent<Door>();
+			door.enterWin = properties["DoorWin"] == "true";
+		}
 	}
 	
 	
