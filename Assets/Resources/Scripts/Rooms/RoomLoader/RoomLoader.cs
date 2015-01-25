@@ -18,6 +18,7 @@ public class RoomLoader : TiledMapLoader {
 	
 	private Transform currentLayer;
 	private int currentUnityLayer;
+	private SimplePuzzle simplePuzzle = null;
 	
 	public RoomLoaderLinker roomLoaderLinker;
 	
@@ -41,10 +42,13 @@ public class RoomLoader : TiledMapLoader {
 			float x = float.Parse(positions[0]);
 			float z = this.room.height - float.Parse(positions[1]);
 			room.startingPosition = new Vector3(x,1,z);
+		}else if(name == "PlayerStartingAngle"){
+			this.room.startingAngle = float.Parse(value);
 		}else if(name == "-PuzzleId"){
 			int index = Int32.Parse(value);
 			GameObject prefab = this.roomLoaderLinker.PuzzleBasePrefabs[index];
-			GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
+			GameObject newGo = GameObjectExtend.createClone(prefab, prefab.name, room.transform, Vector3.zero);
+			simplePuzzle = newGo.GetComponent<SimplePuzzle>();
 		}else if(name == "=FloorButtonSequence"){
 			putButtonSequence(value);
 		}
@@ -61,7 +65,7 @@ public class RoomLoader : TiledMapLoader {
 			currentLink = newLink;
 		}
 		
-		PuzzleFloorButton puzzle = UnityEngine.Object.FindObjectOfType<PuzzleFloorButton>();
+		FloorButtonPuzzle puzzle = UnityEngine.Object.FindObjectOfType<FloorButtonPuzzle>();
 		puzzle.firstKeySquenceLink = firstLink;
 		puzzle.currentKeySquenceLink = firstLink;
 	}
@@ -163,4 +167,10 @@ public class RoomLoader : TiledMapLoader {
 		
 	}
 	
+
+	protected override void afterAll(){
+		if(this.simplePuzzle != null){
+			simplePuzzle.init();
+		}
+	}
 }

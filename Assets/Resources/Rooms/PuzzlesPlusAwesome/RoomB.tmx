@@ -1,28 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="left-down" width="12" height="12" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
+  <property name="PlayerStartingAngle" value="180"/>
   <property name="PlayerStartingPosition" value="6,7"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
   <image source="../RoomEditorImage.png" width="320" height="160"/>
+  <tile id="3">
+   <properties>
+    <property name="FloorButton" value="r"/>
+   </properties>
+  </tile>
   <tile id="4">
    <properties>
-    <property name="FloorButton" value="0"/>
+    <property name="FloorButton" value="c"/>
    </properties>
   </tile>
   <tile id="5">
    <properties>
-    <property name="FloorButton" value="1"/>
+    <property name="FloorButton" value="o"/>
    </properties>
   </tile>
   <tile id="6">
    <properties>
-    <property name="FloorButton" value="2"/>
+    <property name="FloorButton" value="m"/>
    </properties>
   </tile>
   <tile id="7">
    <properties>
-    <property name="KeySnake" value="4"/>
+    <property name="FloorButton" value="b"/>
    </properties>
   </tile>
   <tile id="8">
@@ -101,7 +107,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
-0,0,7,0,0,0,0,0,0,6,0,0,
+0,23,7,0,0,0,0,0,0,6,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,

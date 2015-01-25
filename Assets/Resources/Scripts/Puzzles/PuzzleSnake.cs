@@ -11,7 +11,7 @@ public class PuzzleSnake : PuzzleBase {
 	public override void OnStart() {
 		base.OnStart();
 		
-		player = GameObject.Find("Player");
+		player = GameObject.FindWithTag("Player");
 		
 		KeySnake[] keys = transform.parent.GetComponentsInChildren<KeySnake>();
 		int[] indices = new int[keys.Length];
