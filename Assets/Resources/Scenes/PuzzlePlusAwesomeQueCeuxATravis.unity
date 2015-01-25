@@ -121,53 +121,6 @@ MonoBehaviour:
   height: 0
   fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
   map: 0
---- !u!1 &74045648
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 74045650}
-  - 114: {fileID: 74045649}
-  m_Layer: 0
-  m_Name: RoomG
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &74045649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 74045648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  looseRoom: {fileID: 0}
-  nextRoom: {fileID: 62231561}
-  startingPosition: {x: 0, y: 0, z: 0}
-  startingAngle: 0
-  width: 0
-  height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
-  map: 0
---- !u!4 &74045650
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 74045648}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 612877398}
-  m_RootOrder: 3
 --- !u!1 &88128686
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,48 +211,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!1 &207180841
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-  m_PrefabInternal: {fileID: 1859161979}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 207180843}
-  - 114: {fileID: 207180842}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &207180842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11444318, guid: 86f0fb2e4b0084c42988aada07be1ef9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1859161979}
-  m_GameObject: {fileID: 207180841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a46289f5b9840643b71f1fb366fb15a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleActive: 1
-  doors: []
---- !u!4 &207180843
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-  m_PrefabInternal: {fileID: 1859161979}
-  m_GameObject: {fileID: 207180841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 179.735168, y: 78.3647156, z: -48.9251709}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
 --- !u!1 &311057590
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,12 +449,14 @@ MonoBehaviour:
   - {fileID: 126918, guid: e73ce3b7d0f4f5e4495c02767508f0c5, type: 2}
   - {fileID: 125316, guid: 29b955b517940264d8081969fe1c1c9f, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
-  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 128106, guid: ba25ebc8e80b0c542962bd2fa58bb71b, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   PuzzleBasePrefabs:
   - {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
   - {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
+  - {fileID: 116414, guid: 1bce46ef20aad604783e25a774e66bbb, type: 2}
+  - {fileID: 159610, guid: bd60b96c92e5017409aa5213f1fd34a4, type: 2}
 --- !u!4 &405509012
 Transform:
   m_ObjectHideFlags: 0
@@ -556,6 +469,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!1 &417380765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 417380766}
+  - 114: {fileID: 417380767}
+  m_Layer: 0
+  m_Name: RoomL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &417380766
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417380765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 612877398}
+  m_RootOrder: 5
+--- !u!114 &417380767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417380765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  looseRoom: {fileID: 0}
+  nextRoom: {fileID: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  startingAngle: 0
+  width: 0
+  height: 0
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomL.tmx
+  map: 0
 --- !u!1 &475836658
 GameObject:
   m_ObjectHideFlags: 0
@@ -672,9 +632,10 @@ Transform:
   - {fileID: 62231560}
   - {fileID: 1413918456}
   - {fileID: 1528050203}
-  - {fileID: 74045650}
   - {fileID: 1703808500}
   - {fileID: 1974879750}
+  - {fileID: 417380766}
+  - {fileID: 1357730655}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!1 &657472987
@@ -789,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRoom: {fileID: 1703808499}
-  firstRoom: {fileID: 1974879751}
+  firstRoom: {fileID: 1528050202}
   rooms:
   - {fileID: 62231561}
   - {fileID: 1413918457}
@@ -994,7 +955,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4294950911
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1014,6 +975,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 311057591}
   m_RootOrder: 1
+--- !u!1 &1357730654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1357730655}
+  - 114: {fileID: 1357730656}
+  m_Layer: 0
+  m_Name: RoomMines
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357730655
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357730654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 612877398}
+  m_RootOrder: 6
+--- !u!114 &1357730656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357730654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  looseRoom: {fileID: 1357730656}
+  nextRoom: {fileID: 0}
+  startingPosition: {x: 0, y: 0, z: 0}
+  startingAngle: 0
+  width: 0
+  height: 0
+  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomMines.tmx
+  map: 0
 --- !u!1 &1413918455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,8 +1061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 1528050202}
-  nextRoom: {fileID: 0}
+  looseRoom: {fileID: 1413918457}
+  nextRoom: {fileID: 1528050202}
   startingPosition: {x: 9, y: 2, z: 9}
   startingAngle: 0
   width: 0
@@ -1161,7 +1169,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 14809090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_ViewID.m_ID
@@ -1203,6 +1211,10 @@ Prefab:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294950911
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 311057590}
@@ -1235,7 +1247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 1413918457}
+  looseRoom: {fileID: 1528050202}
   nextRoom: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
@@ -1328,7 +1340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1703808499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,7 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 0}
-  nextRoom: {fileID: 74045649}
+  nextRoom: {fileID: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
@@ -1359,7 +1371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1756251046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,54 +1445,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!1001 &1859161979
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 179.735168
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 78.3647156
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -48.9251709
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 420418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-      propertyPath: m_Name
-      value: GameObject
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
-  m_RootGameObject: {fileID: 207180841}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &1974879749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1508,7 +1472,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &1974879751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1521,7 +1485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 0}
-  nextRoom: {fileID: 0}
+  nextRoom: {fileID: 62231561}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0

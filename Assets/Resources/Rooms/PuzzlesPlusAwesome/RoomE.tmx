@@ -102,6 +102,7 @@
   <properties>
    <property name="Offset1" value=""/>
    <property name="SnakeKey" value="0"/>
+   <property name="UnityLayer" value="P2 Only"/>
   </properties>
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,

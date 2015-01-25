@@ -113,8 +113,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .75, y: 3, z: .75}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: .899999976, y: .899999976, z: .899999976}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11425830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -148,8 +148,10 @@ MonoBehaviour:
   - {fileID: 11425834}
   cube: {fileID: 0}
   puzzle: {fileID: 0}
+  simplePuzzle: {fileID: 0}
   cubeMeshRenderer: {fileID: 0}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
+  keyword: 
   enterWin: 1
 --- !u!114 &11425834
 MonoBehaviour:
