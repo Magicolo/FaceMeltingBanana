@@ -11,6 +11,7 @@ public class DoorOpen : State {
 	
 	public override void OnStart() {
 		Layer.cubeMeshRenderer.material.color = new Color(0,0,0,0);
+		Layer.cubeMeshRenderer.enabled = false;
 		Layer.cube.GetComponent<BoxCollider>().enabled = false;
 	}
 }

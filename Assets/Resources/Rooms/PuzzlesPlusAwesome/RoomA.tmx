@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="left-down" width="12" height="12" tilewidth="32" tileheight="32" nextobjectid="1">
  <properties>
+  <property name="PlayerStartingAngle" value="90"/>
   <property name="PlayerStartingPosition" value="7,7"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
@@ -102,7 +103,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="P2 Only" width="12" height="12">
+ <layer name="P2 Only" width="12" height="12" visible="0">
   <properties>
    <property name="Offset" value="5"/>
    <property name="UnityLayer" value="P2 Only"/>
@@ -122,7 +123,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Wall2" width="12" height="12">
+ <layer name="Wall2" width="12" height="12" visible="0">
   <properties>
    <property name="Offset" value="2"/>
   </properties>
@@ -141,7 +142,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Wall3" width="12" height="12">
+ <layer name="Wall3" width="12" height="12" visible="0">
   <properties>
    <property name="Offset" value="3"/>
   </properties>
@@ -160,7 +161,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="Ceilling" width="12" height="12">
+ <layer name="Ceilling" width="12" height="12" visible="0">
   <properties>
    <property name="Offset" value="4"/>
    <property name="UnityLayer" value="P1 Only"/>

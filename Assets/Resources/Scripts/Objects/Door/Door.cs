@@ -6,9 +6,11 @@ public class Door : StateLayer {
 
 	[Disable] public GameObject cube;
 	[Disable] public PuzzleBase puzzle;
+	[Disable] public SimplePuzzle simplePuzzle;
 	[Disable] public MeshRenderer cubeMeshRenderer;
 	
 	public Color baseColor;
+	public string keyword;
 	
 	public bool enterWin = true;
 	
@@ -23,14 +25,12 @@ public class Door : StateLayer {
 	
 	public override void TriggerEnter(Collider collision) {
 		base.TriggerEnter(collision);
-
-		if (enterWin && collision.gameObject.name == "Player") {
+		if (enterWin && collision.gameObject.tag == "Player") {
 			RoomFlowManager.instance.goToNextRoom();
 		}
 	}
 	
 	public void Open() {
-		Logger.Log("Open");
 		SwitchState<DoorOpening>();
 	}
 	

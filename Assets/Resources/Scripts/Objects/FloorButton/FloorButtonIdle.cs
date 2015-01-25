@@ -13,7 +13,7 @@ public class FloorButtonIdle : State {
 	}
 	
 	public override void TriggerEnter(Collider collision) {
-		if (collision.gameObject.name == "Player") {
+		if (collision.gameObject.tag == "Player") {
 			SwitchState<FloorButtonPlayerOn>();
 		}
 	}

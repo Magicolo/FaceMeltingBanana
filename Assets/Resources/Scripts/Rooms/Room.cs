@@ -4,8 +4,10 @@ using Magicolo;
 
 public class Room : MonoBehaviour {
 
+	public Room looseRoom;
 	public Room nextRoom;
 	public Vector3 startingPosition;
+	public float startingAngle;
 	
 	public int width;
 	public int height;
