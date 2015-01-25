@@ -5,6 +5,6 @@ using Magicolo;
 public class FloorButton : StateLayer {
 
 	public string keyword;
-	[Disable] public PuzzleFloorButton puzzle;
+	[Disable] public SimplePuzzle simplePuzzle;
 	
 }

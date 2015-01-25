@@ -14,7 +14,6 @@ public class FloorButtonPlayerOff : State {
     
 	public override void OnEnter() {
 		t = 0;
-		Layer.puzzle.registerKeyword(this.Layer.keyword);
 		startingPosition = this.transform.position;
 		finalPosition = new Vector3(startingPosition.x, startingPosition.y + 0.09f, startingPosition.z);
 	}
