@@ -117,7 +117,8 @@ public class RoomLoader : TiledMapLoader {
 		if(properties.ContainsKey("SnakeKey")){
 			KeySnake ks = newGo.GetComponent<KeySnake>();
 			ks.index = Int32.Parse(properties["SnakeKey"]);
-		}else if(properties.ContainsKey("FloorButton")){
+		}
+		if(properties.ContainsKey("FloorButton")){
 			FloorButton fb = newGo.GetComponent<FloorButton>();
 			fb.keyword = properties["FloorButton"];
 		}
@@ -139,6 +140,10 @@ public class RoomLoader : TiledMapLoader {
 		if(properties.ContainsKey("DoorWin")){
 			Door door = newGo.GetComponent<Door>();
 			door.enterWin = properties["DoorWin"] == "true";
+		}
+		if(properties.ContainsKey("DoorKeyword")){
+			Door door = newGo.GetComponent<Door>();
+			door.keyword = properties["DoorKeyword"];
 		}
 		if(properties.ContainsKey("Collider")){
 			BoxCollider box = newGo.GetComponentInChildren<BoxCollider>();
