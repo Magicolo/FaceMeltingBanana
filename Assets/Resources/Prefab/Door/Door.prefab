@@ -31,6 +31,7 @@ GameObject:
   - 114: {fileID: 11425832}
   - 114: {fileID: 11425834}
   - 114: {fileID: 11425836}
+  - 114: {fileID: 11488084}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -75,7 +76,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -129,7 +130,7 @@ MonoBehaviour:
   - {fileID: 11425832}
 --- !u!114 &11425832
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
@@ -142,13 +143,18 @@ MonoBehaviour:
   states:
   - {fileID: 11425836}
   - {fileID: 11425834}
+  - {fileID: 11488084}
   currentStates:
   - {fileID: 11425834}
   speed: 1
   cube: {fileID: 0}
+  puzzle: {fileID: 0}
+  cubeMeshRenderer: {fileID: 0}
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  enterWin: 1
 --- !u!114 &11425834
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
@@ -161,13 +167,26 @@ MonoBehaviour:
   machine: {fileID: 11425830}
 --- !u!114 &11425836
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125832}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af076d0ef0f75b14dac3c4e909d801cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layer: {fileID: 11425832}
+  machine: {fileID: 11425830}
+--- !u!114 &11488084
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0cb960728b05142a40ef030b8f5c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   layer: {fileID: 11425832}
