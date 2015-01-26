@@ -19,7 +19,7 @@ public class Server : MonoBehaviour {
 		Cartographer
 	}
 	
-	public PlayerTypes playerType;
+	public PlayerTypes playerTypes;
 	
 	// PlayerPrefs.SetString("MyString", "MyValue");
 	int serverPort = 25003;
@@ -27,15 +27,15 @@ public class Server : MonoBehaviour {
 
 	void Start() {
 		//Sera setter par le Main Menu
-		int playerType = PlayerPrefs.GetInt("PlayerType");
+		int pInt = PlayerPrefs.GetInt("PlayerType");
 
-		if (playerType==0){
-			PlayerTypes = PlayerTypes.Adventurer;
+		if (pInt==0){
+			playerTypes = PlayerTypes.Adventurer;
 			StartServer();
 
 		} else {
-			PlayerTypes = PlayerTypes.Cartographer;
-			StartClient();
+			playerTypes = PlayerTypes.Cartographer;
+			//StartClient();
 		}
 		
 	}
@@ -64,7 +64,7 @@ public class Server : MonoBehaviour {
 
 
 
-
+	/*
 
 	void ConnectToServer() {
 		Network.Connect(ip,clientPort);
@@ -117,7 +117,7 @@ public class Server : MonoBehaviour {
 
 
 
-
+*/
 
 
 
