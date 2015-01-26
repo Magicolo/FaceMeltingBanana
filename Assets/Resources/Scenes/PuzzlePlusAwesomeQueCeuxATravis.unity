@@ -114,12 +114,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 0}
-  nextRoom: {fileID: 1413918457}
+  nextRoom: {fileID: 1528050202}
   startingPosition: {x: 10, y: 2, z: 15}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomA.tmx
   map: 0
 --- !u!1 &88128686
 GameObject:
@@ -245,7 +246,7 @@ Transform:
   - {fileID: 1557606283}
   - {fileID: 1254077826}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &311057592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 193414a30d64bf248a4563307e5380d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerType: 0
+  clientPort: 25003
+  ip: 127.0.0.1
+  playerTypes: 0
+  pInt: 0
 --- !u!148 &311057593
 NetworkView:
   m_ObjectHideFlags: 0
@@ -450,8 +454,11 @@ MonoBehaviour:
   - {fileID: 125316, guid: 29b955b517940264d8081969fe1c1c9f, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
   - {fileID: 128106, guid: ba25ebc8e80b0c542962bd2fa58bb71b, type: 2}
+  - {fileID: 175590, guid: c36c47243e069b743a95155c38ebca85, type: 2}
+  - {fileID: 175590, guid: 7b717e46bcfa0eb459f434ab30b39ed6, type: 2}
+  - {fileID: 175590, guid: 9e951f0c0ee09ff4aa5012b9a8627054, type: 2}
   - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
-  - {fileID: 175590, guid: e59e8cf53c9627a4cb52e8d7182abb88, type: 2}
+  - {fileID: 107252, guid: 24431c965b22e944fa1e418d140a6a87, type: 2}
   PuzzleBasePrefabs:
   - {fileID: 132150, guid: 7a9d7ee0f07e8e640b6e5cfa0c66700c, type: 2}
   - {fileID: 120418, guid: 86f0fb2e4b0084c42988aada07be1ef9, type: 2}
@@ -514,7 +521,8 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
-  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomL.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomL.tmx
   map: 0
 --- !u!1 &475836658
 GameObject:
@@ -563,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -577,6 +585,487 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 475836658}
+--- !u!1 &555431335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 107324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 555431344}
+  - 114: {fileID: 555431343}
+  - 82: {fileID: 555431342}
+  - 82: {fileID: 555431341}
+  - 82: {fileID: 555431340}
+  - 82: {fileID: 555431339}
+  - 82: {fileID: 555431338}
+  - 82: {fileID: 555431337}
+  - 82: {fileID: 555431336}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &555431336
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8268348, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: .200000003
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431337
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431338
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207326, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431339
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207328, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431340
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207332, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: e539bd41fefa88f47b211ed8cec3bbd2, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431341
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207334, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &555431342
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8207330, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!114 &555431343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73,
+    type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffee1f8594af3cc4bbae32470b1d07db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentMusic: {fileID: 555431342}
+  idleMusic: {fileID: 555431341}
+  ashsSong: {fileID: 8300000, guid: 72f0b62a38ac98143849c33ca5576e3d, type: 3}
+  brodysSong: {fileID: 8300000, guid: dce0419907ae222419f18eb560d21e91, type: 3}
+  currentAmbiance: {fileID: 555431340}
+  idleAmbiance: {fileID: 555431339}
+  hospitalAmbiance: {fileID: 8300000, guid: e539bd41fefa88f47b211ed8cec3bbd2, type: 3}
+  forestAmbiance: {fileID: 8300000, guid: ffe9a8d39cf362c49855ccbb8f43e277, type: 3}
+  windAmbiance: {fileID: 8300000, guid: 1b18bd67af20c9b49be861a703ab59f6, type: 3}
+  windDangerAmbiance: {fileID: 8300000, guid: ee19bba871479d64484e3e53bccdf9f6, type: 3}
+  currentHallucination: {fileID: 555431338}
+  idleHallucination: {fileID: 555431337}
+  ambulanceHallucination: {fileID: 8300000, guid: f77bdb4d2e462814a8078f07c1e29c94,
+    type: 3}
+  policeHallucination: {fileID: 8300000, guid: e135abb4f2cc66844ac12b82c2bf0d62, type: 3}
+  heartBeepHallucination: {fileID: 8300000, guid: 8c83d846ccd22af4d9571bf037a2ebca,
+    type: 3}
+  traficHallucination: {fileID: 8300000, guid: 96c7e9e7457d2fa4e8f3516cccb8ea6f, type: 3}
+  currentLevelSource: {fileID: 555431336}
+  levelSuccess: {fileID: 8300000, guid: e94157a457fddb34293bc0bf5dadf259, type: 3}
+  levelFail: {fileID: 8300000, guid: 42f4efc897d694641b53e845abb04e95, type: 3}
+--- !u!4 &555431344
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+  m_PrefabInternal: {fileID: 743348971}
+  m_GameObject: {fileID: 555431335}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.92092419, y: -2.64795113, z: -3.43143129}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &603575188
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,6 +1074,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 603575189}
+  - 114: {fileID: 603575190}
   m_Layer: 0
   m_Name: ScoreEngine
   m_TagString: Untagged
@@ -603,7 +1093,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
+--- !u!114 &603575190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603575188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951135120f616c2468c27b2517403629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 30
 --- !u!1 &612877397
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,10 +1132,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 62231560}
-  - {fileID: 1413918456}
   - {fileID: 1528050203}
-  - {fileID: 1703808500}
+  - {fileID: 1413918456}
   - {fileID: 1974879750}
+  - {fileID: 1703808500}
   - {fileID: 417380766}
   - {fileID: 1357730655}
   m_Father: {fileID: 0}
@@ -651,19 +1153,19 @@ GameObject:
   - 92: {fileID: 657472989}
   - 81: {fileID: 657472988}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: CameraTopView
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &657472988
 AudioListener:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 657472987}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &657472989
 Behaviour:
   m_ObjectHideFlags: 0
@@ -722,6 +1224,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1001 &743348971
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.92092419
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.64795113
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3.43143129
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407324, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a8e4b4637672c6d41a9b3e48ea2f5e73, type: 2}
+  m_RootGameObject: {fileID: 555431335}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1030245612
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,11 +1295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537d355950c0da74faed32519e442b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoom: {fileID: 1703808499}
-  firstRoom: {fileID: 1528050202}
+  currentRoom: {fileID: 0}
+  firstRoom: {fileID: 62231561}
   rooms:
   - {fileID: 62231561}
+  - {fileID: 1528050202}
   - {fileID: 1413918457}
+  - {fileID: 1974879751}
+  - {fileID: 1703808499}
   fadeImage: {fileID: 475836660}
 --- !u!4 &1030245614
 Transform:
@@ -768,51 +1317,37 @@ Transform:
   - {fileID: 88128687}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &1101963283
+--- !u!1 &1105275486
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 1101963288}
-  - 33: {fileID: 1101963287}
-  - 23: {fileID: 1101963285}
-  - 114: {fileID: 1101963284}
-  - 54: {fileID: 1101963289}
-  - 136: {fileID: 1101963286}
+  - 4: {fileID: 1105275490}
+  - 33: {fileID: 1105275489}
+  - 64: {fileID: 1105275488}
+  - 23: {fileID: 1105275487}
   m_Layer: 0
-  m_Name: PlayerTop
-  m_TagString: Player
+  m_Name: PlaneOverlay
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1101963284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1101963283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4af67ae9554429546bdb343c0763950d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
---- !u!23 &1101963285
+  m_IsActive: 1
+--- !u!23 &1105275487
 Renderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1101963283}
+  m_GameObject: {fileID: 1105275486}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: ca49380a71a2bb64c830d06bd421b9d1, type: 2}
+  - {fileID: 2100000, guid: d7994b258dafbac45a38216c734e2ef7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -820,53 +1355,38 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!136 &1101963286
-CapsuleCollider:
+--- !u!64 &1105275488
+MeshCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1101963283}
+  m_GameObject: {fileID: 1105275486}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .500000119
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1101963287
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &1105275489
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1101963283}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1101963288
+  m_GameObject: {fileID: 1105275486}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1105275490
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1101963283}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 5, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1105275486}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: 5.80999994, y: 20.0799999, z: 7.21000004}
+  m_LocalScale: {x: 3.94270062, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
---- !u!54 &1101963289
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1101963283}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
+  m_RootOrder: 8
 --- !u!1 &1254077820
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1540,8 @@ MonoBehaviour:
   startingAngle: 0
   width: 0
   height: 0
-  fileName: C:/Users/BananaMobile/Documents/Workshop/Unity/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomMines.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomMines.tmx
   map: 0
 --- !u!1 &1413918455
 GameObject:
@@ -1032,7 +1553,7 @@ GameObject:
   - 4: {fileID: 1413918456}
   - 114: {fileID: 1413918457}
   m_Layer: 0
-  m_Name: RoomB
+  m_Name: RoomD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1049,7 +1570,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1413918457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,12 +1583,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1413918457}
-  nextRoom: {fileID: 1528050202}
+  nextRoom: {fileID: 1974879751}
   startingPosition: {x: 9, y: 2, z: 9}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomB.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD_1.tmx
   map: 0
 --- !u!1 &1423193527
 GameObject:
@@ -1169,7 +1691,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 14809090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
       propertyPath: m_ViewID.m_ID
@@ -1215,11 +1737,94 @@ Prefab:
       propertyPath: m_CullingMask.m_Bits
       value: 4294950911
       objectReference: {fileID: 0}
+    - target: {fileID: 11409090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: playerTypes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: pInt
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11409090, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: ip
+      value: 127.0.0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9d4133d5d30b644bd87802a347eaccbe, type: 2}
   m_RootGameObject: {fileID: 311057590}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &1525555495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1525555497}
+  - 108: {fileID: 1525555496}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1525555496
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525555495}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 31.2399998
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1525555497
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525555495}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.80999994, y: 22.0100002, z: 12.6199999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &1528050201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,12 +1853,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 1528050202}
-  nextRoom: {fileID: 0}
+  nextRoom: {fileID: 1413918457}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomD.tmx
   map: 0
 --- !u!4 &1528050203
 Transform:
@@ -1266,7 +1872,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!1 &1557606282
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1946,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1703808499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,13 +1958,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b7f3c9ba132a049950a403aa0c6f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  looseRoom: {fileID: 0}
-  nextRoom: {fileID: 0}
+  looseRoom: {fileID: 1703808499}
+  nextRoom: {fileID: 1974879751}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomE.tmx
   map: 0
 --- !u!4 &1703808500
 Transform:
@@ -1371,7 +1978,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &1756251046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1444,7 +2051,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &1974879749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,7 +2079,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 612877398}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &1974879751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,12 +2092,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   looseRoom: {fileID: 0}
-  nextRoom: {fileID: 62231561}
+  nextRoom: {fileID: 1703808499}
   startingPosition: {x: 0, y: 0, z: 0}
   startingAngle: 0
   width: 0
   height: 0
-  fileName: D:/GIT/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
+  overlayMaterial: {fileID: 0}
+  fileName: D:/GIT/git2/FaceMeltingBanana/Assets/Resources/Rooms/PuzzlesPlusAwesome/RoomG.tmx
   map: 0
 --- !u!1001 &2068737573
 Prefab:

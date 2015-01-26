@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-down" width="12" height="12" tilewidth="32" tileheight="32" nextobjectid="1">
+ <properties>
+  <property name="PlayerStartingAngle" value="180"/>
+  <property name="PlayerStartingPosition" value="5,9"/>
+ </properties>
+ <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
+  <image source="../RoomEditorImage.png" width="320" height="192"/>
+  <tile id="4">
+   <properties>
+    <property name="FloorButton" value="0"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="FloorButton" value="1"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="FloorButton" value="2"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="KeySnake" value="4"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="DoorColor" value="255,0,0"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="DoorColor" value="0,0,255"/>
+   </properties>
+  </tile>
+  <tile id="10">
+   <properties>
+    <property name="DoorColor" value="255,255,0"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="DoorLocked" value="false"/>
+   </properties>
+  </tile>
+  <tile id="41">
+   <properties>
+    <property name="Collider" value="false"/>
+   </properties>
+  </tile>
+  <tile id="42">
+   <properties>
+    <property name="Collider" value="false"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Floor" width="12" height="12">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,45,0,0,0,0,0,0,
+0,0,35,34,33,32,34,33,34,0,0,0,
+0,0,34,32,31,35,32,34,35,0,0,0,
+0,0,33,34,33,35,30,35,35,0,0,0,
+0,32,33,34,30,30,33,35,33,45,0,0,
+0,0,30,31,33,35,31,34,32,0,0,0,
+0,0,30,31,30,35,34,33,30,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Wall1" width="12" height="12">
+  <properties>
+   <property name="Offset" value="1"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,31,30,32,31,0,31,33,32,30,0,0,
+0,32,0,0,0,0,0,0,0,33,0,0,
+0,35,0,0,0,0,0,0,0,32,0,0,
+0,31,0,0,0,0,0,0,0,31,0,0,
+0,12,0,0,0,0,0,0,0,0,0,0,
+0,31,0,0,0,0,0,0,0,30,0,0,
+0,30,0,0,0,0,0,0,0,34,0,0,
+0,34,34,30,33,30,35,32,30,31,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Object1" width="12" height="12">
+  <properties>
+   <property name="Offset1" value=""/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="P2 Only" width="12" height="12">
+  <properties>
+   <property name="Offset" value="5"/>
+   <property name="UnityLayer" value="P2 Only"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Wall2" width="12" height="12" visible="0">
+  <properties>
+   <property name="Offset" value="2"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,30,31,31,32,49,35,31,35,32,0,0,
+0,31,0,0,0,0,0,0,0,31,0,0,
+0,31,0,0,0,0,0,0,0,32,0,0,
+0,32,0,0,0,0,0,0,0,31,0,0,
+0,51,0,0,0,0,0,0,0,50,0,0,
+0,35,0,0,0,0,0,0,0,31,0,0,
+0,32,0,0,0,0,0,0,0,34,0,0,
+0,33,34,33,30,32,32,33,31,31,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Wall3" width="12" height="12" visible="0">
+  <properties>
+   <property name="Offset" value="3"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,34,32,32,33,32,31,30,31,33,0,0,
+0,32,0,0,0,0,0,0,0,31,0,0,
+0,33,0,0,0,0,0,0,0,32,0,0,
+0,30,0,0,0,0,0,0,0,30,0,0,
+0,33,0,0,0,0,0,0,0,33,0,0,
+0,31,0,0,0,0,0,0,0,33,0,0,
+0,32,0,0,0,0,0,0,0,34,0,0,
+0,31,32,33,31,30,31,32,34,32,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="Ceilling" width="12" height="12" visible="0">
+  <properties>
+   <property name="Offset" value="4"/>
+   <property name="UnityLayer" value="P1 Only"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,30,35,30,31,33,33,30,0,0,0,
+0,0,30,30,33,34,31,32,33,0,0,0,
+0,0,33,35,31,34,32,31,35,0,0,0,
+0,0,32,35,34,34,34,30,30,0,0,0,
+0,0,34,34,35,34,30,30,33,0,0,0,
+0,0,31,34,32,30,34,34,34,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

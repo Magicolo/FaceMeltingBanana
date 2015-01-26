@@ -7,7 +7,7 @@
   <property name="PlayerStartingPosition" value="3,10"/>
  </properties>
  <tileset firstgid="1" name="RoomEditorImage" tilewidth="32" tileheight="32">
-  <image source="../RoomEditorImage.png" width="320" height="160"/>
+  <image source="../RoomEditorImage.png" width="320" height="192"/>
   <tile id="3">
    <properties>
     <property name="FloorButton" value="r"/>
@@ -119,7 +119,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <layer name="P2 Only" width="12" height="12" visible="0">
+ <layer name="P2 Only" width="12" height="12">
   <properties>
    <property name="Offset" value="5"/>
    <property name="UnityLayer" value="P2 Only"/>

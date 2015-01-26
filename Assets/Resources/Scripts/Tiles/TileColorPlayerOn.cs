@@ -28,7 +28,7 @@ public class TileColorPlayerOn : State {
 	}
 	
 	public override void TriggerExit(Collider collision) {
-		if (collision.gameObject.name == "Player") {
+		if (collision.gameObject.tag == "Player") {
 			SwitchState<TileColorIdle>();
 		}
 	}

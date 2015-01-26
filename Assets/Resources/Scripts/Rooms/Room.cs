@@ -12,6 +12,8 @@ public class Room : MonoBehaviour {
 	public int width;
 	public int height;
 	
+	public Material overlayMaterial;
+	
 	public string fileName;
 	[ButtonAttribute("Open Map","openMap", NoPrefixLabel = true)] public bool map;
 	

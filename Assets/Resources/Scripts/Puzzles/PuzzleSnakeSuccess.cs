@@ -10,8 +10,8 @@ public class PuzzleSnakeSuccess : State {
 	}
 	
 	public override void OnEnter() {
-		RoomFlowManager.instance.activeState(Layer.successString);
-		RoomFlowManager.instance.goToNextRoom();
+//		RoomFlowManager.instance.activeState(Layer.successString);
+//		RoomFlowManager.instance.goToNextRoom();
 	}
 }
 

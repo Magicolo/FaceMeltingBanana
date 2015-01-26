@@ -9,8 +9,15 @@ public class DoorOpening : State {
 		get { return ((Door)layer); }
 	}
 	
+	public AudioSource doorSource;
+	
 	private float t = 0;
 	private Color alphaColor;
+	
+	public override void OnEnter()
+	{
+		doorSource.Play();
+	}
 	
 	public override void OnStart() {
 		alphaColor = new Color(Layer.baseColor.r, Layer.baseColor.g, Layer.baseColor.b, 0);

@@ -21,9 +21,11 @@ public class PuzzleBase : StateLayer {
 	}
 	
 	public virtual void Success() {
+		AudioManager.PlayLevelSource(true);
 	}
 	
 	public virtual void Fail() {
+		AudioManager.PlayLevelSource(false);
 	}
 }
 

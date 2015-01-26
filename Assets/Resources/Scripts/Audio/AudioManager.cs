@@ -31,16 +31,6 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioSource idleMusic;
 	public AudioClip ashsSong;
 	public AudioClip brodysSong;
-		
-	[Button("SwitchToAsh", "SwitchToAsh", NoPrefixLabel = true)] public bool switchToAsh;
-	void SwitchToAsh() {
-		switchMusic(Songs.Ash, 0.75F, 10);
-	}
-	
-	[Button("SwitchToBrody", "SwitchToBrody", NoPrefixLabel = true)] public bool switchToBrody;
-	void SwitchToBrody() {
-		switchMusic(Songs.Brody, 0.5F, 10);
-	}
 
 	[Separator]
 	 
@@ -50,26 +40,6 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip forestAmbiance;
 	public AudioClip windAmbiance;
 	public AudioClip windDangerAmbiance;
-		
-	[Button("SwitchToForest", "SwitchToForest", NoPrefixLabel = true)] public bool switchToForest;
-	void SwitchToForest() {
-		switchAmbiance(Ambiances.Forest, 0.5F, 10);
-	}
-	
-	[Button("SwitchToWind", "SwitchToWind", NoPrefixLabel = true)] public bool switchToWind;
-	void SwitchToWind() {
-		switchAmbiance(Ambiances.Wind, 0.75F, 10);
-	}
-	
-	[Button("SwitchToWindDanger", "SwitchToWindDanger", NoPrefixLabel = true)] public bool switchToWindDanger;
-	void SwitchToWindDanger() {
-		switchAmbiance(Ambiances.WindDanger, 0.75F, 10);
-	}
-	
-	[Button("SwitchToHospital", "SwitchToHospital", NoPrefixLabel = true)] public bool switchToHospital;
-	void SwitchToHospital() {
-		switchAmbiance(Ambiances.Hospital, 0.5F, 10);
-	}
 
 	[Separator]
 	
@@ -80,110 +50,137 @@ public class AudioManager : MonoBehaviourExtended {
 	public AudioClip heartBeepHallucination;
 	public AudioClip traficHallucination;
 	
-	[Button("PlayRandom", "PlayRandom", NoPrefixLabel = true)] public bool playRandom;
-	void PlayRandom() {
-		playRandomHallucinations(10, 30, 0.5F, 2);
-	}
+	[Separator]
 	
-	[Button("StopRandom", "StopRandom", NoPrefixLabel = true)] public bool stopRandom;
-	void StopRandom() {
-		stopRandomHallucinations(2);
-	}
+	public AudioSource currentLevelSource;
+	public AudioClip levelSuccess;
+	public AudioClip levelFail;
 	
-	
-	public static void SwitchMusic(Songs song, float volume, float fade) {
-		Instance.switchMusic(song, volume, fade);
-	}
-	
-	public static void SwitchAmbiance(Ambiances ambiance, float volume, float fade) {
-		Instance.switchAmbiance(ambiance, volume, fade);
-	}
-	
-	public static void PlayRandomHallucinations(float minFrequency, float maxFrequency, float volume, float fade) {
-		Instance.playRandomHallucinations(minFrequency, maxFrequency, volume, fade);
-	}
-		
-	public static void StopRandomHallucinations(float fade) {
-		Instance.stopRandomHallucinations(fade);
-	}
-	
-	void switchMusic(Songs song, float volume, float fade) {
-		switch (song) {
-			case Songs.Ash:
-				idleMusic.clip = ashsSong;
-				break;
-			case Songs.Brody:
-				idleMusic.clip = brodysSong;
-				break;
+	public static void PlayAll() {
+		if (Network.isServer) {
+			PlayRandomMusic(60, 150, 0.75F, 5);
+			PlayRandomAmbiance(60, 150, 0.5F, 5);
+			PlayRandomHallucination(120, 240, 0.5F, 2);
 		}
+	}
+	
+	public static void StopAll() {
+		StopRandomMusic(2);
+		StopRandomAmbiance(2);
+		StopRandomHallucination(2);
+	}
+	
+	public static void PlayLevelSource(bool success) {
+		Instance.playLevelSource(success);
+	}
+	
+	public static void PlayRandomMusic(float minFrequency, float maxFrequency, float volume, float fade) {
+		Instance.playRandomMusic(minFrequency, maxFrequency, volume, fade);
+	}
 		
-		idleMusic.volume = 0;
-		idleMusic.Play();
+	public static void StopRandomMusic(float fade) {
+		Instance.stopRandomMusic(fade);
+	}
+	
+	public static void PlayRandomAmbiance(float minFrequency, float maxFrequency, float volume, float fade) {
+		Instance.playRandomAmbiance(minFrequency, maxFrequency, volume, fade);
+	}
+		
+	public static void StopRandomAmbiance(float fade) {
+		Instance.stopRandomAmbiance(fade);
+	}
+	
+	public static void PlayRandomHallucination(float minFrequency, float maxFrequency, float volume, float fade) {
+		Instance.playRandomHallucination(minFrequency, maxFrequency, volume, fade);
+	}
+		
+	public static void StopRandomHallucination(float fade) {
+		Instance.stopRandomHallucination(fade);
+	}
+	
+	void playRandomMusic(float minFrequency, float maxFrequency, float volume, float fade) {
+		if (CoroutinesExist("PlayRandomMusic")) {
+			StopCoroutines("PlayRandomMusic");
+		}
 		
 		if (CoroutinesExist("FadeMusic")) {
 			StopCoroutines("FadeMusic");
 		}
+		
+		AudioClip[] songs = { ashsSong, brodysSong };
+		StartCoroutine("PlayRandomMusic", PlayRandom(currentMusic, idleMusic, songs, minFrequency, maxFrequency, volume, fade, "Music"));
+	}
+	
+	void stopRandomMusic(float fade) {
+		if (CoroutinesExist("PlayRandomMusic")) {
+			StopCoroutines("PlayRandomMusic");
+		}
+		
+		if (CoroutinesExist("FadeMusic")) {
+			StopCoroutines("FadeMusic");
+		}
+		
 		StartCoroutine("FadeMusic", FadeOut(currentMusic, fade));
-		StartCoroutine("FadeMusic", FadeIn(idleMusic, volume, fade));
-		
-		AudioSource musicTemp = currentMusic;
-		currentMusic = idleMusic;
-		idleMusic = musicTemp;
+		StartCoroutine("FadeMusic", FadeOut(idleMusic, fade));
 	}
 	
-	void switchAmbiance(Ambiances ambiance, float volume, float fade) {
-		switch (ambiance) {
-			case Ambiances.Hospital:
-				idleAmbiance.clip = hospitalAmbiance;
-				break;
-			case Ambiances.Forest:
-				idleAmbiance.clip = forestAmbiance;
-				break;
-			case Ambiances.Wind:
-				idleAmbiance.clip = windAmbiance;
-				break;
-			case Ambiances.WindDanger:
-				idleAmbiance.clip = windDangerAmbiance;
-				break;
+	void playRandomAmbiance(float minFrequency, float maxFrequency, float volume, float fade) {
+		if (CoroutinesExist("PlayRandomAmbiance")) {
+			StopCoroutines("PlayRandomAmbiance");
 		}
 		
-		idleAmbiance.volume = 0;
-		idleAmbiance.Play();
-		
-		if (CoroutinesExist("FadeAmbiances")) {
-			StopCoroutines("FadeAmbiances");
+		if (CoroutinesExist("FadeAmbiance")) {
+			StopCoroutines("FadeAmbiance");
 		}
+		
+		AudioClip[] ambiances = { forestAmbiance, hospitalAmbiance, windAmbiance, windDangerAmbiance };
+		StartCoroutine("PlayRandomAmbiance", PlayRandom(currentAmbiance, idleAmbiance, ambiances, minFrequency, maxFrequency, volume, fade, "Ambiance"));
+	}
+	
+	void stopRandomAmbiance(float fade) {
+		if (CoroutinesExist("PlayRandomAmbiance")) {
+			StopCoroutines("PlayRandomAmbiance");
+		}
+		
+		if (CoroutinesExist("FadeAmbiance")) {
+			StopCoroutines("FadeAmbiance");
+		}
+		
 		StartCoroutine("FadeAmbiance", FadeOut(currentAmbiance, fade));
-		StartCoroutine("FadeAmbiance", FadeIn(idleAmbiance, volume, fade));
-		
-		AudioSource ambianceTemp = currentAmbiance;
-		currentAmbiance = idleAmbiance;
-		idleAmbiance = ambianceTemp;
+		StartCoroutine("FadeAmbiance", FadeOut(idleAmbiance, fade));
 	}
 	
-	void playRandomHallucinations(float minFrequency, float maxFrequency, float volume, float fade) {
-		if (CoroutinesExist("PlayRandomHallucinations")) {
-			StopCoroutines("PlayRandomHallucinations");
+	void playRandomHallucination(float minFrequency, float maxFrequency, float volume, float fade) {
+		if (CoroutinesExist("PlayRandomHallucination")) {
+			StopCoroutines("PlayRandomHallucination");
 		}
 		
-		if (CoroutinesExist("FadeHallucinations")) {
-			StopCoroutines("FadeHallucinations");
+		if (CoroutinesExist("FadeHallucination")) {
+			StopCoroutines("FadeHallucination");
 		}
 		
-		StartCoroutine("PlayRandomHallucinations", PlayRandom(currentHallucination, idleHallucination, minFrequency, maxFrequency, volume, fade));
+		AudioClip[] hallucinations = { ambulanceHallucination, policeHallucination, heartBeepHallucination, traficHallucination };
+		StartCoroutine("PlayRandomHallucination", PlayRandom(currentHallucination, idleHallucination, hallucinations, minFrequency, maxFrequency, volume, fade, "Hallucination"));
 	}
 		
-	void stopRandomHallucinations(float fade) {
-		if (CoroutinesExist("PlayRandomHallucinations")) {
-			StopCoroutines("PlayRandomHallucinations");
+	void stopRandomHallucination(float fade) {
+		if (CoroutinesExist("PlayRandomHallucination")) {
+			StopCoroutines("PlayRandomHallucination");
 		}
 		
-		if (CoroutinesExist("FadeHallucinations")) {
-			StopCoroutines("FadeHallucinations");
+		if (CoroutinesExist("FadeHallucination")) {
+			StopCoroutines("FadeHallucination");
 		}
 		
-		StartCoroutine("FadeHallucinations", FadeOut(currentHallucination, fade));
-		StartCoroutine("FadeHallucinations", FadeOut(idleHallucination, fade));
+		StartCoroutine("FadeHallucination", FadeOut(currentHallucination, fade));
+		StartCoroutine("FadeHallucination", FadeOut(idleHallucination, fade));
+	}
+	
+	void playLevelSource(bool success) {
+		if (Network.isServer){
+			currentLevelSource.clip = success ? levelSuccess : levelFail;
+			currentLevelSource.Play();
+		}
 	}
 	
 	IEnumerator FadeIn(AudioSource source, float targetVolume, float fade) {
@@ -212,8 +209,22 @@ public class AudioManager : MonoBehaviourExtended {
 		source.Stop();
 	}
 
-	IEnumerator PlayRandom(AudioSource source1, AudioSource source2, float minFrequency, float maxFrequency, float volume, float fade) {
+	IEnumerator PlayRandom(AudioSource source1, AudioSource source2, AudioClip[] audioClips, float minFrequency, float maxFrequency, float volume, float fade, string suffix) {
 		while (true) {
+			source2.clip = audioClips.GetRandom();
+			source2.volume = 0;
+			source2.Play();
+	
+			if (CoroutinesExist("Fade" + suffix)) {
+				StopCoroutines("Fade" + suffix);
+			}
+			StartCoroutine("Fade" + suffix, FadeOut(source1, fade));
+			StartCoroutine("Fade" + suffix, FadeIn(source2, volume, fade));
+	
+			AudioSource sourceTemp = source1;
+			source1 = source2;
+			source2 = sourceTemp;
+		
 			float random = Random.Range(minFrequency, maxFrequency);
 			float counter = 0;
 			
@@ -221,20 +232,6 @@ public class AudioManager : MonoBehaviourExtended {
 				counter += Time.deltaTime;
 				yield return new WaitForSeconds(0);
 			}
-			
-			source2.clip = new []{ ambulanceHallucination, policeHallucination, heartBeepHallucination, traficHallucination }.GetRandom();
-			source2.volume = 0;
-			source2.Play();
-		
-			if (CoroutinesExist("FadeHallucinations")) {
-				StopCoroutines("FadeHallucinations");
-			}
-			StartCoroutine("FadeHallucinations", FadeOut(source1, fade));
-			StartCoroutine("FadeHallucinations", FadeIn(source2, volume, fade));
-		
-			AudioSource sourceTemp = source1;
-			source1 = source2;
-			source2 = sourceTemp;
 		}
 	}
 }
